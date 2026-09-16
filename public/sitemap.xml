@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://card-india.org/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://card-india.org/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://card-india.org/our-work</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://card-india.org/impact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://card-india.org/gallery</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://card-india.org/case-study</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://card-india.org/donate</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://card-india.org/contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://card-india.org/mgnregs</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://card-india.org/lacim</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://card-india.org/melania</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://card-india.org/pollination</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://card-india.org/otf</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+</urlset>

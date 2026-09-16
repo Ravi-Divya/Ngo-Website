@@ -1,0 +1,9 @@
+services:
+  card:
+    build: .
+    container_name: card-ngo-website
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
