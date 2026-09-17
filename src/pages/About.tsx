@@ -28,6 +28,12 @@ export default function About() {
                 Over three decades, CARD has implemented targeted, grassroots initiatives across Chittoor District—partnering with marginalized families, Yanadi tribal communities, smallholder farmers, and rural women to advance education, secure permanent housing, build sustainable livelihoods, and uphold civil dignity.
               </p>
 
+              <div className="bg-brand-soft/90 border-l-4 border-brand-primary p-3.5 md:p-4 rounded-r-2xl shadow-2xs">
+                <p className="text-brand-dark text-sm md:text-base font-semibold leading-relaxed">
+                  Founder <strong>S. Ravi</strong> felicitated by Chittoor MP <strong>Daggumalla Prasada Rao garu</strong>, District Collector <strong>Sumit Kumar garu, IAS</strong>, and CHUDA Chairperson <strong>Katari Hemalatha garu</strong>.
+                </p>
+              </div>
+
               {/* Legal Badges */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
                 <div className="flex items-center gap-2.5 bg-brand-soft/70 border border-brand-light p-3 rounded-2xl">
@@ -83,7 +89,7 @@ export default function About() {
               <div className="mt-3 bg-brand-soft/80 border border-brand-light p-3.5 rounded-2xl w-full text-center">
                 <div className="text-xs font-bold text-brand-dark">Official Felicitation &amp; Leadership Honor</div>
                 <p className="text-[11px] text-brand-muted mt-1 leading-snug">
-                  Founder <strong>S. Ravi</strong> honored by Chittoor MP <strong>Daggumalla Prasada Rao</strong>, District Collector <strong>Sumit Kumar, IAS</strong>, and CHUDA Chairperson <strong>Katari Hemalatha</strong>.
+                  Founder <strong>S. Ravi</strong> felicitated by Chittoor MP <strong>Daggumalla Prasada Rao garu</strong>, District Collector <strong>Sumit Kumar garu, IAS</strong>, and CHUDA Chairperson <strong>Katari Hemalatha garu</strong>.
                 </p>
               </div>
             </div>
@@ -116,7 +122,7 @@ export default function About() {
                   MP
                 </div>
                 <div>
-                  <div className="font-bold text-sm text-brand-dark">Daggumalla Prasada Rao</div>
+                  <div className="font-bold text-sm text-brand-dark">Daggumalla Prasada Rao garu</div>
                   <div className="text-xs text-amber-800 font-medium mt-0.5">Hon&apos;ble Member of Parliament (MP)</div>
                   <div className="text-[11px] text-brand-muted">Chittoor Lok Sabha Constituency</div>
                 </div>
@@ -127,7 +133,7 @@ export default function About() {
                   IAS
                 </div>
                 <div>
-                  <div className="font-bold text-sm text-brand-dark">Sumit Kumar, IAS</div>
+                  <div className="font-bold text-sm text-brand-dark">Sumit Kumar garu, IAS</div>
                   <div className="text-xs text-sky-800 font-medium mt-0.5">District Collector &amp; Magistrate</div>
                   <div className="text-[11px] text-brand-muted">Chittoor District, Govt. of Andhra Pradesh</div>
                 </div>
@@ -138,7 +144,7 @@ export default function About() {
                   CHUDA
                 </div>
                 <div>
-                  <div className="font-bold text-sm text-brand-dark">Katari Hemalatha</div>
+                  <div className="font-bold text-sm text-brand-dark">Katari Hemalatha garu</div>
                   <div className="text-xs text-rose-800 font-medium mt-0.5">Chairperson</div>
                   <div className="text-[11px] text-brand-muted">Chittoor Urban Development Authority (CHUDA)</div>
                 </div>

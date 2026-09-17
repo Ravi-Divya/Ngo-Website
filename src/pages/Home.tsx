@@ -102,7 +102,7 @@ export default function Home() {
                 />
               </div>
               <p className="text-[11px] md:text-xs text-brand-muted text-center mt-2.5 max-w-xs font-medium leading-tight">
-                Founder <strong>S. Ravi</strong> felicitated by Chittoor MP <strong>Daggumalla Prasada Rao</strong>, District Collector <strong>Sumit Kumar, IAS</strong>, and CHUDA Chairperson <strong>Katari Hemalatha</strong>.
+                Founder <strong>S. Ravi</strong> felicitated by Chittoor MP <strong>Daggumalla Prasada Rao garu</strong>, District Collector <strong>Sumit Kumar garu, IAS</strong>, and CHUDA Chairperson <strong>Katari Hemalatha garu</strong>.
               </p>
             </div>
           </div>
