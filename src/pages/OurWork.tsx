@@ -41,7 +41,7 @@ const sectors = [
   {
     id: 'agriculture-support',
     sector: 'Agriculture Support',
-    poster: '/images/poster_agriculture.png',
+    poster: '/images/card_felicitation_award.jpg',
     keyFeatures: [
       'Community nurseries for fruit & timber saplings',
       'MGNREGS Shrama Shakthi Sangha (SSS) group land work',

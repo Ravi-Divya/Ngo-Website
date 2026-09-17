@@ -72,13 +72,109 @@ export default function About() {
               </div>
             </div>
 
-            <div className="lg:col-span-5">
-              <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-100">
+            <div className="lg:col-span-5 flex flex-col items-center">
+              <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-100 w-full">
                 <img
-                  src="/images/poster_agriculture.png"
-                  alt="CARD Sustainable Agriculture & Rural Livelihoods"
-                  className="w-full h-[430px] object-cover hover:scale-102 transition-transform duration-500"
+                  src="/images/card_felicitation_award.jpg"
+                  alt="Founder S. Ravi receiving official felicitation from Chittoor MP Daggumalla Prasada Rao, District Collector Sumit Kumar IAS, and CHUDA Chairperson Katari Hemalatha"
+                  className="w-full h-[360px] sm:h-[400px] object-cover object-center hover:scale-102 transition-transform duration-500"
                 />
+              </div>
+              <div className="mt-3 bg-brand-soft/80 border border-brand-light p-3.5 rounded-2xl w-full text-center">
+                <div className="text-xs font-bold text-brand-dark">Official Felicitation &amp; Leadership Honor</div>
+                <p className="text-[11px] text-brand-muted mt-1 leading-snug">
+                  Founder <strong>S. Ravi</strong> honored by Chittoor MP <strong>Daggumalla Prasada Rao</strong>, District Collector <strong>Sumit Kumar, IAS</strong>, and CHUDA Chairperson <strong>Katari Hemalatha</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Government & District Leadership Felicitation Block */}
+          <div className="bg-gradient-to-r from-amber-50/90 via-orange-50/40 to-amber-50/90 border border-amber-200/80 rounded-3xl p-6 md:p-8 shadow-sm">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-5 border-b border-amber-200/60">
+              <div>
+                <span className="inline-flex items-center gap-1.5 bg-amber-500/15 text-amber-800 font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider mb-2">
+                  <Award size={14} className="text-amber-600" /> District Felicitation &amp; Honor
+                </span>
+                <h3 className="text-xl md:text-2xl font-display font-bold text-brand-dark">
+                  Honored by Chittoor District Leadership
+                </h3>
+                <p className="text-brand-deep text-xs md:text-sm mt-1">
+                  Founder &amp; Executive Secretary <strong>S. Ravi</strong> was formally awarded and felicitated by top government and public representatives for 30 years of transformative rural welfare.
+                </p>
+              </div>
+              <div className="shrink-0 bg-white px-4 py-2 rounded-2xl border border-amber-200 text-center shadow-2xs">
+                <div className="text-lg font-bold text-brand-primary">1995 – 2025</div>
+                <div className="text-[10px] text-brand-muted uppercase font-semibold">30 Years of Service</div>
+              </div>
+            </div>
+
+            {/* Dignitaries Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-white/95 p-4 rounded-2xl border border-amber-100 shadow-2xs flex items-start gap-3">
+                <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shrink-0 font-bold text-xs">
+                  MP
+                </div>
+                <div>
+                  <div className="font-bold text-sm text-brand-dark">Daggumalla Prasada Rao</div>
+                  <div className="text-xs text-amber-800 font-medium mt-0.5">Hon&apos;ble Member of Parliament (MP)</div>
+                  <div className="text-[11px] text-brand-muted">Chittoor Lok Sabha Constituency</div>
+                </div>
+              </div>
+
+              <div className="bg-white/95 p-4 rounded-2xl border border-amber-100 shadow-2xs flex items-start gap-3">
+                <div className="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center shrink-0 font-bold text-xs">
+                  IAS
+                </div>
+                <div>
+                  <div className="font-bold text-sm text-brand-dark">Sumit Kumar, IAS</div>
+                  <div className="text-xs text-sky-800 font-medium mt-0.5">District Collector &amp; Magistrate</div>
+                  <div className="text-[11px] text-brand-muted">Chittoor District, Govt. of Andhra Pradesh</div>
+                </div>
+              </div>
+
+              <div className="bg-white/95 p-4 rounded-2xl border border-amber-100 shadow-2xs flex items-start gap-3">
+                <div className="w-10 h-10 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center shrink-0 font-bold text-xs">
+                  CHUDA
+                </div>
+                <div>
+                  <div className="font-bold text-sm text-brand-dark">Katari Hemalatha</div>
+                  <div className="text-xs text-rose-800 font-medium mt-0.5">Chairperson</div>
+                  <div className="text-[11px] text-brand-muted">Chittoor Urban Development Authority (CHUDA)</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Extra Impact Points for About Us */}
+            <div className="mt-5 pt-4 border-t border-amber-200/60">
+              <div className="text-xs font-bold text-brand-dark uppercase tracking-wider mb-3">
+                Key Grassroots Milestones Recognized:
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs text-brand-deep">
+                <div className="flex items-start gap-2 bg-white/70 p-2.5 rounded-xl border border-amber-100">
+                  <CheckCircle2 size={16} className="text-amber-600 shrink-0 mt-0.5" />
+                  <span><strong>Yanadi Tribal Housing:</strong> Constructed permanent pucca housing colonies with official land pattas &amp; solar electricity.</span>
+                </div>
+                <div className="flex items-start gap-2 bg-white/70 p-2.5 rounded-xl border border-amber-100">
+                  <CheckCircle2 size={16} className="text-amber-600 shrink-0 mt-0.5" />
+                  <span><strong>Drinking Water &amp; Sanitation:</strong> Installed deep borewells and community water systems across 150+ rural habitations.</span>
+                </div>
+                <div className="flex items-start gap-2 bg-white/70 p-2.5 rounded-xl border border-amber-100">
+                  <CheckCircle2 size={16} className="text-amber-600 shrink-0 mt-0.5" />
+                  <span><strong>Girl Child Education:</strong> Distributed free study kits, uniforms, and digital literacy support to school dropouts.</span>
+                </div>
+                <div className="flex items-start gap-2 bg-white/70 p-2.5 rounded-xl border border-amber-100">
+                  <CheckCircle2 size={16} className="text-amber-600 shrink-0 mt-0.5" />
+                  <span><strong>Sustainable Agriculture:</strong> Rejuvenated rural lands with check dams, honeybee apiculture &amp; MGNREGS SSS groups.</span>
+                </div>
+                <div className="flex items-start gap-2 bg-white/70 p-2.5 rounded-xl border border-amber-100">
+                  <CheckCircle2 size={16} className="text-amber-600 shrink-0 mt-0.5" />
+                  <span><strong>Women Self-Help Groups:</strong> Mobilized women into federations for livelihood training and micro-enterprise loans.</span>
+                </div>
+                <div className="flex items-start gap-2 bg-white/70 p-2.5 rounded-xl border border-amber-100">
+                  <CheckCircle2 size={16} className="text-amber-600 shrink-0 mt-0.5" />
+                  <span><strong>Disaster &amp; COVID Relief:</strong> Emergency food supplies, ration kits, and medical aid provided during pandemics and cyclones.</span>
+                </div>
               </div>
             </div>
           </div>

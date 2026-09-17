@@ -3,7 +3,7 @@ import PartnersScroll from '../components/PartnersScroll';
 import ResourcesSection from '../components/ResourcesSection';
 import Section from '../components/Section';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, HeartHandshake, TreePine, BookOpen, Utensils } from 'lucide-react';
+import { ArrowRight, Users, HeartHandshake, TreePine, BookOpen, Utensils, Award } from 'lucide-react';
 
 const programs = [
   {
@@ -67,9 +67,15 @@ export default function Home() {
                 Established in 1995 by founder <strong>S. Ravi</strong>, <strong>Community Alternative Research and Development (CARD)</strong> is a registered non-profit organization with 30 years of empowering rural communities across Andhra Pradesh.
               </p>
               <p className="text-brand-muted text-sm md:text-base leading-relaxed">
-                Through permanent housing for Yanadi tribal families, educational support, food security, and agricultural livelihoods, CARD empowers marginalized communities across Chittoor District to achieve self-reliance and dignity.
+                Over three decades, CARD has pioneered permanent housing colonies for Yanadi tribal families, quality education for underprivileged rural children, drinking water infrastructure, and sustainable agricultural livelihoods across 150+ villages in Chittoor District.
               </p>
-              <div className="grid grid-cols-3 gap-3 md:gap-4 pt-2">
+              <div className="bg-brand-soft/80 border border-brand-light/90 rounded-2xl p-3.5 text-xs text-brand-deep flex items-start gap-2.5">
+                <Award size={18} className="text-brand-primary shrink-0 mt-0.5" />
+                <span>
+                  <strong>Distinguished Recognition:</strong> Founder <strong>S. Ravi</strong> was officially felicitated by Hon&apos;ble Chittoor MP <strong>Daggumalla Prasada Rao</strong>, District Collector <strong>Sumit Kumar, IAS</strong>, and CHUDA Chairperson <strong>Katari Hemalatha</strong> for 30 years of selfless grassroots social development.
+                </span>
+              </div>
+              <div className="grid grid-cols-3 gap-3 md:gap-4 pt-1">
                 <div className="bg-brand-soft p-3 md:p-3.5 rounded-2xl border border-brand-light text-center">
                   <div className="text-xl md:text-2xl font-display font-bold text-brand-primary">1995</div>
                   <div className="text-[10px] md:text-xs text-brand-muted mt-0.5 font-semibold uppercase tracking-wider">Established</div>
@@ -93,14 +99,17 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="lg:col-span-4 flex justify-center items-center">
-              <div className="relative rounded-2xl overflow-hidden shadow-md border-2 border-slate-200 bg-slate-100 max-w-[260px] sm:max-w-[280px] w-full">
+            <div className="lg:col-span-4 flex flex-col items-center">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg border-2 border-brand-light bg-slate-100 max-w-sm w-full">
                 <img
-                  src="/images/poster_agriculture.png"
-                  alt="CARD Sustainable Agriculture & Rural Livelihoods"
-                  className="w-full h-44 sm:h-48 md:h-52 object-cover hover:scale-105 transition-transform duration-500"
+                  src="/images/card_felicitation_award.jpg"
+                  alt="Founder S. Ravi felicitated by Chittoor MP Daggumalla Prasada Rao, District Collector Sumit Kumar IAS, and CHUDA Chairperson Katari Hemalatha"
+                  className="w-full h-52 sm:h-56 md:h-64 object-cover object-center hover:scale-105 transition-transform duration-500"
                 />
               </div>
+              <p className="text-[11px] md:text-xs text-brand-muted text-center mt-2.5 max-w-xs font-medium leading-tight">
+                Founder <strong>S. Ravi</strong> felicitated by Chittoor MP <strong>Daggumalla Prasada Rao</strong>, District Collector <strong>Sumit Kumar, IAS</strong>, and CHUDA Chairperson <strong>Katari Hemalatha</strong>.
+              </p>
             </div>
           </div>
         </div>
