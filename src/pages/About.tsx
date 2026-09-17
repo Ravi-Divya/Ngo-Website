@@ -20,19 +20,17 @@ export default function About() {
               </h2>
               <div className="w-16 h-1 bg-brand-primary rounded-full mb-2"></div>
               
-              <p className="text-brand-deep text-base md:text-lg leading-relaxed">
-                Established in 1995 by founder <strong>S. Ravi</strong>, <strong>Community Alternative Research and Development (CARD)</strong> is a registered non-profit organization with 30 years of empowering rural communities across Andhra Pradesh.
+              <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+                Established in 1995 by founder <strong className="text-gray-900 font-bold">S. Ravi</strong>, <strong className="text-gray-900 font-bold">Community Alternative Research and Development (CARD)</strong> is a registered non-profit organization with 30 years of empowering rural communities across Andhra Pradesh.
               </p>
               
-              <p className="text-brand-muted text-sm md:text-base leading-relaxed">
-                Over three decades, CARD has implemented targeted, grassroots initiatives across Chittoor District—partnering with marginalized families, Yanadi tribal communities, smallholder farmers, and rural women to advance education, secure permanent housing, build sustainable livelihoods, and uphold civil dignity.
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                Over three decades, <strong className="text-gray-900 font-bold">CARD</strong> has implemented targeted, grassroots initiatives across Chittoor District—partnering with marginalized families, Yanadi tribal communities, smallholder farmers, and rural women to advance education, secure permanent housing, build sustainable livelihoods, and uphold civil dignity.
               </p>
 
-              <div className="bg-brand-soft/90 border-l-4 border-brand-primary p-3.5 md:p-4 rounded-r-2xl shadow-2xs">
-                <p className="text-brand-dark text-sm md:text-base font-semibold leading-relaxed">
-                  Founder <strong>S. Ravi</strong> felicitated by Chittoor MP <strong>Daggumalla Prasada Rao garu</strong>, District Collector <strong>Sumit Kumar garu, IAS</strong>, and CHUDA Chairperson <strong>Katari Hemalatha garu</strong>.
-                </p>
-              </div>
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                Founder <strong className="text-gray-900 font-bold">S. Ravi</strong> felicitated by Chittoor MP <strong className="text-gray-900 font-bold">Daggumalla Prasada Rao garu</strong>, District Collector <strong className="text-gray-900 font-bold">Sumit Kumar garu, IAS</strong>, and CHUDA Chairperson <strong className="text-gray-900 font-bold">Katari Hemalatha garu</strong>.
+              </p>
 
               {/* Legal Badges */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
