@@ -3,7 +3,7 @@ import PartnersScroll from '../components/PartnersScroll';
 import ResourcesSection from '../components/ResourcesSection';
 import Section from '../components/Section';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, HeartHandshake, TreePine, BookOpen, Utensils, Award } from 'lucide-react';
+import { ArrowRight, Users, HeartHandshake, TreePine, BookOpen, Utensils } from 'lucide-react';
 
 const programs = [
   {
@@ -69,13 +69,7 @@ export default function Home() {
               <p className="text-brand-muted text-sm md:text-base leading-relaxed">
                 Over three decades, CARD has pioneered permanent housing colonies for Yanadi tribal families, quality education for underprivileged rural children, drinking water infrastructure, and sustainable agricultural livelihoods across 150+ villages in Chittoor District.
               </p>
-              <div className="bg-brand-soft/80 border border-brand-light/90 rounded-2xl p-3.5 text-xs text-brand-deep flex items-start gap-2.5">
-                <Award size={18} className="text-brand-primary shrink-0 mt-0.5" />
-                <span>
-                  <strong>Distinguished Recognition:</strong> Founder <strong>S. Ravi</strong> was officially felicitated by Hon&apos;ble Chittoor MP <strong>Daggumalla Prasada Rao</strong>, District Collector <strong>Sumit Kumar, IAS</strong>, and CHUDA Chairperson <strong>Katari Hemalatha</strong> for 30 years of selfless grassroots social development.
-                </span>
-              </div>
-              <div className="grid grid-cols-3 gap-3 md:gap-4 pt-1">
+              <div className="grid grid-cols-3 gap-3 md:gap-4 pt-2">
                 <div className="bg-brand-soft p-3 md:p-3.5 rounded-2xl border border-brand-light text-center">
                   <div className="text-xl md:text-2xl font-display font-bold text-brand-primary">1995</div>
                   <div className="text-[10px] md:text-xs text-brand-muted mt-0.5 font-semibold uppercase tracking-wider">Established</div>
