@@ -101,9 +101,6 @@ export default function Home() {
                   className="w-full h-52 sm:h-56 md:h-64 object-cover object-center hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <p className="text-[11px] md:text-xs text-brand-muted text-center mt-2.5 max-w-xs font-medium leading-tight">
-                Founder <strong>S. Ravi</strong> felicitated by Chittoor MP <strong>Daggumalla Prasada Rao garu</strong>, District Collector <strong>Sumit Kumar garu, IAS</strong>, and CHUDA Chairperson <strong>Katari Hemalatha garu</strong>.
-              </p>
             </div>
           </div>
         </div>

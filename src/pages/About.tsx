@@ -12,84 +12,51 @@ export default function About() {
       <main className="flex-grow py-14 md:py-20">
         <div className="container mx-auto px-4 md:px-10 max-w-6xl space-y-20">
           
-          {/* Genesis & History */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7 space-y-5">
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-dark leading-tight">
-                About Us
-              </h2>
-              <div className="w-16 h-1 bg-brand-primary rounded-full mb-2"></div>
+          {/* Genesis & History Card */}
+          {/* Genesis & History Card */}
+          <div className="bg-white border border-gray-200 shadow-xl shadow-brand-soft/20 rounded-3xl p-6 md:p-10 lg:p-12 overflow-hidden">
+            
+            <div className="flow-root">
               
-              <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-                Established in 1995 by founder <strong className="text-gray-900 font-bold">S. Ravi</strong>, <strong className="text-gray-900 font-bold">Community Alternative Research and Development (CARD)</strong> is a registered non-profit organization with 30 years of empowering rural communities across Andhra Pradesh.
-              </p>
-              
-              <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                Over three decades, <strong className="text-gray-900 font-bold">CARD</strong> has implemented targeted, grassroots initiatives across Chittoor District—partnering with marginalized families, Yanadi tribal communities, smallholder farmers, and rural women to advance education, secure permanent housing, build sustainable livelihoods, and uphold civil dignity.
-              </p>
-
-              <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                Founder <strong className="text-gray-900 font-bold">S. Ravi</strong> felicitated by Chittoor MP <strong className="text-gray-900 font-bold">Daggumalla Prasada Rao garu</strong>, District Collector <strong className="text-gray-900 font-bold">Sumit Kumar garu, IAS</strong>, and CHUDA Chairperson <strong className="text-gray-900 font-bold">Katari Hemalatha garu</strong>.
-              </p>
-
-              {/* Legal Badges */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-                <div className="flex items-center gap-2.5 bg-brand-soft/70 border border-brand-light p-3 rounded-2xl">
-                  <ShieldCheck size={20} className="text-brand-primary shrink-0" />
-                  <div>
-                    <div className="text-xs font-bold text-brand-dark">Registered NGO</div>
-                    <div className="text-[11px] text-brand-muted">Government of AP</div>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-2.5 bg-brand-soft/70 border border-brand-light p-3 rounded-2xl">
-                  <FileText size={20} className="text-brand-primary shrink-0" />
-                  <div>
-                    <div className="text-xs font-bold text-brand-dark">12A &amp; 80G Tax Exempt</div>
-                    <div className="text-[11px] text-brand-muted">Income Tax Act</div>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-2.5 bg-brand-soft/70 border border-brand-light p-3 rounded-2xl">
-                  <CheckCircle2 size={20} className="text-brand-primary shrink-0" />
-                  <div>
-                    <div className="text-xs font-bold text-brand-dark">FCRA Registered</div>
-                    <div className="text-[11px] text-brand-muted">Ministry of Home Affairs</div>
-                  </div>
-                </div>
+              {/* Left Side Image (Floated) */}
+              <div className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-white p-2 w-full sm:w-1/2 lg:w-5/12 float-left mr-6 md:mr-8 lg:mr-10 mb-4 md:mb-6 mt-1 hover:shadow-xl transition-shadow duration-300">
+                <img
+                  src="/images/card_felicitation_award.jpg"
+                  alt="Founder S. Ravi felicitated by Chittoor MP Daggumalla Prasada Rao garu, District Collector Sumit Kumar garu, IAS, and CHUDA Chairperson Katari Hemalatha garu"
+                  className="w-full h-auto aspect-[4/3] object-cover object-center rounded-xl"
+                />
               </div>
+              
+              {/* Right Side & Wrapping Content */}
+              <div className="space-y-5">
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-dark leading-tight">
+                  About Us
+                </h2>
+                <div className="w-16 h-1 bg-brand-primary rounded-full mb-6"></div>
+                
+                <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+                  Established in 1995 by founder <strong className="text-gray-900 font-bold">S. Ravi</strong>, <strong className="text-gray-900 font-bold">Community Alternative Research and Development (CARD)</strong> is a registered non-profit organization with 30 years of empowering rural communities across Andhra Pradesh.
+                </p>
+                
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                  For over three decades, <strong className="text-gray-900 font-bold">CARD</strong> has served as a catalyst for transformative, grassroots change across the Chittoor District. We work closely with marginalized families, Yanadi tribal communities, smallholder farmers, and rural women, understanding that true empowerment begins at the community level. Our comprehensive initiatives focus on advancing access to quality education, securing permanent and safe housing, cultivating sustainable agricultural livelihoods, and fiercely upholding the civil rights and dignity of every individual we serve.
+                </p>
 
-              {/* Stats Counters */}
-              <div className="grid grid-cols-3 gap-4 pt-2">
-                <div className="bg-brand-soft p-4 rounded-2xl border border-brand-light text-center">
-                  <div className="text-2xl md:text-3xl font-display font-bold text-brand-primary">1995</div>
-                  <div className="text-[11px] text-brand-muted mt-1 font-semibold uppercase tracking-wider">30+ Years Active</div>
-                </div>
-                <div className="bg-brand-soft p-4 rounded-2xl border border-brand-light text-center">
-                  <div className="text-2xl md:text-3xl font-display font-bold text-brand-primary">150+</div>
-                  <div className="text-[11px] text-brand-muted mt-1 font-semibold uppercase tracking-wider">Villages Served</div>
-                </div>
-                <div className="bg-brand-soft p-4 rounded-2xl border border-brand-light text-center">
-                  <div className="text-2xl md:text-3xl font-display font-bold text-brand-primary">50,000+</div>
-                  <div className="text-[11px] text-brand-muted mt-1 font-semibold uppercase tracking-wider">Lives Impacted</div>
-                </div>
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                  In recognition of this tireless dedication, Founder <strong className="text-gray-900 font-bold">S. Ravi</strong> was recently felicitated for his exemplary contributions to rural development. The honoring ceremony was led by esteemed dignitaries, including Chittoor Member of Parliament <strong className="text-gray-900 font-bold">Sri Daggumalla Prasada Rao garu</strong>, Honorable District Collector <strong className="text-gray-900 font-bold">Sri Sumit Kumar garu, IAS</strong>, and CHUDA Chairperson <strong className="text-gray-900 font-bold">Smt. Katari Hemalatha garu</strong>—a powerful testament to CARD's lasting impact on the region.
+                </p>
+
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                  Operating with full transparency, <strong className="text-gray-900 font-bold">CARD</strong> is officially registered as an NGO with the Government of AP, holds 12A &amp; 80G tax-exempt status under the Income Tax Act, and is FCRA registered under the Ministry of Home Affairs. With 30+ years of active service, our grassroots initiatives have expanded to serve over 150 villages, profoundly impacting more than 50,000 lives.
+                </p>
               </div>
             </div>
 
-            <div className="lg:col-span-5 flex flex-col items-center">
-              <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-100 w-full">
-                <img
-                  src="/images/card_felicitation_award.jpg"
-                  alt="Founder S. Ravi receiving official felicitation from Chittoor MP Daggumalla Prasada Rao, District Collector Sumit Kumar IAS, and CHUDA Chairperson Katari Hemalatha"
-                  className="w-full h-[360px] sm:h-[400px] object-cover object-center hover:scale-102 transition-transform duration-500"
-                />
-              </div>
-              <div className="mt-3 bg-brand-soft/80 border border-brand-light p-3.5 rounded-2xl w-full text-center">
-                <div className="text-xs font-bold text-brand-dark">Official Felicitation &amp; Leadership Honor</div>
-                <p className="text-[11px] text-brand-muted mt-1 leading-snug">
-                  Founder <strong>S. Ravi</strong> felicitated by Chittoor MP <strong>Daggumalla Prasada Rao garu</strong>, District Collector <strong>Sumit Kumar garu, IAS</strong>, and CHUDA Chairperson <strong>Katari Hemalatha garu</strong>.
-                </p>
-              </div>
+            {/* Tagline centered at the end of the paragraphs */}
+            <div className="clear-both pt-6 mt-6 border-t border-gray-100 text-center">
+              <h3 className="text-xl md:text-2xl font-serif italic text-brand-primary/90 font-medium">
+                "Building resilience and dignity, one village at a time."
+              </h3>
             </div>
           </div>
 

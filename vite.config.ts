@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import type { Plugin } from 'vite';
 import type { IncomingMessage, ServerResponse } from 'node:http';
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import apiHandler from './api/[...path]';
 import type { VercelResponse } from './api/vercel-types';
 
@@ -56,29 +56,35 @@ function apiDevMiddleware(): Plugin {
   };
 }
 
-export default defineConfig({
-  plugins: [react(), tailwindcss(), apiDevMiddleware()],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'src'),
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '');
+  // Assign loaded env variables to process.env so Node.js API handlers can use them
+  Object.assign(process.env, env);
+
+  return {
+    plugins: [react(), tailwindcss(), apiDevMiddleware()],
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, 'src'),
+      },
     },
-  },
-  server: {
-    port: 3000,
-    host: true,
-  },
-  build: {
-    outDir: 'dist',
-    sourcemap: false,
-    minify: 'esbuild',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          motion: ['motion'],
-          ui: ['lucide-react', 'clsx', 'tailwind-merge'],
+    server: {
+      port: 3000,
+      host: true,
+    },
+    build: {
+      outDir: 'dist',
+      sourcemap: false,
+      minify: 'esbuild',
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            vendor: ['react', 'react-dom', 'react-router-dom'],
+            motion: ['motion'],
+            ui: ['lucide-react', 'clsx', 'tailwind-merge'],
+          },
         },
       },
     },
-  },
+  };
 });
