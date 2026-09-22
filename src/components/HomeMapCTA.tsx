@@ -18,13 +18,13 @@ export default function HomeMapCTA() {
         <div className="max-w-3xl mx-auto text-center mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-light/60 text-brand-deep text-xs font-bold tracking-widest uppercase mb-3">
             <MapPin size={13} className="text-brand-primary" />
-            Field Presence &amp; Operational Reach
+            Get In Touch
           </div>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-dark tracking-tight">
-            Rooted in Chittoor, Touching 150+ Rural Villages
+            Contact Us
           </h2>
           <p className="text-brand-muted text-base md:text-lg mt-3 leading-relaxed">
-            From our registered headquarters in Mittapalyam, CARD coordinates daily field interventions across 5 mandals in Andhra Pradesh.
+            Visit our field headquarters in Chittoor or reach out directly to our grassroots team across Andhra Pradesh.
           </p>
         </div>
 

@@ -226,7 +226,7 @@ export default function Footer() {
             </Link>
             <span className="text-white/20">•</span>
             <Link
-              to="/super-admin"
+              to="/divya"
               className="inline-flex items-center gap-1 text-sky-400 hover:text-white transition-colors font-medium"
               title="CARD Leadership & Super Admin Portal"
             >

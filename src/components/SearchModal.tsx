@@ -23,7 +23,7 @@ const SEARCH_ITEMS: SearchItem[] = [
   { id: 'p-gallery', category: 'PAGES', title: 'Gallery', path: '/gallery', description: 'Photographic documentation of our field interventions' },
   { id: 'p-donate', category: 'PAGES', title: 'Donate Now (80G Tax Deductible)', path: '/donate', description: '100% transparent donations eligible for 50% Indian tax rebate' },
   { id: 'p-contact', category: 'PAGES', title: 'Contact Us', path: '/contact', description: 'Chittoor head office, field centers, phone & email' },
-  { id: 'p-admin', category: 'PAGES', title: 'Super Admin Portal', path: '/super-admin', description: 'Executive dashboard, donor records, compliance & lead management' },
+  { id: 'p-admin', category: 'PAGES', title: 'Super Admin Portal', path: '/divya', description: 'Executive dashboard, donor records, compliance & lead management' },
   { id: 'p-privacy', category: 'PAGES', title: 'Privacy Policy', path: '/privacy-policy', description: 'Donor data security, PAN compliance & IT Act governance' },
   { id: 'p-cookie', category: 'PAGES', title: 'Cookie Policy', path: '/cookie-policy', description: 'How cookies enhance your site experience' },
 

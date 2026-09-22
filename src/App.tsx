@@ -117,6 +117,7 @@ const AppContent = () => {
               <Route path="/donate" element={<PageWrapper><Donate /></PageWrapper>} />
               <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
               <Route path="/super-admin" element={<PageWrapper><SuperAdmin /></PageWrapper>} />
+              <Route path="/divya" element={<PageWrapper><SuperAdmin /></PageWrapper>} />
               <Route path="/privacy-policy" element={<PageWrapper><PrivacyPolicy /></PageWrapper>} />
               <Route path="/cookie-policy" element={<PageWrapper><CookiePolicy /></PageWrapper>} />
               <Route path="/terms" element={<PageWrapper><TermsOfService /></PageWrapper>} />
