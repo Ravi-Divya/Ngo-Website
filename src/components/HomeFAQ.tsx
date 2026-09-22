@@ -41,9 +41,9 @@ export default function HomeFAQ() {
   const [openId, setOpenId] = useState<string | null>('faq-1');
 
   return (
-    <section id="faqs" className="py-20 md:py-28 bg-[#0B1E36] text-white relative overflow-hidden border-b border-[#16385C]">
-      {/* Background subtle radial glow in brand palette */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-sky-500/5 rounded-full blur-3xl pointer-events-none" />
+    <section id="faqs" className="py-20 md:py-28 bg-white text-brand-dark relative overflow-hidden border-b border-brand-light">
+      {/* Background subtle radial glow */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-brand-soft/60 rounded-full blur-3xl pointer-events-none" />
 
       {/* Schema.org FAQPage JSON-LD for Search Engines */}
       <script
@@ -66,27 +66,27 @@ export default function HomeFAQ() {
 
       <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-          {/* Left Column: Reference Image 2 Style */}
+          {/* Left Column: Reference Image Style on White Background */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <span className="w-6 h-[2px] bg-sky-400" />
-              <span className="text-xs font-bold text-sky-400 uppercase tracking-widest font-mono">
+              <span className="w-6 h-[2px] bg-brand-primary" />
+              <span className="text-xs font-bold text-brand-primary uppercase tracking-widest font-mono">
                 FAQ
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-medium text-white tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-medium text-brand-dark tracking-tight leading-tight">
               Questions we get asked
             </h2>
 
-            <p className="text-slate-300 text-sm md:text-base leading-relaxed pt-2 max-w-md font-sans">
+            <p className="text-brand-muted text-sm md:text-base leading-relaxed pt-2 max-w-md font-sans">
               Everything you need to know about our grassroots field work, Section 80G tax deductions, and visiting community projects across Chittoor.
             </p>
 
             <div className="pt-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 text-sky-400 hover:text-sky-300 font-bold text-sm transition-colors group"
+                className="inline-flex items-center gap-2 text-brand-primary hover:text-brand-deep font-bold text-sm transition-colors group"
               >
                 <span>Have a question not listed here? Contact us</span>
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -94,8 +94,8 @@ export default function HomeFAQ() {
             </div>
           </div>
 
-          {/* Right Column: Minimalist divider rows matching Image 2 */}
-          <div className="lg:col-span-7 divide-y divide-white/10 border-t border-b border-white/10">
+          {/* Right Column: Minimalist divider rows on White Background */}
+          <div className="lg:col-span-7 divide-y divide-slate-200/80 border-t border-b border-slate-200/80">
             {FAQS.map((faq) => {
               const isOpen = openId === faq.id;
               return (
@@ -107,7 +107,7 @@ export default function HomeFAQ() {
                   >
                     <span
                       className={`font-display text-base sm:text-lg transition-colors font-medium ${
-                        isOpen ? 'text-sky-400' : 'text-slate-100 group-hover:text-sky-300'
+                        isOpen ? 'text-brand-primary' : 'text-slate-900 group-hover:text-brand-primary'
                       }`}
                     >
                       {faq.question}
@@ -117,7 +117,7 @@ export default function HomeFAQ() {
                       <ChevronDown
                         size={18}
                         className={`text-slate-400 transition-transform duration-300 ${
-                          isOpen ? 'rotate-180 text-sky-400' : 'group-hover:text-slate-200'
+                          isOpen ? 'rotate-180 text-brand-primary' : 'group-hover:text-brand-primary'
                         }`}
                       />
                     </span>
@@ -132,7 +132,7 @@ export default function HomeFAQ() {
                         transition={{ duration: 0.25, ease: 'easeInOut' }}
                         className="overflow-hidden"
                       >
-                        <div className="pt-3 pr-6 text-slate-300 text-sm sm:text-base leading-relaxed font-sans">
+                        <div className="pt-3 pr-6 text-slate-600 text-sm sm:text-base leading-relaxed font-sans">
                           {faq.answer}
                         </div>
                       </motion.div>

@@ -100,7 +100,7 @@ export default function PrivacyPolicy() {
               <div><strong>Organization:</strong> Community Alternative Research and Development (CARD)</div>
               <div><strong>Address:</strong> Mittapalyam Post, Gudipala Mandal, Chittoor District, Andhra Pradesh — 517125</div>
               <div><strong>Email:</strong> cardngo1992@gmail.com / cardngo.org@gmail.com</div>
-              <div><strong>Phone:</strong> +91 94402 70876 / +91 98854 29900</div>
+              <div><strong>Phone:</strong> +91 9885429900</div>
             </div>
           </section>
         </div>

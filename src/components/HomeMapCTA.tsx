@@ -116,7 +116,7 @@ export default function HomeMapCTA() {
             {/* Direct Instant Channels at Bottom */}
             <div className="relative z-10 pt-8 mt-6 border-t border-white/15 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
               <a
-                href="tel:+919440270876"
+                href="tel:+919885429900"
                 className="flex items-center gap-2.5 text-slate-300 hover:text-white transition-colors group"
               >
                 <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-sky-400 group-hover:bg-brand-primary group-hover:text-white transition-all">
@@ -124,12 +124,12 @@ export default function HomeMapCTA() {
                 </div>
                 <div>
                   <div className="text-[10px] text-slate-400">Direct Field Call</div>
-                  <div className="font-semibold text-white">+91 94402 70876</div>
+                  <div className="font-semibold text-white">+91 9885429900</div>
                 </div>
               </a>
 
               <a
-                href="https://wa.me/919440270876?text=Hello%20CARD%20Team%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20community%20programs."
+                href="https://wa.me/919885429900?text=Hello%20CARD%20Team%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20community%20programs."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 text-slate-300 hover:text-white transition-colors group"
