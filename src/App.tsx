@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'motion/react';
 import { ChevronUp } from 'lucide-react';
 import Navbar from './components/Navbar';
@@ -104,6 +104,15 @@ const AppContent = () => {
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
+              <Route path="/home" element={<PageWrapper><Home /></PageWrapper>} />
+              <Route path="/Home" element={<Navigate to="/" replace />} />
+              <Route path="/index" element={<Navigate to="/" replace />} />
+              <Route path="/index.html" element={<Navigate to="/" replace />} />
+              <Route path="/faq" element={<Navigate to="/#faqs" replace />} />
+              <Route path="/faqs" element={<Navigate to="/#faqs" replace />} />
+              <Route path="/case-studies" element={<Navigate to="/case-study" replace />} />
+              <Route path="/programs" element={<Navigate to="/our-work" replace />} />
+              <Route path="/admin" element={<Navigate to="/super-admin" replace />} />
               <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
               <Route path="/our-work" element={<PageWrapper><OurWork /></PageWrapper>} />
               <Route path="/impact" element={<PageWrapper><Impact /></PageWrapper>} />

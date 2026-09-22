@@ -111,16 +111,19 @@ export default function Navbar() {
             <div key={link.name} className="relative group">
               <NavLink
                 to={link.path}
-                className={({ isActive }) => cn(
-                  "relative flex items-center gap-1 font-display font-medium text-base tracking-wide transition-all duration-300 pb-2",
-                  isActive ? "text-brand-primary" : "text-brand-muted hover:text-brand-primary"
-                )}
+                className={({ isActive }) => {
+                  const active = isActive || (link.path === '/' && location.pathname === '/home');
+                  return cn(
+                    "relative flex items-center gap-1 font-display font-medium text-base tracking-wide transition-all duration-300 pb-2",
+                    active ? "text-brand-primary" : "text-brand-muted hover:text-brand-primary"
+                  );
+                }}
               >
                 {link.name}
                 {link.dropdown && <ChevronDown size={14} className="transition-transform group-hover:rotate-180" />}
                 <span className={cn(
                   "absolute bottom-0 left-0 h-[3px] bg-brand-primary transition-all duration-300",
-                  location.pathname === link.path ? "w-full" : "w-0 group-hover:w-full"
+                  (location.pathname === link.path || (link.path === '/' && location.pathname === '/home')) ? "w-full" : "w-0 group-hover:w-full"
                 )} />
               </NavLink>
 
@@ -204,18 +207,21 @@ export default function Navbar() {
               className="absolute top-full left-4 right-4 mt-2 lg:hidden bg-white/95 backdrop-blur-xl rounded-3xl border border-brand-light shadow-2xl overflow-hidden"
             >
               <div className="flex flex-col gap-4 p-8">
-                {navLinks.map((link) => (
-                  <NavLink
-                    key={link.name}
-                    to={link.path}
-                    className={({ isActive }) => cn(
-                      "text-xl font-display font-medium tracking-wide py-3 transition-colors",
-                      isActive ? "text-brand-primary border-l-4 border-brand-primary pl-4" : "text-brand-deep"
-                    )}
-                  >
-                    {link.name}
-                  </NavLink>
-                ))}
+                {navLinks.map((link) => {
+                  const isHome = link.path === '/' && location.pathname === '/home';
+                  return (
+                    <NavLink
+                      key={link.name}
+                      to={link.path}
+                      className={({ isActive }) => cn(
+                        "text-xl font-display font-medium tracking-wide py-3 transition-colors",
+                        (isActive || isHome) ? "text-brand-primary border-l-4 border-brand-primary pl-4" : "text-brand-deep"
+                      )}
+                    >
+                      {link.name}
+                    </NavLink>
+                  );
+                })}
 
                 {/* Mobile Search Link */}
                 <button
