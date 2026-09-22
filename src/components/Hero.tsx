@@ -48,25 +48,16 @@ export default function Hero() {
           animate="visible"
           variants={containerVariants}
         >
-          {/* Trust Pill */}
-          <motion.div 
-            variants={itemVariants}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-light/70 text-brand-deep text-xs md:text-sm font-semibold mb-4 border border-brand-light shadow-2xs"
-          >
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Serving 150+ Villages Across Andhra Pradesh Since 1995</span>
-          </motion.div>
-
           {/* Heading */}
           <h1 className="font-display font-bold leading-tight mb-3">
             <motion.span variants={itemVariants} className="block text-3xl md:text-4xl lg:text-5xl text-brand-dark mb-1">
-              Transforming Lives &amp;
+              Transforming and Building
             </motion.span>
             <motion.span variants={itemVariants} className="block text-3xl md:text-4xl lg:text-5xl text-brand-primary mb-1">
-              Empowering Communities
+              Stronger Communities
             </motion.span>
             <motion.span variants={itemVariants} className="block text-3xl md:text-4xl lg:text-5xl text-brand-dark">
-              At The Grassroots
+              Together
             </motion.span>
           </h1>
 
@@ -74,7 +65,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-base md:text-lg text-brand-deep font-sans max-w-lg mt-2 leading-relaxed"
           >
-            Community Alternative Research and Development (CARD) pioneers sustainable livelihoods, quality child education, drinking water infrastructure, and permanent housing for Yanadi tribal and underprivileged rural families.
+            CARD works to improve the socio, economic, political and cultural condition of the unorganized and underprivileged people in rural areas, empowering vulnerable communities through education, healthcare, sanitation, and sustainable livelihoods.
           </motion.p>
 
           {/* Buttons */}

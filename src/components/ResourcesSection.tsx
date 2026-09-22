@@ -42,35 +42,13 @@ const reports: Report[] = [
 
 export default function ResourcesSection() {
   return (
-    <section id="transparency" className="py-16 md:py-24 bg-white border-y border-brand-light">
-      <div className="container mx-auto px-4 md:px-10 max-w-7xl">
+    <section className="py-16 md:py-24 bg-white border-y border-brand-light">
+      <div className="container mx-auto px-4 md:px-10">
         <Section className="text-center mb-12">
-          <span className="text-brand-primary font-bold text-xs uppercase tracking-widest bg-brand-light/60 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-brand-light">
-            Governance &amp; Trust
-          </span>
           <h2 className="text-3xl md:text-5xl font-display font-bold text-brand-dark mb-4">
-            Transparency &amp; Accountability
+            Our Documents
           </h2>
-          <div className="w-16 h-1 bg-brand-primary mx-auto rounded-full mb-4"></div>
-          <p className="text-brand-deep text-base max-w-2xl mx-auto leading-relaxed">
-            CARD operates with total fiscal integrity. Review and download our statutory registrations, annual profiles, and tax exemption certificates.
-          </p>
-
-          {/* Registration badges */}
-          <div className="flex flex-wrap items-center justify-center gap-2.5 mt-6">
-            <span className="bg-brand-soft px-3 py-1 rounded-full text-xs font-semibold text-brand-dark border border-brand-light">
-              ✓ 80G Tax Exemption (IT Act)
-            </span>
-            <span className="bg-brand-soft px-3 py-1 rounded-full text-xs font-semibold text-brand-dark border border-brand-light">
-              ✓ 12AB Legal Registration
-            </span>
-            <span className="bg-brand-soft px-3 py-1 rounded-full text-xs font-semibold text-brand-dark border border-brand-light">
-              ✓ FCRA Certified (MHA, Govt of India)
-            </span>
-            <span className="bg-brand-soft px-3 py-1 rounded-full text-xs font-semibold text-brand-dark border border-brand-light">
-              ✓ NITI Aayog NGO Darpan Verified
-            </span>
-          </div>
+          <div className="w-16 h-1 bg-brand-primary mx-auto rounded-full"></div>
         </Section>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

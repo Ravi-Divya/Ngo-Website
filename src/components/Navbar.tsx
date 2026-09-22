@@ -9,8 +9,6 @@ function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-import AnnouncementBar from './AnnouncementBar';
-
 interface NavLinkItem {
   name: string;
   path: string;
@@ -22,39 +20,36 @@ interface NavLinkItem {
 
 const navLinks: NavLinkItem[] = [
   { name: 'Home', path: '/' },
-  { name: 'About Us', path: '/about' },
-  { name: 'Our Work', path: '/our-work' },
+  { name: 'About', path: '/about' },
   { 
-    name: 'Programs', 
+    name: 'Our Work', 
     path: '/our-work',
     dropdown: [
       {
-        heading: 'Grassroots Initiatives',
+        heading: 'Programs',
         items: [
-          { name: 'MGNREGS Social Forestry', path: '/mgnregs' },
-          { name: 'LACIM Tribal Rehabilitation', path: '/lacim' },
-          { name: 'OTF Girl Child Education', path: '/otf' },
-          { name: 'Melania Livelihoods', path: '/melania' },
-          { name: 'The Pollination Project', path: '/pollination' },
+          { name: 'MGNREGS', path: '/mgnregs' },
+          { name: 'LACIM', path: '/lacim' },
+          { name: 'OTF/FEP', path: '/otf' },
+          { name: 'Melania', path: '/melania' },
+          { name: 'Pollination', path: '/pollination' },
         ]
-      }
-    ]
-  },
-  { name: 'Impact', path: '/impact' },
-  {
-    name: 'Get Involved',
-    path: '/contact',
-    dropdown: [
+      },
       {
-        heading: 'Join Our Mission',
+        heading: 'Gallery',
         items: [
-          { name: 'Volunteer With Us', path: '/contact#volunteer' },
-          { name: 'Partner With Us (CSR)', path: '/contact' },
-          { name: 'Sponsor a Beneficiary', path: '/donate' },
+          { name: 'View Gallery', path: '/gallery' },
+        ]
+      },
+      {
+        heading: 'Impact',
+        items: [
+          { name: 'Our Impact', path: '/impact' },
         ]
       }
     ]
   },
+  { name: 'Case Study', path: '/case-study' },
   { name: 'Contact', path: '/contact' },
 ];
 
@@ -75,7 +70,6 @@ export default function Navbar() {
       transition={{ duration: 0.7, ease: 'easeOut' }}
       className="fixed top-0 left-0 w-full z-50 bg-brand-soft/95 backdrop-blur-md border-b border-brand-light shadow-sm"
     >
-      <AnnouncementBar />
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-16 md:h-20">
 
         {/* Standard Logo & Name — Left */}

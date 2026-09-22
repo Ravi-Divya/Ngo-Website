@@ -91,7 +91,7 @@ const AppContent = () => {
       <ScrollToTop />
       <div className="min-h-screen flex flex-col bg-white text-brand-dark font-sans selection:bg-brand-primary selection:text-white">
         <Navbar />
-        <main className="flex-grow pt-24 md:pt-28">
+        <main className="flex-grow pt-16 md:pt-20">
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
