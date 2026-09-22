@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, ChevronDown, Search } from 'lucide-react';
+import { Menu, X, ChevronDown, Search, Sparkles, ArrowRight } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import SearchModal from './SearchModal';
@@ -57,6 +57,7 @@ const navLinks: NavLinkItem[] = [
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [showAnnouncement, setShowAnnouncement] = useState(true);
   const location = useLocation();
 
   useEffect(() => {
@@ -153,16 +154,16 @@ export default function Navbar() {
             </div>
           ))}
 
-          {/* Search Trigger Button (Desktop) */}
+          {/* Redesigned Modern Search Button (Desktop) */}
           <button
             onClick={() => setSearchOpen(true)}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-soft hover:bg-brand-light/70 text-brand-deep hover:text-brand-primary border border-brand-light transition-all text-xs font-medium shadow-sm group"
+            className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white hover:bg-brand-soft text-brand-dark hover:text-brand-primary border border-brand-light hover:border-brand-primary/40 transition-all text-xs font-medium shadow-2xs group cursor-pointer"
             aria-label="Open search dialog"
             title="Search website (Ctrl + K)"
           >
             <Search size={15} className="text-brand-primary group-hover:scale-110 transition-transform" />
-            <span className="hidden xl:inline text-brand-muted">Search...</span>
-            <kbd className="hidden xl:inline-block px-1.5 py-0.5 text-[10px] font-mono text-brand-muted bg-white rounded border border-brand-light">
+            <span className="text-brand-muted group-hover:text-brand-primary transition-colors font-medium">Search</span>
+            <kbd className="px-1.5 py-0.5 text-[10px] font-mono text-brand-muted bg-brand-soft rounded border border-brand-light group-hover:bg-white transition-colors">
               ⌘K
             </kbd>
           </button>
@@ -179,10 +180,11 @@ export default function Navbar() {
         <div className="flex items-center gap-2 lg:hidden">
           <button
             onClick={() => setSearchOpen(true)}
-            className="p-2 text-brand-deep hover:text-brand-primary transition-colors rounded-full hover:bg-brand-soft"
+            className="p-2 text-brand-deep hover:text-brand-primary transition-colors rounded-full hover:bg-brand-soft border border-brand-light/60 shadow-2xs"
             aria-label="Open search"
+            title="Search"
           >
-            <Search size={20} className="text-brand-primary" />
+            <Search size={18} className="text-brand-primary" />
           </button>
           <button
             className="p-2 text-brand-deep hover:text-brand-primary transition-colors"
@@ -195,6 +197,47 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+
+      {/* Announcement Bar below Navbar */}
+      <AnimatePresence>
+        {showAnnouncement && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="bg-gradient-to-r from-brand-deep via-[#0369A1] to-sky-600 text-white border-t border-sky-400/20 overflow-hidden shadow-xs"
+          >
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-2 flex items-center justify-between gap-3 text-xs">
+              <div className="flex items-center gap-2.5 overflow-hidden">
+                <span className="inline-flex items-center gap-1 bg-white/20 text-white font-bold px-2 py-0.5 rounded-full text-[10px] uppercase tracking-wider shrink-0">
+                  <Sparkles size={11} className="text-amber-300" /> Notice
+                </span>
+                <p className="truncate text-sky-50 font-normal">
+                  <strong>Section 80G Tax Exemption:</strong> All donor contributions qualify for a 50% tax deduction under the Indian Income Tax Act.
+                </p>
+              </div>
+
+              <div className="flex items-center gap-3 shrink-0">
+                <Link
+                  to="/donate"
+                  className="hidden sm:inline-flex items-center gap-1 font-bold text-white hover:text-amber-200 transition-colors underline underline-offset-2 text-xs"
+                >
+                  <span>Donate Online</span>
+                  <ArrowRight size={12} />
+                </Link>
+                <button
+                  onClick={() => setShowAnnouncement(false)}
+                  className="p-1 text-white/70 hover:text-white rounded-full hover:bg-white/10 transition-colors cursor-pointer"
+                  aria-label="Dismiss announcement"
+                  title="Dismiss"
+                >
+                  <X size={13} />
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
         {/* Mobile Menu */}
         <AnimatePresence>
