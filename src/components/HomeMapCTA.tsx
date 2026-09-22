@@ -96,17 +96,17 @@ export default function HomeMapCTA() {
                 </div>
               </div>
 
-              {/* Action Buttons */}
+              {/* Action Buttons in Light Blue as requested */}
               <div className="pt-4 flex flex-col sm:flex-row gap-3">
                 <Link
                   to="/contact"
-                  className="flex-1 inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-bold rounded-full py-3.5 px-6 border border-white/20 transition-all text-sm"
+                  className="flex-1 inline-flex items-center justify-center bg-sky-500/20 hover:bg-sky-500/35 text-sky-100 hover:text-white font-bold rounded-full py-3.5 px-6 border border-sky-400/50 hover:border-sky-300 transition-all text-sm shadow-sm"
                 >
                   Connect With Us
                 </Link>
                 <Link
                   to="/donate"
-                  className="flex-1 inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-bold rounded-full py-3.5 px-6 border border-white/20 transition-all text-sm"
+                  className="flex-1 inline-flex items-center justify-center bg-sky-400 hover:bg-sky-300 text-slate-950 font-bold rounded-full py-3.5 px-6 border border-sky-300 transition-all text-sm shadow-md hover:shadow-sky-400/25"
                 >
                   Donate Now
                 </Link>

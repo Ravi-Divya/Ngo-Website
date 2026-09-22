@@ -29,6 +29,7 @@ import TermsOfService from './pages/TermsOfService';
 import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
 import CookieBanner from './components/CookieBanner';
+import SmoothScroll from './components/SmoothScroll';
 
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -50,10 +51,15 @@ const BackToTop = () => {
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    const lenis = (window as unknown as { lenis?: { scrollTo: (target: number, opts?: { duration?: number }) => void } }).lenis;
+    if (lenis) {
+      lenis.scrollTo(0, { duration: 1.2 });
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
@@ -97,6 +103,7 @@ const AppContent = () => {
 
   return (
     <>
+      <SmoothScroll />
       <ScrollToTop />
       <div className="min-h-screen flex flex-col bg-white text-brand-dark font-sans selection:bg-brand-primary selection:text-white">
         <Navbar />

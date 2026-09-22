@@ -3,31 +3,31 @@ import { Link } from 'react-router-dom';
 
 export default function HomeMinimalCTA() {
   return (
-    <section className="py-20 md:py-28 bg-[#F4F5F7] border-b border-slate-200/80">
+    <section className="py-10 md:py-14 bg-[#1F242D] border-b border-slate-700/60">
       <div className="container mx-auto px-6 md:px-12 lg:px-16 max-w-6xl">
-        <div className="max-w-4xl space-y-6">
-          {/* Main Headline with new inspiring phrasing */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-display font-medium text-slate-900 leading-[1.18] tracking-tight">
+        <div className="max-w-4xl space-y-4">
+          {/* Main Headline with exact same text */}
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-display font-medium text-white leading-[1.2] tracking-tight">
             True community change begins on the ground — with the people who live it.
           </h2>
 
-          {/* Subheading text */}
-          <p className="text-base sm:text-lg md:text-xl text-slate-600 font-sans leading-relaxed max-w-2xl pt-1">
+          {/* Subheading text with exact same text */}
+          <p className="text-sm sm:text-base md:text-lg text-slate-300 font-sans leading-relaxed max-w-2xl">
             Connect directly with our dedicated field leadership and grassroots teams driving daily transformation across rural villages — transparent, accountable, and rooted in service since 1995.
           </p>
 
-          {/* Action CTAs: Solid button and clean text link */}
-          <div className="pt-4 flex flex-wrap items-center gap-6">
+          {/* Action CTAs: Solid button and clean text link with exact same text */}
+          <div className="pt-2 flex flex-wrap items-center gap-6">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center bg-brand-primary hover:bg-brand-deep text-white font-medium text-sm md:text-base px-7 py-3 rounded-lg shadow-sm hover:shadow transition-all duration-200"
+              className="inline-flex items-center justify-center bg-brand-primary hover:bg-brand-deep text-white font-medium text-sm md:text-base px-6 py-2.5 rounded-lg shadow-sm hover:shadow transition-all duration-200"
             >
               Connect with our team
             </Link>
 
             <Link
               to="/case-study"
-              className="text-slate-800 hover:text-brand-primary font-medium text-sm md:text-base transition-colors underline-offset-4 hover:underline"
+              className="text-slate-300 hover:text-white font-medium text-sm md:text-base transition-colors underline-offset-4 hover:underline"
             >
               Explore our case studies &rarr;
             </Link>
