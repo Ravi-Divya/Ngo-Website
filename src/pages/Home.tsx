@@ -2,6 +2,9 @@ import Hero from '../components/Hero';
 import PartnersScroll from '../components/PartnersScroll';
 import ResourcesSection from '../components/ResourcesSection';
 import ProgramsShowcase from '../components/ProgramsShowcase';
+import HomeLocation from '../components/HomeLocation';
+import HomeFAQ from '../components/HomeFAQ';
+import HomeEnquiryCTA from '../components/HomeEnquiryCTA';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
@@ -73,6 +76,14 @@ export default function Home() {
       {/* 4th Section: Our Partners */}
       <PartnersScroll />
 
+      {/* 5th Section: Location & Operational Reach */}
+      <HomeLocation />
+
+      {/* 6th Section: Frequently Asked Questions */}
+      <HomeFAQ />
+
+      {/* 7th Section: CTA & Enquiry Form for Details */}
+      <HomeEnquiryCTA />
     </div>
   );
 }
