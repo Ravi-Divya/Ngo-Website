@@ -34,24 +34,6 @@ export default function HomeMapCTA() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
-              {/* Floating Pin Card on Map */}
-              <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-lg border border-brand-light max-w-xs text-xs">
-                <div className="flex items-center gap-2 font-display font-bold text-brand-dark text-sm">
-                  <span className="w-2.5 h-2.5 rounded-full bg-brand-primary animate-pulse" />
-                  CARD Headquarters
-                </div>
-                <p className="text-brand-muted mt-1 leading-snug">
-                  Mittapalyam, Gudipala Mandal, Chittoor District, AP — 517125
-                </p>
-                <a
-                  href="https://maps.google.com/?q=Chittoor,+Andhra+Pradesh"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-brand-primary font-bold mt-2 hover:underline"
-                >
-                  <Navigation size={12} /> Open in Google Maps
-                </a>
-              </div>
             </div>
 
             {/* Clusters Strip Below Map */}
@@ -123,9 +105,9 @@ export default function HomeMapCTA() {
                 </Link>
                 <Link
                   to="/donate"
-                  className="flex-1 inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full py-3.5 px-6 border border-white/20 transition-all text-sm"
+                  className="flex-1 inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-bold rounded-full py-3.5 px-6 border border-white/20 transition-all text-sm"
                 >
-                  <Heart size={16} className="text-rose-400" /> Donate (80G)
+                  Donate
                 </Link>
               </div>
             </div>

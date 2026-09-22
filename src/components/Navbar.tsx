@@ -1,29 +1,13 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Search } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import SearchModal from './SearchModal';
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
-}
-
-// Custom modern search symbol
-function ModernSearchSymbol({ className = "w-4 h-4" }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-      <path d="M16.5 16.5L21.5 21.5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-      <path d="M11 7.5A3.5 3.5 0 0 0 7.5 11" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" opacity="0.65" />
-    </svg>
-  );
 }
 
 interface NavLinkItem {
@@ -173,7 +157,7 @@ export default function Navbar() {
             aria-label="Open search dialog"
             title="Search website (Ctrl + K)"
           >
-            <ModernSearchSymbol className="w-4 h-4 text-brand-primary group-hover:scale-110 transition-transform" />
+            <Search size={15} className="text-brand-primary group-hover:scale-110 transition-transform" />
             <span className="hidden xl:inline text-brand-muted">Search...</span>
             <kbd className="hidden xl:inline-block px-1.5 py-0.5 text-[10px] font-mono text-brand-muted bg-white rounded border border-brand-light">
               ⌘K
@@ -195,7 +179,7 @@ export default function Navbar() {
             className="p-2 text-brand-deep hover:text-brand-primary transition-colors rounded-full hover:bg-brand-soft"
             aria-label="Open search"
           >
-            <ModernSearchSymbol className="w-5 h-5 text-brand-primary" />
+            <Search size={20} className="text-brand-primary" />
           </button>
           <button
             className="p-2 text-brand-deep hover:text-brand-primary transition-colors"
@@ -241,7 +225,7 @@ export default function Navbar() {
                   }}
                   className="flex items-center gap-3 text-left py-2 text-brand-deep hover:text-brand-primary font-display font-medium text-lg border-b border-brand-light/60 pb-3"
                 >
-                  <ModernSearchSymbol className="w-5 h-5 text-brand-primary" />
+                  <Search size={20} className="text-brand-primary" />
                   <span>Search Entire Site (Programs, FAQs, 80G)...</span>
                 </button>
 

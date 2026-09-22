@@ -272,10 +272,10 @@ export default function ProgramsShowcase() {
         <div className="mt-10 bg-gradient-to-r from-brand-soft via-white to-brand-soft rounded-3xl p-6 sm:p-8 border border-brand-light shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <div>
             <h4 className="font-display font-bold text-lg sm:text-xl text-brand-dark mb-1">
-              Want to support or adopt one of our grassroots programs?
+              Partner with us to create sustainable grassroots change.
             </h4>
             <p className="text-brand-muted text-xs sm:text-sm max-w-xl">
-              All contributions directly purchase school kits, construct permanent tribal homes, or establish community borewells. 100% tax deductible under Section 80G.
+              Join hands with CARD to empower rural children through education, support tribal welfare, and foster long-term community livelihoods across Andhra Pradesh.
             </p>
           </div>
 

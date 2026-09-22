@@ -210,7 +210,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-6 mt-2 border-t border-[#16385C]/60 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-sans text-brand-light/60">
+        <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-sans text-brand-light/60">
           <p>© {currentYear} CARD — Community Alternative Research and Development. All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-4 text-xs">
             <Link to="/privacy-policy" className="hover:text-white transition-colors">
