@@ -100,8 +100,8 @@ export default function HomeEnquiryCTA() {
                   </div>
                   <div>
                     <span className="text-[11px] font-bold text-brand-muted uppercase tracking-wider block">Call Direct</span>
-                    <a href="tel:+919885429900" className="font-bold text-sm text-brand-dark hover:text-brand-primary transition-colors">
-                      +91 9885429900
+                    <a href="tel:+919440270876" className="font-bold text-sm text-brand-dark hover:text-brand-primary transition-colors">
+                      +91 94402 70876
                     </a>
                   </div>
                 </div>
@@ -134,7 +134,7 @@ export default function HomeEnquiryCTA() {
               {/* Direct WhatsApp CTA Button */}
               <div className="pt-2">
                 <a
-                  href="https://wa.me/919885429900"
+                  href="https://wa.me/919440270876"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-6 rounded-2xl text-sm transition-all shadow-md hover:shadow-lg"

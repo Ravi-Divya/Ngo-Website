@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle, ShieldCheck } from 'lucide-react';
+import { ChevronDown, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link } from 'react-router-dom';
 
@@ -30,13 +30,21 @@ const FAQS: FAQ[] = [
     question: 'Can donors and corporate partners visit project sites in Chittoor?',
     answer: 'Yes, absolutely. CARD maintains a complete open-door policy. Donors and CSR representatives are welcome to visit our community schools, Yanadi tribal settlements, and clean water stations in Chittoor. Contact our team to coordinate local field transport.',
   },
+  {
+    id: 'faq-5',
+    question: 'How does CARD ensure financial transparency and reporting?',
+    answer: 'CARD undergoes independent annual statutory audits, submits yearly filings to the Ministry of Corporate Affairs, maintains active NGO DARPAN accreditation (AP/2017/0158245), and provides detailed utilization reports directly to all institutional and individual donors.',
+  },
 ];
 
 export default function HomeFAQ() {
   const [openId, setOpenId] = useState<string | null>('faq-1');
 
   return (
-    <section id="faqs" className="py-16 md:py-24 bg-white border-b border-brand-light relative">
+    <section id="faqs" className="py-20 md:py-28 bg-[#0B1E36] text-white relative overflow-hidden border-b border-[#16385C]">
+      {/* Background subtle radial glow in brand palette */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-sky-500/5 rounded-full blur-3xl pointer-events-none" />
+
       {/* Schema.org FAQPage JSON-LD for Search Engines */}
       <script
         type="application/ld+json"
@@ -56,81 +64,84 @@ export default function HomeFAQ() {
         }}
       />
 
-      <div className="container mx-auto px-4 md:px-10 max-w-4xl">
-        {/* Simple & Clean Section Header: FAQ's matching Image 2 */}
-        <div className="text-center max-w-2xl mx-auto mb-10">
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-brand-dark mb-2">
-            FAQ&apos;s
-          </h2>
-          <div className="w-16 h-1 bg-brand-primary mx-auto rounded-full"></div>
-        </div>
+      <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          {/* Left Column: Reference Image 2 Style */}
+          <div className="lg:col-span-5 space-y-4">
+            <div className="flex items-center gap-3">
+              <span className="w-6 h-[2px] bg-sky-400" />
+              <span className="text-xs font-bold text-sky-400 uppercase tracking-widest font-mono">
+                FAQ
+              </span>
+            </div>
 
-        {/* 4 Focused Accordion Items */}
-        <div className="space-y-3.5">
-          {FAQS.map((faq) => {
-            const isOpen = openId === faq.id;
-            return (
-              <div
-                key={faq.id}
-                className={`border rounded-2xl transition-all duration-300 overflow-hidden ${
-                  isOpen
-                    ? 'border-brand-primary/40 bg-white shadow-md'
-                    : 'border-brand-light bg-brand-soft/30 hover:bg-white hover:border-brand-light'
-                }`}
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-medium text-white tracking-tight leading-tight">
+              Questions we get asked
+            </h2>
+
+            <p className="text-slate-300 text-sm md:text-base leading-relaxed pt-2 max-w-md font-sans">
+              Everything you need to know about our grassroots field work, Section 80G tax deductions, and visiting community projects across Chittoor.
+            </p>
+
+            <div className="pt-4">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 text-sky-400 hover:text-sky-300 font-bold text-sm transition-colors group"
               >
-                <button
-                  onClick={() => setOpenId(isOpen ? null : faq.id)}
-                  className="w-full text-left px-5 md:px-6 py-4 md:py-5 flex items-center justify-between gap-4 group"
-                  aria-expanded={isOpen}
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 rounded-full bg-brand-primary shrink-0 opacity-80 group-hover:scale-125 transition-transform" />
-                    <span className="font-display font-bold text-base md:text-lg text-brand-dark group-hover:text-brand-primary transition-colors">
+                <span>Have a question not listed here? Contact us</span>
+                <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Right Column: Minimalist divider rows matching Image 2 */}
+          <div className="lg:col-span-7 divide-y divide-white/10 border-t border-b border-white/10">
+            {FAQS.map((faq) => {
+              const isOpen = openId === faq.id;
+              return (
+                <div key={faq.id} className="py-5 transition-colors">
+                  <button
+                    onClick={() => setOpenId(isOpen ? null : faq.id)}
+                    className="w-full text-left flex items-start justify-between gap-6 group cursor-pointer"
+                    aria-expanded={isOpen}
+                  >
+                    <span
+                      className={`font-display text-base sm:text-lg transition-colors font-medium ${
+                        isOpen ? 'text-sky-400' : 'text-slate-100 group-hover:text-sky-300'
+                      }`}
+                    >
                       {faq.question}
                     </span>
-                  </div>
-                  <div
-                    className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${
-                      isOpen ? 'rotate-180 bg-brand-primary text-white' : 'bg-white border border-brand-light text-slate-500'
-                    }`}
-                  >
-                    <ChevronDown size={16} />
-                  </div>
-                </button>
 
-                <AnimatePresence>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.2, ease: 'easeInOut' }}
-                    >
-                      <div className="px-5 md:px-6 pb-5 pt-1 border-t border-brand-light/50">
-                        <p className="text-brand-muted text-sm md:text-base leading-relaxed">
+                    <span className="shrink-0 mt-1">
+                      <ChevronDown
+                        size={18}
+                        className={`text-slate-400 transition-transform duration-300 ${
+                          isOpen ? 'rotate-180 text-sky-400' : 'group-hover:text-slate-200'
+                        }`}
+                      />
+                    </span>
+                  </button>
+
+                  <AnimatePresence>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.25, ease: 'easeInOut' }}
+                        className="overflow-hidden"
+                      >
+                        <div className="pt-3 pr-6 text-slate-300 text-sm sm:text-base leading-relaxed font-sans">
                           {faq.answer}
-                        </p>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Small reassurance footer */}
-        <div className="mt-8 text-center bg-brand-soft/40 rounded-2xl p-4 border border-brand-light flex flex-col sm:flex-row items-center justify-center gap-3 text-xs text-brand-deep">
-          <div className="flex items-center gap-2">
-            <ShieldCheck size={16} className="text-brand-primary" />
-            <span>Have more questions about our projects or partnerships?</span>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            })}
           </div>
-          <Link
-            to="/contact"
-            className="font-bold text-brand-primary hover:underline inline-flex items-center gap-1"
-          >
-            Reach Out to Our Team →
-          </Link>
         </div>
       </div>
     </section>

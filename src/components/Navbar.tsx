@@ -85,6 +85,47 @@ export default function Navbar() {
       transition={{ duration: 0.7, ease: 'easeOut' }}
       className="fixed top-0 left-0 w-full z-50 bg-brand-soft/95 backdrop-blur-md border-b border-brand-light shadow-sm"
     >
+      {/* Announcement Bar ABOVE Navbar */}
+      <AnimatePresence>
+        {showAnnouncement && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="bg-gradient-to-r from-brand-deep via-[#0369A1] to-sky-600 text-white border-b border-sky-400/20 overflow-hidden shadow-2xs"
+          >
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-1.5 sm:py-2 flex items-center justify-between gap-3 text-xs">
+              <div className="flex items-center gap-2.5 overflow-hidden">
+                <span className="inline-flex items-center gap-1 bg-white/20 text-white font-bold px-2 py-0.5 rounded-full text-[10px] uppercase tracking-wider shrink-0">
+                  <Sparkles size={11} className="text-amber-300" /> Notice
+                </span>
+                <p className="truncate text-sky-50 font-normal">
+                  <strong>Section 80G Tax Exemption:</strong> All donor contributions qualify for a 50% tax deduction under the Indian Income Tax Act.
+                </p>
+              </div>
+
+              <div className="flex items-center gap-3 shrink-0">
+                <Link
+                  to="/donate"
+                  className="hidden sm:inline-flex items-center gap-1 font-bold text-white hover:text-amber-200 transition-colors underline underline-offset-2 text-xs"
+                >
+                  <span>Donate Online</span>
+                  <ArrowRight size={12} />
+                </Link>
+                <button
+                  onClick={() => setShowAnnouncement(false)}
+                  className="p-1 text-white/70 hover:text-white rounded-full hover:bg-white/10 transition-colors cursor-pointer"
+                  aria-label="Dismiss announcement"
+                  title="Dismiss"
+                >
+                  <X size={13} />
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-16 md:h-20">
 
         {/* Standard Logo & Name — Left */}
@@ -198,46 +239,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Announcement Bar below Navbar */}
-      <AnimatePresence>
-        {showAnnouncement && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="bg-gradient-to-r from-brand-deep via-[#0369A1] to-sky-600 text-white border-t border-sky-400/20 overflow-hidden shadow-xs"
-          >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-2 flex items-center justify-between gap-3 text-xs">
-              <div className="flex items-center gap-2.5 overflow-hidden">
-                <span className="inline-flex items-center gap-1 bg-white/20 text-white font-bold px-2 py-0.5 rounded-full text-[10px] uppercase tracking-wider shrink-0">
-                  <Sparkles size={11} className="text-amber-300" /> Notice
-                </span>
-                <p className="truncate text-sky-50 font-normal">
-                  <strong>Section 80G Tax Exemption:</strong> All donor contributions qualify for a 50% tax deduction under the Indian Income Tax Act.
-                </p>
-              </div>
 
-              <div className="flex items-center gap-3 shrink-0">
-                <Link
-                  to="/donate"
-                  className="hidden sm:inline-flex items-center gap-1 font-bold text-white hover:text-amber-200 transition-colors underline underline-offset-2 text-xs"
-                >
-                  <span>Donate Online</span>
-                  <ArrowRight size={12} />
-                </Link>
-                <button
-                  onClick={() => setShowAnnouncement(false)}
-                  className="p-1 text-white/70 hover:text-white rounded-full hover:bg-white/10 transition-colors cursor-pointer"
-                  aria-label="Dismiss announcement"
-                  title="Dismiss"
-                >
-                  <X size={13} />
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
         {/* Mobile Menu */}
         <AnimatePresence>
