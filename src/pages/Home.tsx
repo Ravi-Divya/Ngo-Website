@@ -2,12 +2,11 @@ import Hero from '../components/Hero';
 import PartnersScroll from '../components/PartnersScroll';
 import ResourcesSection from '../components/ResourcesSection';
 import ProgramsShowcase from '../components/ProgramsShowcase';
-import HomeLocation from '../components/HomeLocation';
+import HomeMapCTA from '../components/HomeMapCTA';
 import HomeFAQ from '../components/HomeFAQ';
-import HomeEnquiryCTA from '../components/HomeEnquiryCTA';
+import HomeMinimalCTA from '../components/HomeMinimalCTA';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 
 export default function Home() {
   return (
@@ -67,7 +66,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2nd Section: Our Programs (Modern Animated Dashboard & Showcase) */}
+      {/* 2nd Section: Our Programs (Animated Modern Showcase) */}
       <ProgramsShowcase />
 
       {/* 3rd Section: Governance & Compliance Reports */}
@@ -76,14 +75,14 @@ export default function Home() {
       {/* 4th Section: Our Partners */}
       <PartnersScroll />
 
-      {/* 5th Section: Location & Operational Reach */}
-      <HomeLocation />
+      {/* 5th Section: Map on Left, Punchy CTA on Right (No full form, just high-converting CTA) */}
+      <HomeMapCTA />
 
-      {/* 6th Section: Frequently Asked Questions */}
+      {/* 6th Section: Frequently Asked Questions (SEO & GEO Optimized) */}
       <HomeFAQ />
 
-      {/* 7th Section: CTA & Enquiry Form for Details */}
-      <HomeEnquiryCTA />
+      {/* 7th Section: Minimalist Executive CTA Section (Reference Image 1) */}
+      <HomeMinimalCTA />
     </div>
   );
 }

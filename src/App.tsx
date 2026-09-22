@@ -22,6 +22,10 @@ import Melania from './pages/Melania';
 import Pollination from './pages/Pollination';
 import OTF from './pages/OTF';
 import CaseStudy from './pages/CaseStudy';
+import SuperAdmin from './pages/SuperAdmin';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import CookiePolicy from './pages/CookiePolicy';
+import TermsOfService from './pages/TermsOfService';
 import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
 import CookieBanner from './components/CookieBanner';
@@ -112,6 +116,10 @@ const AppContent = () => {
               <Route path="/case-study" element={<PageWrapper><CaseStudy /></PageWrapper>} />
               <Route path="/donate" element={<PageWrapper><Donate /></PageWrapper>} />
               <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
+              <Route path="/super-admin" element={<PageWrapper><SuperAdmin /></PageWrapper>} />
+              <Route path="/privacy-policy" element={<PageWrapper><PrivacyPolicy /></PageWrapper>} />
+              <Route path="/cookie-policy" element={<PageWrapper><CookiePolicy /></PageWrapper>} />
+              <Route path="/terms" element={<PageWrapper><TermsOfService /></PageWrapper>} />
               <Route path="*" element={<PageWrapper><NotFound /></PageWrapper>} />
             </Routes>
           </AnimatePresence>

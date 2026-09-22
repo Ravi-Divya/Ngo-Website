@@ -210,8 +210,29 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-5 text-center text-brand-light/50 text-xs font-sans">
+        <div className="pt-6 mt-2 border-t border-[#16385C]/60 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-sans text-brand-light/60">
           <p>© {currentYear} CARD — Community Alternative Research and Development. All rights reserved.</p>
+          <div className="flex flex-wrap items-center gap-4 text-xs">
+            <Link to="/privacy-policy" className="hover:text-white transition-colors">
+              Privacy Policy
+            </Link>
+            <span className="text-white/20">•</span>
+            <Link to="/cookie-policy" className="hover:text-white transition-colors">
+              Cookie Policy
+            </Link>
+            <span className="text-white/20">•</span>
+            <Link to="/terms" className="hover:text-white transition-colors">
+              Terms of Service
+            </Link>
+            <span className="text-white/20">•</span>
+            <Link
+              to="/super-admin"
+              className="inline-flex items-center gap-1 text-sky-400 hover:text-white transition-colors font-medium"
+              title="CARD Leadership & Super Admin Portal"
+            >
+              <span>Super Admin Portal</span>
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

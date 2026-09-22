@@ -38,9 +38,16 @@ export default function CookieBanner() {
               <Cookie size={20} />
             </div>
             <div>
-              <h3 className="font-display font-bold text-brand-dark mb-2">We value your privacy</h3>
-              <p className="text-brand-muted font-sans text-sm leading-relaxed">
-                We use cookies to analyse website traffic and improve your experience. By continuing, you agree to our use of cookies.
+              <h3 className="font-display font-bold text-brand-dark mb-1.5">We value your privacy</h3>
+              <p className="text-brand-muted font-sans text-xs leading-relaxed">
+                We use cookies to analyze site traffic and enhance your experience. Read our{' '}
+                <a href="/cookie-policy" className="text-brand-primary font-semibold hover:underline">
+                  Cookie Policy
+                </a>{' '}
+                and{' '}
+                <a href="/privacy-policy" className="text-brand-primary font-semibold hover:underline">
+                  Privacy Policy
+                </a>.
               </p>
             </div>
           </div>

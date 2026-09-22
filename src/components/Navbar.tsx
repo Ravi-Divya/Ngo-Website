@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Search } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import SearchModal from './SearchModal';
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -55,11 +56,24 @@ const navLinks: NavLinkItem[] = [
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [location]);
+
+  // Global shortcut for search (Cmd+K / Ctrl+K)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        setSearchOpen((prev) => !prev);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   return (
     <motion.nav
@@ -136,6 +150,20 @@ export default function Navbar() {
             </div>
           ))}
 
+          {/* Search Trigger Button (Desktop) */}
+          <button
+            onClick={() => setSearchOpen(true)}
+            className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-soft hover:bg-brand-light/70 text-brand-deep hover:text-brand-primary border border-brand-light transition-all text-xs font-medium shadow-sm group"
+            aria-label="Open search dialog"
+            title="Search website (Ctrl + K)"
+          >
+            <Search size={15} className="text-brand-muted group-hover:text-brand-primary transition-colors" />
+            <span className="hidden xl:inline text-brand-muted">Search...</span>
+            <kbd className="hidden xl:inline-block px-1.5 py-0.5 text-[10px] font-mono text-brand-muted bg-white rounded border border-brand-light">
+              ⌘K
+            </kbd>
+          </button>
+
           <Link
             to="/donate"
             className="font-bold uppercase tracking-widest text-xs rounded-full transition-all duration-500 bg-brand-primary text-white px-5 py-2 hover:bg-brand-deep shadow-lg hover:-translate-y-0.5 active:translate-y-0"
@@ -144,16 +172,25 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Toggle */}
-        <button
-          className="lg:hidden p-2 text-brand-deep hover:text-brand-primary transition-colors"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={mobileMenuOpen}
-          aria-controls="mobile-menu"
-        >
-          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        {/* Mobile Right Controls: Search + Hamburger */}
+        <div className="flex items-center gap-2 lg:hidden">
+          <button
+            onClick={() => setSearchOpen(true)}
+            className="p-2 text-brand-deep hover:text-brand-primary transition-colors rounded-full hover:bg-brand-soft"
+            aria-label="Open search"
+          >
+            <Search size={22} />
+          </button>
+          <button
+            className="p-2 text-brand-deep hover:text-brand-primary transition-colors"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
+          >
+            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
 
         {/* Mobile Menu */}
@@ -179,6 +216,19 @@ export default function Navbar() {
                     {link.name}
                   </NavLink>
                 ))}
+
+                {/* Mobile Search Link */}
+                <button
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setSearchOpen(true);
+                  }}
+                  className="flex items-center gap-3 text-left py-2 text-brand-deep hover:text-brand-primary font-display font-medium text-lg border-b border-brand-light/60 pb-3"
+                >
+                  <Search size={20} className="text-brand-primary" />
+                  <span>Search Entire Site (Programs, FAQs, 80G)...</span>
+                </button>
+
                 <Link
                   to="/donate"
                   className="bg-brand-primary text-white text-center font-bold uppercase tracking-widest py-5 rounded-2xl mt-4 shadow-xl"
@@ -195,6 +245,9 @@ export default function Navbar() {
             </motion.div>
           )}
         </AnimatePresence>
+
+      {/* Spotlight Command Search Modal */}
+      <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
     </motion.nav>
   );
 }
