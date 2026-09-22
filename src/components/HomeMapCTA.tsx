@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { MapPin, Phone, Mail, ArrowRight, ShieldCheck, CheckCircle2, MessageSquare } from 'lucide-react';
 
 const clusters = [
   { name: 'Gudipala Mandal', focus: 'Education & Community RO Plants' },
