@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight,
-  Heart,
   TreePine,
   Users,
   BookOpen,
@@ -235,9 +234,8 @@ export default function ProgramsShowcase() {
 
                           <Link
                             to="/donate"
-                            className="bg-brand-soft hover:bg-brand-light text-brand-primary font-bold py-3 px-6 rounded-full text-sm border border-brand-light transition-all inline-flex items-center gap-1.5 cursor-pointer shadow-2xs"
+                            className="bg-brand-soft hover:bg-brand-light text-brand-primary font-bold py-3 px-6 rounded-full text-sm border border-brand-light transition-all inline-flex items-center justify-center cursor-pointer shadow-2xs"
                           >
-                            <Heart size={16} />
                             <span>Support This Program</span>
                           </Link>
                         </div>
@@ -282,9 +280,8 @@ export default function ProgramsShowcase() {
           <div className="flex items-center gap-3 shrink-0">
             <Link
               to="/donate"
-              className="bg-brand-primary hover:bg-brand-deep text-white font-bold py-3 px-6 rounded-full text-sm shadow-md hover:shadow-lg transition-all inline-flex items-center gap-2"
+              className="bg-brand-primary hover:bg-brand-deep text-white font-bold py-3 px-6 rounded-full text-sm shadow-md hover:shadow-lg transition-all inline-flex items-center justify-center"
             >
-              <Heart size={15} />
               <span>Donate Now</span>
             </Link>
 

@@ -1,6 +1,6 @@
 import PageHeader from '../components/PageHeader';
 import FocusAreas from '../components/FocusAreas';
-import { Target, Eye, Heart, ArrowRight, ShieldCheck, FileText, CheckCircle2 } from 'lucide-react';
+import { Target, Eye, ArrowRight, ShieldCheck, FileText, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function About() {
@@ -105,7 +105,7 @@ export default function About() {
             to="/donate"
             className="inline-flex items-center gap-2 bg-brand-primary text-white font-bold rounded-full px-8 py-4 text-base shadow-lg hover:bg-brand-deep transition-all"
           >
-            <Heart size={18} /> Support Our Mission <ArrowRight size={18} />
+            Support Our Mission <ArrowRight size={18} />
           </Link>
         </div>
       </main>

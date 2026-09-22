@@ -12,7 +12,6 @@ import {
   Mail,
   Phone,
   MapPin,
-  Heart,
   Youtube,
   CheckCircle2,
 } from 'lucide-react';
@@ -202,9 +201,9 @@ export default function Footer() {
             <div>
               <Link
                 to="/donate"
-                className="inline-flex items-center justify-center gap-1.5 border border-sky-400 text-sky-300 hover:bg-sky-400 hover:text-slate-900 transition-all py-1.5 px-5 rounded-full font-bold text-xs shadow-sm"
+                className="inline-flex items-center justify-center border border-sky-400 text-sky-300 hover:bg-sky-400 hover:text-slate-900 transition-all py-1.5 px-5 rounded-full font-bold text-xs shadow-sm"
               >
-                <Heart size={14} /> Donate Now
+                Donate Now
               </Link>
             </div>
           </div>

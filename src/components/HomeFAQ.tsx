@@ -57,11 +57,12 @@ export default function HomeFAQ() {
       />
 
       <div className="container mx-auto px-4 md:px-10 max-w-4xl">
-        {/* Simple & Clean Section Header: Just FAQ's as requested */}
+        {/* Simple & Clean Section Header: FAQ's matching Image 2 */}
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-dark tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-brand-dark mb-2">
             FAQ&apos;s
           </h2>
+          <div className="w-16 h-1 bg-brand-primary mx-auto rounded-full"></div>
         </div>
 
         {/* 4 Focused Accordion Items */}

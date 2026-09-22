@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Navigation, Phone, Mail, MessageSquare, Heart, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { MapPin, Phone, Mail, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
 
 const clusters = [
   { name: 'Gudipala Mandal', focus: 'Education & Community RO Plants' },
@@ -15,10 +15,11 @@ export default function HomeMapCTA() {
     <section id="location-map" className="py-16 md:py-24 bg-gradient-to-b from-white via-brand-soft/30 to-white border-b border-brand-light">
       <div className="container mx-auto px-4 md:px-10">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-dark tracking-tight">
+        <div className="container mx-auto px-4 md:px-10 mb-8 text-center">
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-brand-dark mb-2">
             Contact Us
           </h2>
+          <div className="w-16 h-1 bg-brand-primary mx-auto rounded-full"></div>
         </div>
 
         {/* 2-Column Grid: Map on Left, CTA Card on Right (No full form, just high-converting CTA) */}
@@ -99,15 +100,15 @@ export default function HomeMapCTA() {
               <div className="pt-4 flex flex-col sm:flex-row gap-3">
                 <Link
                   to="/contact"
-                  className="flex-1 inline-flex items-center justify-center gap-2 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold rounded-full py-3.5 px-6 transition-all shadow-lg hover:shadow-sky-400/25 text-sm"
+                  className="flex-1 inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-bold rounded-full py-3.5 px-6 border border-white/20 transition-all text-sm"
                 >
-                  <MessageSquare size={16} /> Connect With Us
+                  Connect With Us
                 </Link>
                 <Link
                   to="/donate"
                   className="flex-1 inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-bold rounded-full py-3.5 px-6 border border-white/20 transition-all text-sm"
                 >
-                  Donate
+                  Donate Now
                 </Link>
               </div>
             </div>
