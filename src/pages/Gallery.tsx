@@ -47,7 +47,6 @@ const galleryImages: string[] = [
   "/images/hero_school_kids.jpg",
   "/images/hero_supply_distribution.jpg",
   "/images/hero_village_outreach.jpg",
-  "/images/impact_hero_bg.jpg",
   "/images/lacim_2.jpg",
   "/images/melania_1.jpg",
   "/images/melania_2.jpg",
