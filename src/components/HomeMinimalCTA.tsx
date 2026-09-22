@@ -20,7 +20,7 @@ export default function HomeMinimalCTA() {
           <div className="pt-4 flex flex-wrap items-center gap-6">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center bg-brand-primary hover:bg-[#D95300] text-white font-medium text-sm md:text-base px-7 py-3 rounded-lg shadow-sm hover:shadow transition-all duration-200"
+              className="inline-flex items-center justify-center bg-brand-primary hover:bg-brand-deep text-white font-medium text-sm md:text-base px-7 py-3 rounded-lg shadow-sm hover:shadow transition-all duration-200"
             >
               Connect with our team
             </Link>

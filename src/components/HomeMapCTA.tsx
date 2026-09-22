@@ -15,17 +15,10 @@ export default function HomeMapCTA() {
     <section id="location-map" className="py-16 md:py-24 bg-gradient-to-b from-white via-brand-soft/30 to-white border-b border-brand-light">
       <div className="container mx-auto px-4 md:px-10">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-light/60 text-brand-deep text-xs font-bold tracking-widest uppercase mb-3">
-            <MapPin size={13} className="text-brand-primary" />
-            Get In Touch
-          </div>
+        <div className="max-w-3xl mx-auto text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-dark tracking-tight">
             Contact Us
           </h2>
-          <p className="text-brand-muted text-base md:text-lg mt-3 leading-relaxed">
-            Visit our field headquarters in Chittoor or reach out directly to our grassroots team across Andhra Pradesh.
-          </p>
         </div>
 
         {/* 2-Column Grid: Map on Left, CTA Card on Right (No full form, just high-converting CTA) */}
@@ -124,7 +117,7 @@ export default function HomeMapCTA() {
               <div className="pt-4 flex flex-col sm:flex-row gap-3">
                 <Link
                   to="/contact"
-                  className="flex-1 inline-flex items-center justify-center gap-2 bg-brand-primary text-white font-bold rounded-full py-3.5 px-6 hover:bg-[#D95300] transition-all shadow-lg hover:shadow-orange-500/25 text-sm"
+                  className="flex-1 inline-flex items-center justify-center gap-2 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold rounded-full py-3.5 px-6 transition-all shadow-lg hover:shadow-sky-400/25 text-sm"
                 >
                   <MessageSquare size={16} /> Connect With Us
                 </Link>

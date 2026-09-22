@@ -224,14 +224,6 @@ export default function Footer() {
             <Link to="/terms" className="hover:text-white transition-colors">
               Terms of Service
             </Link>
-            <span className="text-white/20">•</span>
-            <Link
-              to="/divya"
-              className="inline-flex items-center gap-1 text-sky-400 hover:text-white transition-colors font-medium"
-              title="CARD Leadership & Super Admin Portal"
-            >
-              <span>Super Admin Portal</span>
-            </Link>
           </div>
         </div>
       </div>

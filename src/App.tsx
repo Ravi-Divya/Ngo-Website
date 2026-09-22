@@ -90,6 +90,11 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => {
 const AppContent = () => {
   const location = useLocation();
 
+  useEffect(() => {
+    // Increment real-time visitor count for super admin tracking
+    fetch('/api/track').catch(() => {});
+  }, [location.pathname]);
+
   return (
     <>
       <ScrollToTop />

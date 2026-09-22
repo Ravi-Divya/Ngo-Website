@@ -59,16 +59,9 @@ export default function HomeFAQ() {
       <div className="container mx-auto px-4 md:px-10 max-w-4xl">
         {/* Simple & Clean Section Header: Just FAQ's as requested */}
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-light/60 text-brand-deep text-xs font-bold tracking-widest uppercase mb-2">
-            <HelpCircle size={13} className="text-brand-primary" />
-            Common Inquiries
-          </div>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-dark tracking-tight">
             FAQ&apos;s
           </h2>
-          <p className="text-brand-muted text-sm md:text-base mt-2">
-            Quick answers regarding our field work, 80G tax benefits, and visits.
-          </p>
         </div>
 
         {/* 4 Focused Accordion Items */}

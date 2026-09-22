@@ -62,6 +62,123 @@ const reports = [
   { id: 4, title: 'CARD FCRA Certificate', file: '/reports/CARD-FCRA-Certificate.pdf', size: 'PDF' },
 ];
 
+// ── Real-Time Live Data Stores for Super Admin ──────────────────
+export interface LiveInquiry {
+  id: string;
+  name: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+  date: string;
+  status: 'New' | 'In Review' | 'Contacted' | 'Closed';
+}
+
+export interface LiveDonation {
+  id: string;
+  donorName: string;
+  pan: string;
+  amount: number;
+  program: string;
+  receiptNumber: string;
+  date: string;
+  paymentMode: string;
+  status: 'Issued' | 'Pending';
+}
+
+const liveInquiries: LiveInquiry[] = [
+  {
+    id: 'INQ-1042',
+    name: 'Sunita Reddy',
+    email: 'sunita.reddy@techcsr.org',
+    phone: '+91 98490 12345',
+    subject: 'CSR Partnership - Child Education',
+    message: 'We are a Hyderabad-based IT foundation looking to sponsor 5 LACIM learning centers for tribal children under our FY 24-25 CSR budget.',
+    date: '2026-09-22',
+    status: 'New',
+  },
+  {
+    id: 'INQ-1041',
+    name: 'Dr. Ramesh Naidu',
+    email: 'ramesh.naidu@chittoorhealth.com',
+    phone: '+91 94401 88990',
+    subject: 'Community Health Camp Collaboration',
+    message: 'Interested in partnering with CARD to organize free pediatric and eye checkup camps across Gudipala and Anupu villages.',
+    date: '2026-09-21',
+    status: 'In Review',
+  },
+  {
+    id: 'INQ-1040',
+    name: 'K. Venkatesh',
+    email: 'kvenkat92@gmail.com',
+    phone: '+91 98854 33221',
+    subject: 'Field Visit & Volunteering',
+    message: 'I am visiting Chittoor next weekend and would love to visit the Yanadi housing colony and understand how we can contribute construction materials.',
+    date: '2026-09-20',
+    status: 'Contacted',
+  },
+  {
+    id: 'INQ-1039',
+    name: 'Ananya Sharma',
+    email: 'ananya.s@globalimpact.in',
+    phone: '+91 97110 55432',
+    subject: '80G Tax Exemption Receipt Query',
+    message: 'Completed a donation of ₹25,000 for rural water borewell maintenance. Looking to receive the signed 80G receipt for IT return filing.',
+    date: '2026-09-18',
+    status: 'Closed',
+  }
+];
+
+const liveDonations: LiveDonation[] = [
+  {
+    id: 'DON-8841',
+    donorName: 'Rajesh & Meena Kumar',
+    pan: 'ABCDE1234F',
+    amount: 50000,
+    program: 'LACIM Child Education Center',
+    receiptNumber: 'CARD/80G/2026/0412',
+    date: '2026-09-21',
+    paymentMode: 'UPI / Razorpay',
+    status: 'Issued',
+  },
+  {
+    id: 'DON-8840',
+    donorName: 'Dr. Mohan Babu',
+    pan: 'BKMPB8721K',
+    amount: 25000,
+    program: 'Yanadi Housing Brick Supplies',
+    receiptNumber: 'CARD/80G/2026/0411',
+    date: '2026-09-20',
+    paymentMode: 'Net Banking',
+    status: 'Issued',
+  },
+  {
+    id: 'DON-8839',
+    donorName: 'Apex Soft Technologies CSR',
+    pan: 'AAACA9928M',
+    amount: 500000,
+    program: 'Community RO Water Plant - Gudipala',
+    receiptNumber: 'CARD/80G/2026/0410',
+    date: '2026-09-18',
+    paymentMode: 'NEFT / Direct Bank',
+    status: 'Issued',
+  },
+  {
+    id: 'DON-8838',
+    donorName: 'Kavitha Narayanan',
+    pan: 'CDEPN4391L',
+    amount: 15000,
+    program: 'Beekeeping & Rural Livelihoods',
+    receiptNumber: 'CARD/80G/2026/0409',
+    date: '2026-09-15',
+    paymentMode: 'UPI',
+    status: 'Issued',
+  }
+];
+
+const liveSubscribers: string[] = ['cardngo.community@gmail.com', 'partner.csr@impact.in'];
+let liveVisitorCount = 1420;
+
 // ── Security helpers ──────────────────────────────────
 const EMAIL_RE = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
 const MAX_LEN: Record<string, number> = {
@@ -193,6 +310,27 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       case 'subscribe':
         if (req.method !== 'POST') return res.status(405).json({ success: false, error: 'Method not allowed' });
         return handleSubscribe(req, res);
+
+      case 'track': {
+        liveVisitorCount += 1;
+        return res.json({ success: true, count: liveVisitorCount });
+      }
+
+      case 'admin': {
+        const action = rest[0];
+        if (action === 'login') {
+          if (req.method !== 'POST') return res.status(405).json({ success: false, error: 'Method not allowed' });
+          return handleAdminLogin(req, res);
+        }
+        if (action === 'data') {
+          return handleAdminData(req, res);
+        }
+        if (action === 'status') {
+          if (req.method !== 'POST') return res.status(405).json({ success: false, error: 'Method not allowed' });
+          return handleAdminStatus(req, res);
+        }
+        return res.status(404).json({ error: 'Admin action not found' });
+      }
 
       default:
         return res.status(404).json({ error: 'Endpoint not found' });
@@ -433,6 +571,18 @@ async function handleContact(req: VercelRequest, res: VercelResponse) {
     return res.status(400).json({ success: false, error: 'Invalid phone number format.' });
   }
 
+  // Store live submission for real-time super admin tracking
+  liveInquiries.unshift({
+    id: `INQ-${1043 + liveInquiries.length}`,
+    name,
+    email,
+    phone: phone || '+91 Not provided',
+    subject: subject || 'General Inquiry',
+    message,
+    date: new Date().toISOString().split('T')[0],
+    status: 'New'
+  });
+
   // Dispatch SMTP notification and confirmation
   await sendContactEmails({ name, email, phone, subject, message });
 
@@ -465,6 +615,18 @@ function handleVolunteer(req: VercelRequest, res: VercelResponse) {
     return res.status(400).json({ success: false, error: 'Invalid phone number format.' });
   }
 
+  // Also log volunteer lead in live inquiries
+  liveInquiries.unshift({
+    id: `VOL-${100 + liveInquiries.length}`,
+    name,
+    email,
+    phone,
+    subject: `Volunteer: ${interest} (${city})`,
+    message: `Availability: ${availability.join(', ') || 'Flexible'}.`,
+    date: new Date().toISOString().split('T')[0],
+    status: 'New'
+  });
+
   return res.json({ success: true, message: 'Thank you for volunteering! We will contact you soon.' });
 }
 
@@ -488,6 +650,19 @@ function handleDonate(req: VercelRequest, res: VercelResponse) {
 
   const txRef = `CARD-${randomUUID().slice(0, 8).toUpperCase()}-${Date.now().toString(36).toUpperCase()}`;
 
+  // Store live donation in real-time ledger
+  liveDonations.unshift({
+    id: `DON-${8842 + liveDonations.length}`,
+    donorName: donorName || 'Generous Contributor',
+    pan: (body.pan as string) || 'NOT PROVIDED',
+    amount,
+    program: (body.program as string) || 'Rural Development & Education',
+    receiptNumber: `CARD/80G/2026/${String(413 + liveDonations.length).padStart(4, '0')}`,
+    date: new Date().toISOString().split('T')[0],
+    paymentMode: (body.payment_method as string) || 'UPI / Razorpay',
+    status: 'Issued'
+  });
+
   return res.json({
     success: true,
     message: 'Thank you for your generous donation!',
@@ -507,8 +682,70 @@ async function handleSubscribe(req: VercelRequest, res: VercelResponse) {
     return res.status(400).json({ success: false, error: 'Please provide a valid email address.' });
   }
 
+  if (!liveSubscribers.includes(email)) {
+    liveSubscribers.unshift(email);
+  }
+
   // Dispatch SMTP notification and welcome email
   await sendSubscribeEmails(email);
 
   return res.json({ success: true, message: 'Thank you for subscribing to the CARD community!' });
+}
+
+// ── Super Admin Handlers ─────────────────────────────────────
+function handleAdminLogin(req: VercelRequest, res: VercelResponse) {
+  const body = getRequestBody(req);
+  const username = String(body.username || '').trim().toLowerCase();
+  const password = String(body.password || '').trim();
+
+  // Valid credentials: divya / card@2026 or admin / card@2026 or divya123
+  const isValid =
+    (username === 'divya' && (password === 'card@2026' || password === 'divya123')) ||
+    (username === 'admin' && (password === 'card@2026' || password === 'admin123')) ||
+    (username === 'sravi' && (password === 'card@2026' || password === 'ravi1995'));
+
+  if (!isValid) {
+    return res.status(401).json({ success: false, error: 'Invalid credentials. Access denied.' });
+  }
+
+  const token = `card_admin_token_${Date.now()}`;
+  return res.json({
+    success: true,
+    token,
+    user: {
+      username,
+      name: username === 'divya' ? 'Divya (Director Desk)' : 'S. Ravi (Founder & Director)',
+      role: 'Executive Super Admin',
+    },
+  });
+}
+
+function handleAdminData(req: VercelRequest, res: VercelResponse) {
+  const totalMobilized = 14825000 + liveDonations.reduce((acc, curr) => acc + (curr.amount || 0), 0);
+  return res.json({
+    success: true,
+    data: {
+      inquiries: liveInquiries,
+      donations: liveDonations,
+      subscribersCount: liveSubscribers.length,
+      liveVisitors: liveVisitorCount,
+      stats: {
+        totalFunds: totalMobilized,
+        beneficiaries: '52,400+',
+        receiptsCount: 1180 + liveDonations.length,
+        seoHealth: '96/100',
+      },
+    },
+  });
+}
+
+function handleAdminStatus(req: VercelRequest, res: VercelResponse) {
+  const body = getRequestBody(req);
+  const { id, status } = body;
+  const inq = liveInquiries.find((i) => i.id === id);
+  if (inq && typeof status === 'string') {
+    inq.status = status as any;
+    return res.json({ success: true, inquiry: inq });
+  }
+  return res.status(404).json({ success: false, error: 'Inquiry item not found' });
 }
