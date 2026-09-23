@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
-import { CheckCircle2, Heart } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 const sectors = [
   {
@@ -42,7 +42,7 @@ const sectors = [
   {
     id: 'agriculture-support',
     sector: 'Agriculture Support',
-    poster: '/images/card_felicitation_award.jpg',
+    poster: '/images/poster_agriculture.png',
     keyFeatures: [
       'Community nurseries for fruit & timber saplings',
       'MGNREGS Shrama Shakthi Sangha (SSS) group land work',
@@ -108,10 +108,9 @@ export default function OurWork() {
                       <div className="pt-3">
                         <Link
                           to="/donate"
-                          className="inline-flex items-center gap-2 bg-brand-primary hover:bg-brand-deep text-white font-display font-bold px-6 py-2.5 rounded-xl text-xs md:text-sm tracking-wider uppercase shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 cursor-pointer"
+                          className="w-full sm:w-auto inline-flex items-center justify-center bg-brand-primary hover:bg-brand-deep text-white font-display font-bold px-7 py-3 rounded-xl text-xs md:text-sm tracking-wider uppercase shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-center"
                         >
-                          <Heart size={16} className="fill-white" />
-                          <span>Donate Now</span>
+                          Donate Now
                         </Link>
                       </div>
                     </div>

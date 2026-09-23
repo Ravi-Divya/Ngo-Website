@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, ChevronDown, Search, ArrowRight } from 'lucide-react';
+import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import SearchModal from './SearchModal';
@@ -211,20 +211,6 @@ export default function Navbar() {
             </div>
           ))}
 
-          {/* Redesigned Modern Search Button (Desktop) */}
-          <button
-            onClick={() => setSearchOpen(true)}
-            className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white hover:bg-brand-soft text-brand-dark hover:text-brand-primary border border-brand-light hover:border-brand-primary/40 transition-all text-xs font-medium shadow-2xs group cursor-pointer"
-            aria-label="Open search dialog"
-            title="Search website (Ctrl + K)"
-          >
-            <Search size={15} className="text-brand-primary group-hover:scale-110 transition-transform" />
-            <span className="text-brand-muted group-hover:text-brand-primary transition-colors font-medium">Search</span>
-            <kbd className="px-1.5 py-0.5 text-[10px] font-mono text-brand-muted bg-brand-soft rounded border border-brand-light group-hover:bg-white transition-colors">
-              ⌘K
-            </kbd>
-          </button>
-
           <Link
             to="/donate"
             className="font-bold uppercase tracking-widest text-xs rounded-full transition-all duration-500 bg-brand-primary text-white px-5 py-2 hover:bg-brand-deep shadow-lg hover:-translate-y-0.5 active:translate-y-0"
@@ -233,18 +219,10 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Right Controls: Search + Hamburger */}
+        {/* Mobile Right Controls: Hamburger */}
         <div className="flex items-center gap-2 lg:hidden">
           <button
-            onClick={() => setSearchOpen(true)}
-            className="p-2 text-brand-deep hover:text-brand-primary transition-colors rounded-full hover:bg-brand-soft border border-brand-light/60 shadow-2xs"
-            aria-label="Open search"
-            title="Search"
-          >
-            <Search size={18} className="text-brand-primary" />
-          </button>
-          <button
-            className="p-2 text-brand-deep hover:text-brand-primary transition-colors"
+            className="p-2 text-brand-deep hover:text-brand-primary transition-colors cursor-pointer"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileMenuOpen}
@@ -284,21 +262,9 @@ export default function Navbar() {
                   );
                 })}
 
-                {/* Mobile Search Link */}
-                <button
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    setSearchOpen(true);
-                  }}
-                  className="flex items-center gap-3 text-left py-2 text-brand-deep hover:text-brand-primary font-display font-medium text-lg border-b border-brand-light/60 pb-3"
-                >
-                  <Search size={20} className="text-brand-primary" />
-                  <span>Search Entire Site (Programs, FAQs, 80G)...</span>
-                </button>
-
                 <Link
                   to="/donate"
-                  className="bg-brand-primary text-white text-center font-bold uppercase tracking-widest py-5 rounded-2xl mt-4 shadow-xl"
+                  className="bg-brand-primary text-white text-center font-bold uppercase tracking-widest py-4 rounded-2xl mt-2 shadow-xl"
                 >
                   Donate Now
                 </Link>
