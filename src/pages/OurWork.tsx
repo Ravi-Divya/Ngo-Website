@@ -1,5 +1,6 @@
+import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Heart } from 'lucide-react';
 
 const sectors = [
   {
@@ -101,6 +102,17 @@ export default function OurWork() {
                             <span>{kf}</span>
                           </div>
                         ))}
+                      </div>
+
+                      {/* Donate Now CTA Button */}
+                      <div className="pt-3">
+                        <Link
+                          to="/donate"
+                          className="inline-flex items-center gap-2 bg-brand-primary hover:bg-brand-deep text-white font-display font-bold px-6 py-2.5 rounded-xl text-xs md:text-sm tracking-wider uppercase shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 cursor-pointer"
+                        >
+                          <Heart size={16} className="fill-white" />
+                          <span>Donate Now</span>
+                        </Link>
                       </div>
                     </div>
 

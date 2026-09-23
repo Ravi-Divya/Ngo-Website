@@ -80,16 +80,17 @@ export default function LacimModal() {
               <X size={18} />
             </button>
 
-            {/* Top Image: Authentic LACIM Tribal Classroom / Children */}
-            <div className="relative w-full h-52 sm:h-60 bg-slate-100 overflow-hidden">
+            {/* Top Image: Authentic Underprivileged Tribal Child */}
+            <div className="relative w-full h-56 sm:h-64 bg-slate-900 overflow-hidden">
               <img
-                src="/images/lacim_1.jpg"
-                alt="Tribal schoolchildren learning at LACIM center"
-                className="w-full h-full object-cover object-center"
+                src="/images/tribal_child_help.jpg"
+                alt="Underprivileged tribal child in need of care and nutrition"
+                className="w-full h-full object-cover object-[center_28%]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute bottom-3 left-4 bg-brand-dark/90 text-white text-[11px] font-semibold px-2.5 py-1 rounded-full uppercase tracking-wider">
-                LACIM Tribal Programme &bull; Chittoor
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none" />
+              <div className="absolute bottom-3 left-4 bg-brand-dark/95 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+                <span>Urgent Appeal &bull; Tribal Child Welfare</span>
               </div>
             </div>
 
@@ -99,21 +100,21 @@ export default function LacimModal() {
                 id="lacim-modal-title"
                 className="text-2xl sm:text-3xl font-display font-bold text-brand-dark tracking-tight leading-snug"
               >
-                Support Education & Nutrition for Tribal Children
+                Help Vulnerable Children in Urgent Need
               </h2>
 
               <p className="text-slate-600 font-sans text-sm sm:text-base leading-relaxed max-w-md mx-auto">
-                Your donation brings daily nutrition, quality learning, school kits, and health support to underprivileged Yanadi tribal children in Chittoor. Every contribution counts!
+                In remote tribal hamlets, underprivileged children battle extreme poverty, hunger, and lack of basic healthcare. Your compassion provides daily nutrition, medical aid, clothing, and education. Every small contribution saves and rebuilds a life.
               </p>
 
-              {/* Primary Action Button (Matches Reference Image 2 style) */}
+              {/* Primary Action Button */}
               <div className="pt-2">
                 <button
                   onClick={handleDonateClick}
                   className="w-full bg-[#0369A1] hover:bg-[#0284C7] text-white font-display font-bold py-3.5 px-6 rounded-xl text-sm sm:text-base tracking-wider uppercase shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer flex items-center justify-center gap-2"
                 >
                   <Heart size={18} className="fill-white" />
-                  <span>DONATE NOW TO MAKE A DIFFERENCE</span>
+                  <span>DONATE NOW TO HELP A CHILD</span>
                 </button>
               </div>
 
@@ -123,7 +124,7 @@ export default function LacimModal() {
                   onClick={handleLearnMore}
                   className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-primary hover:text-brand-deep transition-colors cursor-pointer"
                 >
-                  <span>Learn more about the LACIM Tribal Project</span>
+                  <span>Learn how CARD supports vulnerable tribal families</span>
                   <ArrowRight size={13} />
                 </button>
               </div>

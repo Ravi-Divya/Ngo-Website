@@ -57,7 +57,7 @@ export default function CookieBanner() {
           {/* Header */}
           <div className="flex items-start justify-between gap-3">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-brand-light text-brand-primary rounded-2xl flex items-center justify-center shrink-0 shadow-2xs">
+              <div className="w-10 h-10 bg-slate-100 text-slate-700 rounded-2xl flex items-center justify-center shrink-0 shadow-2xs">
                 <Cookie size={20} />
               </div>
               <div>
@@ -79,11 +79,11 @@ export default function CookieBanner() {
             <>
               <p className="text-slate-600 font-sans text-xs sm:text-[13px] leading-relaxed mt-3.5">
                 We use cookies to ensure core website functionality and to measure anonymous traffic. Learn more in our{' '}
-                <Link to="/cookie-policy" className="text-brand-primary font-semibold hover:underline">
+                <Link to="/cookie-policy" className="text-slate-800 font-semibold underline hover:text-black">
                   Cookie Policy
                 </Link>{' '}
                 and{' '}
-                <Link to="/privacy-policy" className="text-brand-primary font-semibold hover:underline">
+                <Link to="/privacy-policy" className="text-slate-800 font-semibold underline hover:text-black">
                   Privacy Policy
                 </Link>.
               </p>
@@ -92,13 +92,13 @@ export default function CookieBanner() {
               <div className="grid grid-cols-2 gap-2.5 mt-5">
                 <button
                   onClick={handleAllowAll}
-                  className="bg-brand-primary hover:bg-brand-deep text-white font-bold rounded-xl py-2.5 px-4 text-xs sm:text-sm transition-all shadow-sm cursor-pointer"
+                  className="bg-slate-800 hover:bg-slate-900 text-white font-bold rounded-xl py-2.5 px-4 text-xs sm:text-sm transition-all shadow-sm cursor-pointer"
                 >
                   Allow All
                 </button>
                 <button
                   onClick={handleRejectAll}
-                  className="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl py-2.5 px-4 text-xs sm:text-sm transition-all cursor-pointer"
+                  className="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl py-2.5 px-4 text-xs sm:text-sm transition-all cursor-pointer border border-slate-200"
                 >
                   Reject All
                 </button>
@@ -107,7 +107,7 @@ export default function CookieBanner() {
               <div className="text-center mt-3">
                 <button
                   onClick={() => setShowManage(true)}
-                  className="inline-flex items-center gap-1.5 text-xs text-brand-primary hover:text-brand-deep font-semibold underline underline-offset-4 transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1.5 text-xs text-slate-600 hover:text-slate-900 font-semibold underline underline-offset-4 transition-colors cursor-pointer"
                 >
                   <SlidersHorizontal size={13} />
                   <span>Manage Preferences</span>
@@ -142,7 +142,7 @@ export default function CookieBanner() {
                     type="button"
                     onClick={() => setAnalytics(!analytics)}
                     className={`w-9 h-5 rounded-full transition-colors relative cursor-pointer ${
-                      analytics ? 'bg-brand-primary' : 'bg-slate-300'
+                      analytics ? 'bg-slate-800' : 'bg-slate-300'
                     }`}
                   >
                     <span
@@ -163,7 +163,7 @@ export default function CookieBanner() {
                     type="button"
                     onClick={() => setFunctional(!functional)}
                     className={`w-9 h-5 rounded-full transition-colors relative cursor-pointer ${
-                      functional ? 'bg-brand-primary' : 'bg-slate-300'
+                      functional ? 'bg-slate-800' : 'bg-slate-300'
                     }`}
                   >
                     <span
@@ -179,7 +179,7 @@ export default function CookieBanner() {
               <div className="flex gap-2 pt-1">
                 <button
                   onClick={handleSavePreferences}
-                  className="flex-1 bg-brand-primary hover:bg-brand-deep text-white font-bold rounded-xl py-2 px-3 text-xs transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                  className="flex-1 bg-slate-800 hover:bg-slate-900 text-white font-bold rounded-xl py-2 px-3 text-xs transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
                 >
                   <Check size={14} /> Save Preferences
                 </button>
