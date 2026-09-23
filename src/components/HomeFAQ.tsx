@@ -65,25 +65,26 @@ export default function HomeFAQ() {
       />
 
       <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
+        {/* Section Header matching Contact Us */}
+        <div className="mb-10 md:mb-14 text-center">
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-brand-dark mb-2">
+            FAQ's
+          </h2>
+          <div className="w-16 h-1 bg-brand-primary mx-auto rounded-full"></div>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-          {/* Left Column: Reference Image Style on White Background */}
+          {/* Left Column */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="flex items-center gap-3">
-              <span className="w-6 h-[2px] bg-brand-primary" />
-              <span className="text-xs font-bold text-brand-primary uppercase tracking-widest font-mono">
-                FAQ
-              </span>
-            </div>
-
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-medium text-brand-dark tracking-tight leading-tight">
+            <h3 className="text-2xl sm:text-3xl font-display font-semibold text-brand-dark tracking-tight leading-tight">
               Questions we get asked
-            </h2>
+            </h3>
 
-            <p className="text-brand-muted text-sm md:text-base leading-relaxed pt-2 max-w-md font-sans">
+            <p className="text-brand-muted text-sm md:text-base leading-relaxed pt-1 max-w-md font-sans">
               Everything you need to know about our grassroots field work, Section 80G tax deductions, and visiting community projects across Chittoor.
             </p>
 
-            <div className="pt-4">
+            <div className="pt-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 text-brand-primary hover:text-brand-deep font-bold text-sm transition-colors group"

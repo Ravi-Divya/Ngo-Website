@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, ChevronDown, Search, Sparkles, ArrowRight } from 'lucide-react';
+import { Menu, X, ChevronDown, Search, ArrowRight } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import SearchModal from './SearchModal';
@@ -58,11 +58,28 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [showAnnouncement, setShowAnnouncement] = useState(true);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [location]);
+
+  // Track scroll position: when scrolling down, announcement bar goes up & hides
+  useEffect(() => {
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Global shortcut for search (Cmd+K / Ctrl+K)
   useEffect(() => {
@@ -85,36 +102,34 @@ export default function Navbar() {
       transition={{ duration: 0.7, ease: 'easeOut' }}
       className="fixed top-0 left-0 w-full z-50 bg-brand-soft/95 backdrop-blur-md border-b border-brand-light shadow-sm"
     >
-      {/* Announcement Bar ABOVE Navbar */}
+      {/* Announcement Bar ABOVE Navbar — In gray color, hides/goes up when scrolling down */}
       <AnimatePresence>
-        {showAnnouncement && (
+        {showAnnouncement && !scrolled && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="bg-gradient-to-r from-brand-deep via-[#0369A1] to-sky-600 text-white border-b border-sky-400/20 overflow-hidden shadow-2xs"
+            transition={{ duration: 0.25, ease: 'easeInOut' }}
+            className="bg-slate-800 text-slate-200 border-b border-slate-700 overflow-hidden shadow-2xs"
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-1.5 sm:py-2 flex items-center justify-between gap-3 text-xs">
-              <div className="flex items-center gap-2.5 overflow-hidden">
-                <span className="inline-flex items-center gap-1 bg-white/20 text-white font-bold px-2 py-0.5 rounded-full text-[10px] uppercase tracking-wider shrink-0">
-                  <Sparkles size={11} className="text-amber-300" /> Notice
-                </span>
-                <p className="truncate text-sky-50 font-normal">
-                  <strong>Section 80G Tax Exemption:</strong> All donor contributions qualify for a 50% tax deduction under the Indian Income Tax Act.
+              <div className="flex items-center gap-2 overflow-hidden">
+                <p className="truncate text-slate-200 font-normal">
+                  <strong className="text-white font-semibold">Section 80G Tax Exemption:</strong> All donor contributions qualify for a 50% tax deduction under the Indian Income Tax Act.
                 </p>
               </div>
 
               <div className="flex items-center gap-3 shrink-0">
                 <Link
                   to="/donate"
-                  className="hidden sm:inline-flex items-center gap-1 font-bold text-white hover:text-amber-200 transition-colors underline underline-offset-2 text-xs"
+                  className="hidden sm:inline-flex items-center gap-1 font-bold text-sky-400 hover:text-sky-300 transition-colors underline underline-offset-2 text-xs"
                 >
                   <span>Donate Online</span>
                   <ArrowRight size={12} />
                 </Link>
                 <button
                   onClick={() => setShowAnnouncement(false)}
-                  className="p-1 text-white/70 hover:text-white rounded-full hover:bg-white/10 transition-colors cursor-pointer"
+                  className="p-1 text-slate-400 hover:text-white rounded-full hover:bg-slate-700 transition-colors cursor-pointer"
                   aria-label="Dismiss announcement"
                   title="Dismiss"
                 >
