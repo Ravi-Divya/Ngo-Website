@@ -428,7 +428,7 @@ async function sendContactEmails(data: { name: string; email: string; phone?: st
             <div style="color: #475569; font-size: 12px; text-transform: uppercase; font-weight: bold; margin-bottom: 8px;">Message Content</div>
             <p style="color: #1e293b; font-size: 14px; line-height: 1.6; margin: 0; white-space: pre-wrap;">${data.message}</p>
           </div>
-          <p style="font-size: 12px; color: #94a3b8; margin: 0; text-align: center;">CARD — Community Alternative Research and Development · <a href="https://cardorg.in" style="color: #0284c7;">cardorg.in</a> · Chittoor, AP</p>
+          <p style="font-size: 12px; color: #94a3b8; margin: 0; text-align: center;">CARD — Community Alternative Research and Development · <a href="https://www.cardorg.in" style="color: #0284c7;">www.cardorg.in</a> · Chittoor, AP</p>
         </div>
       `,
     });
@@ -442,7 +442,7 @@ async function sendContactEmails(data: { name: string; email: string; phone?: st
       from: senderFrom,
       to: data.email,
       subject: `Thank you for contacting CARD — Message Received`,
-      text: `Dear ${data.name},\n\nThank you for reaching out to Community Alternative Research and Development (CARD).\n\nWe have received your message regarding "${data.subject}" and our team will get back to you within 24 hours.\n\nWarm regards,\nCARD Team\nWebsite: https://cardorg.in\nEmail: ${adminEmail}\nPhone: +91 9885429900`,
+      text: `Dear ${data.name},\n\nThank you for reaching out to Community Alternative Research and Development (CARD).\n\nWe have received your message regarding "${data.subject}" and our team will get back to you within 24 hours.\n\nWarm regards,\nCARD Team\nWebsite: https://www.cardorg.in\nEmail: ${adminEmail}\nPhone: +91 9885429900`,
       html: `
         <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid #e2e8f0; border-radius: 16px; background: #ffffff;">
           <div style="border-bottom: 2px solid #0077b6; padding-bottom: 12px; margin-bottom: 20px;">

@@ -4,4 +4,4 @@ Disallow: /api/
 Disallow: /super-admin
 Disallow: /divya
 
-Sitemap: https://cardorg.in/sitemap.xml
+Sitemap: https://www.cardorg.in/sitemap.xml
