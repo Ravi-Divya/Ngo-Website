@@ -29,6 +29,7 @@ import TermsOfService from './pages/TermsOfService';
 import NotFound from './pages/NotFound';
 import ScrollToTop from './components/ScrollToTop';
 import CookieBanner from './components/CookieBanner';
+import LacimModal from './components/LacimModal';
 import SmoothScroll from './components/SmoothScroll';
 
 const BackToTop = () => {
@@ -148,6 +149,7 @@ const AppContent = () => {
         </main>
         <BackToTop />
         <Footer />
+        <LacimModal />
         <CookieBanner />
       </div>
     </>

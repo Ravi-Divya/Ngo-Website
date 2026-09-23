@@ -110,27 +110,27 @@ export default function Navbar() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="bg-slate-800 border-b border-slate-700 overflow-hidden shadow-2xs"
+            className="bg-[#0F172A] text-slate-200 border-b border-slate-800 overflow-hidden shadow-2xs"
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-1.5 sm:py-2 flex items-center justify-between gap-3 text-xs">
               <div className="flex items-center gap-2 overflow-hidden">
-                <p className="truncate text-[#E2FF00] font-normal tracking-wide">
-                  <strong className="text-[#CCFF00] font-bold">Section 80G Tax Exemption:</strong>{' '}
-                  <span className="text-[#E2FF00] font-medium">All donor contributions qualify for a 50% tax deduction under the Indian Income Tax Act.</span>
+                <p className="truncate text-slate-300 font-normal">
+                  <strong className="text-white font-bold">Section 80G Tax Exemption:</strong>{' '}
+                  <span className="text-slate-300">All donor contributions qualify for a 50% tax deduction under the Indian Income Tax Act.</span>
                 </p>
               </div>
 
               <div className="flex items-center gap-3 shrink-0">
                 <Link
                   to="/donate"
-                  className="hidden sm:inline-flex items-center gap-1 font-bold text-[#CCFF00] hover:text-white transition-colors underline underline-offset-2 text-xs"
+                  className="hidden sm:inline-flex items-center gap-1 font-bold text-sky-400 hover:text-sky-300 transition-colors underline underline-offset-2 text-xs"
                 >
                   <span>Donate Online</span>
                   <ArrowRight size={12} />
                 </Link>
                 <button
                   onClick={() => setShowAnnouncement(false)}
-                  className="p-1 text-[#CCFF00]/70 hover:text-[#CCFF00] rounded-full hover:bg-slate-700 transition-colors cursor-pointer"
+                  className="p-1 text-slate-400 hover:text-white rounded-full hover:bg-slate-800 transition-colors cursor-pointer"
                   aria-label="Dismiss announcement"
                   title="Dismiss"
                 >
