@@ -49,14 +49,14 @@ export default function LacimModal() {
     <AnimatePresence>
       {isOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-          {/* Dimmed Backdrop */}
+          {/* Dimmed Backdrop without blur */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
             onClick={handleClose}
-            className="fixed inset-0 bg-black/60 backdrop-blur-xs cursor-pointer"
+            className="fixed inset-0 bg-black/65 cursor-pointer"
             aria-hidden="true"
           />
 
@@ -88,7 +88,7 @@ export default function LacimModal() {
                 className="w-full h-full object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute bottom-3 left-4 bg-brand-dark/80 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-1 rounded-full uppercase tracking-wider">
+              <div className="absolute bottom-3 left-4 bg-brand-dark/90 text-white text-[11px] font-semibold px-2.5 py-1 rounded-full uppercase tracking-wider">
                 LACIM Tribal Programme &bull; Chittoor
               </div>
             </div>

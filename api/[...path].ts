@@ -390,7 +390,7 @@ async function sendContactEmails(data: { name: string; email: string; phone?: st
     return;
   }
 
-  const senderFrom = `"CARD Website Notifications" <${process.env.SMTP_USER || adminEmail}>`;
+  const senderFrom = `"CARD Website (cardorg.in)" <${process.env.SMTP_USER || adminEmail}>`;
 
   // 1. Send notification to Admin (cardngo.org@gmail.com)
   try {
@@ -398,13 +398,13 @@ async function sendContactEmails(data: { name: string; email: string; phone?: st
       from: senderFrom,
       to: adminEmail,
       replyTo: data.email,
-      subject: `[Website Inquiry] ${data.subject} — from ${data.name}`,
-      text: `New Contact Form Submission:\n\nName: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone || 'Not provided'}\nSubject: ${data.subject}\n\nMessage:\n${data.message}\n\nTimestamp: ${new Date().toISOString()}`,
+      subject: `[cardorg.in Inquiry] ${data.subject} — from ${data.name}`,
+      text: `New Contact Form Submission on cardorg.in:\n\nName: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone || 'Not provided'}\nSubject: ${data.subject}\n\nMessage:\n${data.message}\n\nTimestamp: ${new Date().toISOString()}`,
       html: `
         <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid #e2e8f0; border-radius: 16px; background: #ffffff;">
-          <div style="border-bottom: 2px solid #0077b6; padding-bottom: 12px; margin-bottom: 20px;">
-            <h2 style="color: #0077b6; margin: 0 0 6px 0; font-size: 20px;">New Contact Message Received</h2>
-            <p style="color: #64748b; margin: 0; font-size: 13px;">Submitted via CARD Official Website Contact Page</p>
+          <div style="border-bottom: 2px solid #0284c7; padding-bottom: 12px; margin-bottom: 20px;">
+            <h2 style="color: #0284c7; margin: 0 0 6px 0; font-size: 20px;">New Contact Message Received</h2>
+            <p style="color: #64748b; margin: 0; font-size: 13px;">Submitted via CARD Official Website (cardorg.in)</p>
           </div>
           <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 20px;">
             <tr>
@@ -413,7 +413,7 @@ async function sendContactEmails(data: { name: string; email: string; phone?: st
             </tr>
             <tr>
               <td style="padding: 8px 0; color: #64748b;"><strong>Email:</strong></td>
-              <td style="padding: 8px 0;"><a href="mailto:${data.email}" style="color: #0077b6; text-decoration: none; font-weight: 600;">${data.email}</a></td>
+              <td style="padding: 8px 0;"><a href="mailto:${data.email}" style="color: #0284c7; text-decoration: none; font-weight: 600;">${data.email}</a></td>
             </tr>
             <tr>
               <td style="padding: 8px 0; color: #64748b;"><strong>Phone:</strong></td>
@@ -424,11 +424,11 @@ async function sendContactEmails(data: { name: string; email: string; phone?: st
               <td style="padding: 8px 0; color: #0f172a; font-weight: 600;">${data.subject}</td>
             </tr>
           </table>
-          <div style="background: #f8fafc; border-left: 4px solid #0077b6; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+          <div style="background: #f8fafc; border-left: 4px solid #0284c7; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
             <div style="color: #475569; font-size: 12px; text-transform: uppercase; font-weight: bold; margin-bottom: 8px;">Message Content</div>
             <p style="color: #1e293b; font-size: 14px; line-height: 1.6; margin: 0; white-space: pre-wrap;">${data.message}</p>
           </div>
-          <p style="font-size: 12px; color: #94a3b8; margin: 0; text-align: center;">CARD — Community Alternative Research and Development · Chittoor, AP</p>
+          <p style="font-size: 12px; color: #94a3b8; margin: 0; text-align: center;">CARD — Community Alternative Research and Development · <a href="https://cardorg.in" style="color: #0284c7;">cardorg.in</a> · Chittoor, AP</p>
         </div>
       `,
     });
@@ -442,7 +442,7 @@ async function sendContactEmails(data: { name: string; email: string; phone?: st
       from: senderFrom,
       to: data.email,
       subject: `Thank you for contacting CARD — Message Received`,
-      text: `Dear ${data.name},\n\nThank you for reaching out to Community Alternative Research and Development (CARD).\n\nWe have received your message regarding "${data.subject}" and our team will get back to you within 24 hours.\n\nWarm regards,\nCARD Team\nEmail: ${adminEmail}\nPhone: +91 9885429900`,
+      text: `Dear ${data.name},\n\nThank you for reaching out to Community Alternative Research and Development (CARD).\n\nWe have received your message regarding "${data.subject}" and our team will get back to you within 24 hours.\n\nWarm regards,\nCARD Team\nWebsite: https://cardorg.in\nEmail: ${adminEmail}\nPhone: +91 9885429900`,
       html: `
         <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid #e2e8f0; border-radius: 16px; background: #ffffff;">
           <div style="border-bottom: 2px solid #0077b6; padding-bottom: 12px; margin-bottom: 20px;">

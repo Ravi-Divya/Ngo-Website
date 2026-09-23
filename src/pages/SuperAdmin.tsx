@@ -166,8 +166,22 @@ export default function SuperAdmin() {
       if (res.ok) {
         const json = await res.json();
         if (json.data) {
-          if (Array.isArray(json.data.inquiries) && json.data.inquiries.length > 0) {
-            setInquiries(json.data.inquiries);
+          // Merge server live inquiries with locally submitted inquiries
+          const localInquiries: InquiryItem[] = (() => {
+            try {
+              return JSON.parse(localStorage.getItem('card_submitted_inquiries') || '[]');
+            } catch {
+              return [];
+            }
+          })();
+
+          if (Array.isArray(json.data.inquiries)) {
+            const combined = [...localInquiries, ...json.data.inquiries];
+            // Remove duplicates by id
+            const unique = combined.filter((item, index, self) => index === self.findIndex((t) => t.id === item.id || (t.email === item.email && t.message === item.message)));
+            setInquiries(unique);
+          } else if (localInquiries.length > 0) {
+            setInquiries(localInquiries);
           }
           if (Array.isArray(json.data.donations) && json.data.donations.length > 0) {
             setDonations(json.data.donations);

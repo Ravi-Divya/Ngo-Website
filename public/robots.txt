@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /super-admin
+Disallow: /divya
 
-Sitemap: https://card-india.org/sitemap.xml
+Sitemap: https://cardorg.in/sitemap.xml

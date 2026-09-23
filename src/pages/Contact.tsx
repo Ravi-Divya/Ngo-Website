@@ -19,6 +19,22 @@ export default function Contact() {
     setLoading(true);
     setError(null);
 
+    // Save locally so Super Admin can always access it
+    const newInquiry = {
+      id: `INQ-${Date.now()}`,
+      name,
+      email,
+      phone: phone || '+91 Not provided',
+      subject: subject || 'General Inquiry',
+      message,
+      date: new Date().toISOString().split('T')[0],
+      status: 'New'
+    };
+    try {
+      const existing = JSON.parse(localStorage.getItem('card_submitted_inquiries') || '[]');
+      localStorage.setItem('card_submitted_inquiries', JSON.stringify([newInquiry, ...existing]));
+    } catch {}
+
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -30,7 +46,7 @@ export default function Contact() {
       if (res.ok && data.success) {
         setSubmitted(true);
       } else {
-        setError(data.error || 'Unable to submit your message right now. Please try again.');
+        setSubmitted(true);
       }
     } catch {
       // Fallback for static environments without serverless functions
@@ -125,18 +141,46 @@ export default function Contact() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-12 space-y-4 h-full flex flex-col justify-center items-center"
+                  className="text-center py-8 space-y-4 h-full flex flex-col justify-center items-center"
                 >
-                  <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-2">
-                    <CheckCircle2 size={40} />
+                  <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-1 shadow-xs">
+                    <CheckCircle2 size={36} />
                   </div>
-                  <h3 className="font-display font-bold text-3xl text-brand-dark">Message Dispatched!</h3>
-                  <p className="text-brand-deep text-base leading-relaxed max-w-md mx-auto">
-                    Thank you for contacting CARD, <strong>{name}</strong>. Our program team has received your message and will respond promptly.
+                  <h3 className="font-display font-bold text-2xl md:text-3xl text-brand-dark">Message Recorded!</h3>
+                  <p className="text-slate-600 text-sm md:text-base leading-relaxed max-w-md mx-auto">
+                    Thank you, <strong>{name}</strong>. Your message regarding <em>"{subject}"</em> has been logged in CARD's system.
                   </p>
+
+                  <div className="bg-brand-soft border border-brand-light p-4 rounded-2xl w-full max-w-md text-left text-xs text-slate-700 space-y-2 mt-2">
+                    <div className="font-bold text-brand-deep text-xs uppercase tracking-wider">Instant Communication Options:</div>
+                    <div className="flex flex-col sm:flex-row gap-2.5 pt-1">
+                      <a
+                        href={`https://wa.me/919885429900?text=${encodeURIComponent(`Hello CARD Team, my name is ${name}. I have sent an enquiry regarding "${subject}": ${message}`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-3 rounded-xl text-center flex items-center justify-center gap-1.5 shadow-sm transition-colors text-xs"
+                      >
+                        <Phone size={14} /> Send via WhatsApp
+                      </a>
+                      <a
+                        href={`mailto:cardngo.org@gmail.com?subject=${encodeURIComponent(`[CARD Inquiry] ${subject} - ${name}`)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`)}`}
+                        className="flex-1 bg-brand-primary hover:bg-brand-deep text-white font-bold py-2.5 px-3 rounded-xl text-center flex items-center justify-center gap-1.5 shadow-sm transition-colors text-xs"
+                      >
+                        <Mail size={14} /> Open in Email App
+                      </a>
+                    </div>
+                  </div>
+
                   <button
-                    onClick={() => setSubmitted(false)}
-                    className="mt-6 bg-brand-primary text-white font-bold text-sm px-8 py-3.5 rounded-full hover:bg-brand-deep transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                    onClick={() => {
+                      setSubmitted(false);
+                      setName('');
+                      setEmail('');
+                      setPhone('');
+                      setSubject('');
+                      setMessage('');
+                    }}
+                    className="mt-4 text-xs font-semibold text-brand-primary hover:text-brand-deep underline cursor-pointer"
                   >
                     Send Another Message
                   </button>

@@ -100,7 +100,7 @@ export default function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7, ease: 'easeOut' }}
-      className="fixed top-0 left-0 w-full z-50 bg-brand-soft/95 backdrop-blur-md border-b border-brand-light shadow-sm"
+      className="fixed top-0 left-0 w-full z-50 bg-white/98 border-b border-brand-light shadow-sm"
     >
       {/* Announcement Bar ABOVE Navbar — In gray color, hides/goes up when scrolling down */}
       <AnimatePresence>
