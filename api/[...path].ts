@@ -377,7 +377,7 @@ function createTransporter() {
 }
 
 async function sendContactEmails(data: { name: string; email: string; phone?: string; subject: string; message: string }) {
-  const adminEmail = process.env.ADMIN_EMAIL || process.env.SMTP_USER || 'cardngo.org@gmail.com';
+  const adminEmail = process.env.ADMIN_EMAIL || process.env.SMTP_USER || 'ravi.cardindia@gmail.com';
   const transporter = createTransporter();
 
   if (!transporter) {
@@ -392,7 +392,7 @@ async function sendContactEmails(data: { name: string; email: string; phone?: st
 
   const senderFrom = `"CARD Website (cardorg.in)" <${process.env.SMTP_USER || adminEmail}>`;
 
-  // 1. Send notification to Admin (cardngo.org@gmail.com)
+  // 1. Send notification to Admin (ravi.cardindia@gmail.com)
   try {
     await transporter.sendMail({
       from: senderFrom,
@@ -472,7 +472,7 @@ async function sendContactEmails(data: { name: string; email: string; phone?: st
 }
 
 async function sendSubscribeEmails(subscriberEmail: string) {
-  const adminEmail = process.env.ADMIN_EMAIL || process.env.SMTP_USER || 'cardngo.org@gmail.com';
+  const adminEmail = process.env.ADMIN_EMAIL || process.env.SMTP_USER || 'ravi.cardindia@gmail.com';
   const transporter = createTransporter();
 
   if (!transporter) {

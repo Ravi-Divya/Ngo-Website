@@ -149,7 +149,7 @@ export default function Donate() {
             <div className="space-y-1">
               <div className="font-bold text-brand-dark text-base">Note on Official Tax Receipts</div>
               <p className="text-brand-deep text-xs md:text-sm leading-relaxed">
-                After completing your contribution, please send your transaction details (reference screenshot, Full Name, Address, and PAN Number) to our email ID: <a href="mailto:cardngo.org@gmail.com" className="text-brand-primary font-bold underline">cardngo.org@gmail.com</a>. Our team will verify and send your official 80G tax exemption receipt directly to your email.
+                After completing your contribution, please send your transaction details (reference screenshot, Full Name, Address, and PAN Number) to our email ID: <a href="mailto:ravi.cardindia@gmail.com" className="text-brand-primary font-bold underline">ravi.cardindia@gmail.com</a> (or <a href="mailto:cardngo.org@gmail.com" className="text-brand-primary font-semibold underline">cardngo.org@gmail.com</a>). Our team will verify and send your official 80G tax exemption receipt directly to your email.
               </p>
             </div>
           </motion.div>

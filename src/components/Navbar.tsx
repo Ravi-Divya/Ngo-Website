@@ -158,11 +158,11 @@ export default function Navbar() {
             />
           </div>
           <div className="flex flex-col justify-center ml-2 sm:ml-3">
-            <span className="font-display font-extrabold text-xs sm:text-sm md:text-base lg:text-lg text-brand-deep tracking-tight leading-tight max-w-[190px] sm:max-w-xs md:max-w-sm lg:max-w-none">
-              Community Alternative Research and Development
+            <span className="font-display font-black text-xs sm:text-sm md:text-base lg:text-lg text-brand-deep tracking-tight leading-tight block">
+              Community Alternative Research
             </span>
-            <span className="font-sans font-bold text-[9px] sm:text-[10px] md:text-[11px] text-brand-primary uppercase tracking-widest leading-none mt-0.5">
-              CARD NGO
+            <span className="font-display font-black text-xs sm:text-sm md:text-base lg:text-lg text-brand-primary tracking-tight leading-tight block">
+              and Development
             </span>
           </div>
         </Link>

@@ -101,9 +101,14 @@ export default function Contact() {
                     </div>
                     <div>
                       <div className="font-bold text-lg mb-1">Phone</div>
-                      <a href="tel:+919885429900" className="text-brand-soft/80 text-sm hover:text-white transition-colors">
-                        +91 9885429900
-                      </a>
+                      <div className="space-y-0.5">
+                        <a href="tel:+919573307088" className="text-brand-soft/90 text-sm hover:text-white transition-colors block font-medium">
+                          +91 9573307088
+                        </a>
+                        <a href="tel:+919885429900" className="text-brand-soft/75 text-xs hover:text-white transition-colors block">
+                          +91 9885429900
+                        </a>
+                      </div>
                     </div>
                   </div>
 
@@ -113,9 +118,14 @@ export default function Contact() {
                     </div>
                     <div>
                       <div className="font-bold text-lg mb-1">Email</div>
-                      <a href="mailto:cardngo.org@gmail.com" className="text-brand-soft/80 text-sm hover:text-white transition-colors">
-                        cardngo.org@gmail.com
-                      </a>
+                      <div className="space-y-0.5">
+                        <a href="mailto:ravi.cardindia@gmail.com" className="text-brand-soft/90 text-sm hover:text-white transition-colors block font-medium">
+                          ravi.cardindia@gmail.com
+                        </a>
+                        <a href="mailto:cardngo.org@gmail.com" className="text-brand-soft/75 text-xs hover:text-white transition-colors block">
+                          cardngo.org@gmail.com
+                        </a>
+                      </div>
                     </div>
                   </div>
 
@@ -155,7 +165,7 @@ export default function Contact() {
                     <div className="font-bold text-brand-deep text-xs uppercase tracking-wider">Instant Communication Options:</div>
                     <div className="flex flex-col sm:flex-row gap-2.5 pt-1">
                       <a
-                        href={`https://wa.me/919885429900?text=${encodeURIComponent(`Hello CARD Team, my name is ${name}. I have sent an enquiry regarding "${subject}": ${message}`)}`}
+                        href={`https://wa.me/919573307088?text=${encodeURIComponent(`Hello CARD Team, my name is ${name}. I have sent an enquiry regarding "${subject}": ${message}`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-3 rounded-xl text-center flex items-center justify-center gap-1.5 shadow-sm transition-colors text-xs"
@@ -163,7 +173,7 @@ export default function Contact() {
                         <Phone size={14} /> Send via WhatsApp
                       </a>
                       <a
-                        href={`mailto:cardngo.org@gmail.com?subject=${encodeURIComponent(`[CARD Inquiry] ${subject} - ${name}`)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`)}`}
+                        href={`mailto:ravi.cardindia@gmail.com?subject=${encodeURIComponent(`[CARD Inquiry] ${subject} - ${name}`)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`)}`}
                         className="flex-1 bg-brand-primary hover:bg-brand-deep text-white font-bold py-2.5 px-3 rounded-xl text-center flex items-center justify-center gap-1.5 shadow-sm transition-colors text-xs"
                       >
                         <Mail size={14} /> Open in Email App

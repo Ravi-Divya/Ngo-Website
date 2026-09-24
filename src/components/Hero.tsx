@@ -39,11 +39,11 @@ export default function Hero() {
         className="absolute bottom-10 left-[5%] w-28 h-28 bg-brand-light/20 rounded-2xl blur-2xl pointer-events-none"
       />
 
-      <div className="container mx-auto px-4 md:px-10 relative z-10 flex flex-col lg:flex-row items-center gap-10 lg:gap-8">
+      <div className="container mx-auto px-4 md:px-10 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-6">
         
-        {/* Left Side (55%) */}
+        {/* Left Side */}
         <motion.div 
-          className="w-full lg:w-[55%] flex flex-col items-start"
+          className="w-full lg:w-[54%] flex flex-col items-start"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
@@ -63,12 +63,12 @@ export default function Hero() {
 
           <motion.p 
             variants={itemVariants}
-            className="text-base md:text-lg text-brand-deep font-sans max-w-lg mt-2 leading-relaxed"
+            className="text-base md:text-lg text-brand-deep font-sans max-w-xl mt-2 leading-relaxed"
           >
             CARD works to improve the socio, economic, political and cultural condition of the unorganized and underprivileged people in rural areas, empowering vulnerable communities through education, healthcare, sanitation, and sustainable livelihoods.
           </motion.p>
 
-          {/* Buttons */}
+          {/* Primary Buttons */}
           <motion.div 
             variants={itemVariants}
             className="mt-6 flex flex-wrap gap-4"
@@ -88,17 +88,38 @@ export default function Hero() {
               Learn More
             </Link>
           </motion.div>
+
+          {/* Join Hands CTA Strip (Requested) */}
+          <motion.div 
+            variants={itemVariants}
+            className="mt-6 w-full max-w-lg bg-white/90 backdrop-blur-md rounded-2xl border border-sky-200/80 p-3.5 sm:p-4 shadow-sm hover:shadow-md transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3"
+          >
+            <div className="flex items-center gap-2.5">
+              <span className="w-8 h-8 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-lg shrink-0">
+                🤝
+              </span>
+              <p className="font-display font-bold text-sm sm:text-base text-brand-dark leading-snug">
+                Join your hands with us to make everyone smile
+              </p>
+            </div>
+            <Link
+              to="/donate"
+              className="w-full sm:w-auto inline-flex items-center justify-center bg-brand-primary hover:bg-brand-deep text-white font-display font-bold px-4 py-2 rounded-xl text-xs uppercase tracking-wider transition-all shadow-2xs hover:shadow-sm shrink-0"
+            >
+              Donate Now
+            </Link>
+          </motion.div>
         </motion.div>
 
-        {/* Right Side (45%) */}
+        {/* Right Side Photo Collage (Tighter Gap & Centered) */}
         <motion.div 
-          className="w-full lg:w-[45%] relative h-[340px] md:h-[400px] flex items-center justify-center lg:justify-end"
-          initial={{ opacity: 0, x: 40 }}
+          className="w-full lg:w-[46%] relative h-[340px] md:h-[400px] flex items-center justify-center"
+          initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           {/* Image Collage */}
-          <div className="relative z-10 w-full max-w-[460px] h-[320px] md:h-[380px] lg:ml-auto">
+          <div className="relative z-10 w-full max-w-[460px] h-[320px] md:h-[380px]">
             {/* Primary Image (Top Centered) */}
             <motion.div
               initial={{ opacity: 0, y: -15 }}

@@ -100,9 +100,15 @@ export default function HomeEnquiryCTA() {
                   </div>
                   <div>
                     <span className="text-[11px] font-bold text-brand-muted uppercase tracking-wider block">Call Direct</span>
-                    <a href="tel:+919885429900" className="font-bold text-sm text-brand-dark hover:text-brand-primary transition-colors">
-                      +91 9885429900
-                    </a>
+                    <div className="flex flex-wrap items-center gap-x-2">
+                      <a href="tel:+919573307088" className="font-bold text-sm text-brand-dark hover:text-brand-primary transition-colors">
+                        +91 9573307088
+                      </a>
+                      <span className="text-slate-300">/</span>
+                      <a href="tel:+919885429900" className="font-semibold text-xs text-brand-muted hover:text-brand-primary transition-colors">
+                        +91 9885429900
+                      </a>
+                    </div>
                   </div>
                 </div>
 
@@ -112,9 +118,14 @@ export default function HomeEnquiryCTA() {
                   </div>
                   <div>
                     <span className="text-[11px] font-bold text-brand-muted uppercase tracking-wider block">Official Email</span>
-                    <a href="mailto:cardngo.org@gmail.com" className="font-bold text-sm text-brand-dark hover:text-brand-primary transition-colors">
-                      cardngo.org@gmail.com
-                    </a>
+                    <div className="flex flex-col">
+                      <a href="mailto:ravi.cardindia@gmail.com" className="font-bold text-sm text-brand-dark hover:text-brand-primary transition-colors">
+                        ravi.cardindia@gmail.com
+                      </a>
+                      <a href="mailto:cardngo.org@gmail.com" className="text-xs text-brand-muted hover:text-brand-primary transition-colors">
+                        cardngo.org@gmail.com
+                      </a>
+                    </div>
                   </div>
                 </div>
 
@@ -134,7 +145,7 @@ export default function HomeEnquiryCTA() {
               {/* Direct WhatsApp CTA Button */}
               <div className="pt-2">
                 <a
-                  href="https://wa.me/919885429900"
+                  href="https://wa.me/919573307088"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-6 rounded-2xl text-sm transition-all shadow-md hover:shadow-lg"

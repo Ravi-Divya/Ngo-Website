@@ -58,12 +58,12 @@ export default function GetInTouch() {
             {
               icon: Phone,
               title: 'Call Us',
-              lines: ['+91 9885429900', 'Mon – Sat, 9:00 AM – 5:00 PM'],
+              lines: ['+91 9573307088', '+91 9885429900', 'Mon – Sat, 9:00 AM – 5:00 PM'],
             },
             {
               icon: Mail,
               title: 'Email Us',
-              lines: ['cardngo.org@gmail.com', 'We reply within 24 hours'],
+              lines: ['ravi.cardindia@gmail.com', 'cardngo.org@gmail.com', 'We reply within 24 hours'],
             },
             {
               icon: Clock,
@@ -131,7 +131,7 @@ export default function GetInTouch() {
           </motion.div>
 
           <motion.a
-            href="https://wa.me/919885429900"
+            href="https://wa.me/919573307088"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
