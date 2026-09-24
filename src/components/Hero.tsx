@@ -89,16 +89,15 @@ export default function Hero() {
             </Link>
           </motion.div>
 
-          {/* Join Hands Message Banner (One Perfect Line) */}
+          {/* Inspiring Mission Strip with Handshake Emoji at End */}
           <motion.div 
             variants={itemVariants}
-            className="mt-6 inline-flex items-center gap-3 bg-white/95 backdrop-blur-md rounded-2xl border border-sky-200/90 px-4 sm:px-5 py-2.5 sm:py-3 shadow-xs hover:shadow-sm transition-all"
+            className="mt-6 inline-flex items-center gap-2.5 sm:gap-3 bg-white/95 backdrop-blur-md rounded-2xl border border-sky-200/90 px-4 sm:px-5 py-2.5 sm:py-3 shadow-xs hover:shadow-sm transition-all"
           >
-            <span className="w-8 h-8 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-lg shrink-0">
-              🤝
-            </span>
-            <p className="font-display font-bold text-xs sm:text-sm md:text-base text-brand-dark whitespace-nowrap tracking-tight">
-              Join your hands with us to make everyone smile
+            <span className="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse shrink-0" />
+            <p className="font-display font-bold text-xs sm:text-sm md:text-base text-brand-dark whitespace-nowrap tracking-tight flex items-center gap-1.5">
+              <span>Join hands with us to bring hope, dignity, and brighter smiles</span>
+              <span className="text-base sm:text-lg" aria-hidden="true">🤝</span>
             </p>
           </motion.div>
         </motion.div>
