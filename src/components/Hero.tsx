@@ -89,25 +89,17 @@ export default function Hero() {
             </Link>
           </motion.div>
 
-          {/* Join Hands CTA Strip (Requested) */}
+          {/* Join Hands Message Banner (One Perfect Line) */}
           <motion.div 
             variants={itemVariants}
-            className="mt-6 w-full max-w-lg bg-white/90 backdrop-blur-md rounded-2xl border border-sky-200/80 p-3.5 sm:p-4 shadow-sm hover:shadow-md transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3"
+            className="mt-6 inline-flex items-center gap-3 bg-white/95 backdrop-blur-md rounded-2xl border border-sky-200/90 px-4 sm:px-5 py-2.5 sm:py-3 shadow-xs hover:shadow-sm transition-all"
           >
-            <div className="flex items-center gap-2.5">
-              <span className="w-8 h-8 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-lg shrink-0">
-                🤝
-              </span>
-              <p className="font-display font-bold text-sm sm:text-base text-brand-dark leading-snug">
-                Join your hands with us to make everyone smile
-              </p>
-            </div>
-            <Link
-              to="/donate"
-              className="w-full sm:w-auto inline-flex items-center justify-center bg-brand-primary hover:bg-brand-deep text-white font-display font-bold px-4 py-2 rounded-xl text-xs uppercase tracking-wider transition-all shadow-2xs hover:shadow-sm shrink-0"
-            >
-              Donate Now
-            </Link>
+            <span className="w-8 h-8 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-lg shrink-0">
+              🤝
+            </span>
+            <p className="font-display font-bold text-xs sm:text-sm md:text-base text-brand-dark whitespace-nowrap tracking-tight">
+              Join your hands with us to make everyone smile
+            </p>
           </motion.div>
         </motion.div>
 

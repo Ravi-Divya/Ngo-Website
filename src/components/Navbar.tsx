@@ -158,11 +158,11 @@ export default function Navbar() {
             />
           </div>
           <div className="flex flex-col justify-center ml-2 sm:ml-3">
-            <span className="font-display font-black text-xs sm:text-sm md:text-base lg:text-lg text-brand-deep tracking-tight leading-tight block">
+            <span className="font-display font-black text-xs sm:text-sm md:text-base lg:text-lg text-brand-primary tracking-tight leading-tight block">
               Community Alternative Research
             </span>
             <span className="font-display font-black text-xs sm:text-sm md:text-base lg:text-lg text-brand-primary tracking-tight leading-tight block">
-              and Development
+              and Development (CARD)
             </span>
           </div>
         </Link>
