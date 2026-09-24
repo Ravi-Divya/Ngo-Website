@@ -147,19 +147,24 @@ export default function Navbar() {
         {/* Standard Logo & Name — Left */}
         <Link 
           to="/" 
-          aria-label="CARD — Home"
-          className="relative flex items-center transition-transform duration-300 hover:scale-105 z-[60] mr-4 md:mr-8"
+          aria-label="Community Alternative Research and Development — Home"
+          className="relative flex items-center transition-transform duration-300 hover:scale-102 z-[60] mr-2 sm:mr-4 md:mr-6"
         >
-          <div className="h-11 md:h-14 w-auto flex-shrink-0">
+          <div className="h-10 sm:h-12 md:h-14 w-auto flex-shrink-0">
             <img
               src="/images/card-logo.png"
-              alt="CARD logo"
+              alt="Community Alternative Research and Development logo"
               className="h-full w-auto object-contain"
             />
           </div>
-          <span className="font-display font-extrabold text-2xl md:text-3xl text-brand-deep tracking-tight ml-3">
-            CARD
-          </span>
+          <div className="flex flex-col justify-center ml-2 sm:ml-3">
+            <span className="font-display font-extrabold text-xs sm:text-sm md:text-base lg:text-lg text-brand-deep tracking-tight leading-tight max-w-[190px] sm:max-w-xs md:max-w-sm lg:max-w-none">
+              Community Alternative Research and Development
+            </span>
+            <span className="font-sans font-bold text-[9px] sm:text-[10px] md:text-[11px] text-brand-primary uppercase tracking-widest leading-none mt-0.5">
+              CARD NGO
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Nav Links — Right */}
