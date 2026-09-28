@@ -39,7 +39,7 @@ const programs: Program[] = [
   {
     id: 'lacim',
     title: 'LACIM Tribal Rehabilitation & Housing',
-    tagline: 'Constructing disaster-resilient brick colonies, sanitation, and child bridge education in Yanadi ST settlements.',
+    tagline: 'Constructing disaster-resilient brick colonies, sanitation, and child bridge education in tribal ST settlements.',
     highlights: [
       'Permanent brick housing with legal government land titles (Pattas)',
       'Individual household sanitation units to prevent open defecation',
@@ -78,7 +78,7 @@ const programs: Program[] = [
   {
     id: 'water',
     title: 'Drinking Water & Sanitation Infrastructure',
-    tagline: 'Deep borewells, overhead storage tanks, and safe piped drinking water directly to Yanadi households.',
+    tagline: 'Deep borewells, overhead storage tanks, and safe piped drinking water directly to tribal households.',
     highlights: [
       '450-ft solar-powered deep borewells in drought-prone areas',
       '5,000-liter overhead storage tanks with community taps',

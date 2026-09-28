@@ -23,12 +23,12 @@ const FAQS: FAQ[] = [
   {
     id: 'faq-3',
     question: 'What are CARD’s primary grassroots development programs?',
-    answer: 'Our core focus areas include: permanent brick housing colonies for Yanadi indigenous tribes, supplementary education and nutrition via LACIM child centers, safe drinking water RO plants, and sustainable livelihoods through beekeeping and agriculture.',
+    answer: 'Our core focus areas include: permanent brick housing colonies for indigenous tribal communities, supplementary education and nutrition via LACIM child centers, safe drinking water RO plants, and sustainable livelihoods through beekeeping and agriculture.',
   },
   {
     id: 'faq-4',
     question: 'Can donors and corporate partners visit project sites in Chittoor?',
-    answer: 'Yes, absolutely. CARD maintains a complete open-door policy. Donors and CSR representatives are welcome to visit our community schools, Yanadi tribal settlements, and clean water stations in Chittoor. Contact our team to coordinate local field transport.',
+    answer: 'Yes, absolutely. CARD maintains a complete open-door policy. Donors and CSR representatives are welcome to visit our community schools, tribal settlements, and clean water stations in Chittoor. Contact our team to coordinate local field transport.',
   },
   {
     id: 'faq-5',

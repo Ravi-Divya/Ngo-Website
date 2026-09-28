@@ -13,7 +13,7 @@ export default function Melania() {
       ]}
       paragraphs={[
         'Supported by Melania, The Netherlands, this micro-livelihood initiative focuses on the economic self-reliance and social empowerment of tribal artisan families in Puthalapattu ST Colony.',
-        'CARD supplies raw natural grass fibers, binding materials, specialized broom-making toolkits, and market linkage assistance to Yanadi ST women. By organizing them into self-help craft groups, the program enables sustainable daily income generation and financial independence.',
+        'CARD supplies raw natural grass fibers, binding materials, specialized broom-making toolkits, and market linkage assistance to tribal ST women. By organizing them into self-help craft groups, the program enables sustainable daily income generation and financial independence.',
       ]}
       backLink="/our-work"
     />

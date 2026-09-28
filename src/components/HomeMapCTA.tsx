@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail, ArrowRight, ShieldCheck, CheckCircle2, MessageSqua
 
 const clusters = [
   { name: 'Gudipala Mandal', focus: 'Education & Community RO Plants' },
-  { name: 'Anupu / Dasarapalli', focus: 'Yanadi Tribal Housing Colonies' },
+  { name: 'Anupu / Dasarapalli', focus: 'Tribal Housing Colonies' },
   { name: 'Puthalapattu', focus: 'Women SHGs & Livelihoods' },
   { name: 'G.D. Nellore', focus: 'Social Audits & MGNREGS Support' },
   { name: 'Singagarapeta', focus: 'Bio-Farming & Beekeeping' },

@@ -27,7 +27,7 @@ const SEARCH_ITEMS: SearchItem[] = [
   // Programs
   { id: 'pr-lacim', category: 'PROGRAMS', title: 'LACIM Children Education & Nutrition', path: '/lacim', description: 'Supplementary schooling, nutrition & learning centers for rural kids' },
   { id: 'pr-mgnregs', category: 'PROGRAMS', title: 'MGNREGS Social Audits & Nurseries', path: '/mgnregs', description: 'Transparency & accountability in rural employment guarantee scheme' },
-  { id: 'pr-otf', category: 'PROGRAMS', title: 'OTF / FEP Tribal Brick Colonies', path: '/otf', description: 'Permanent brick housing colonies for Yanadi indigenous tribes' },
+  { id: 'pr-otf', category: 'PROGRAMS', title: 'OTF / FEP Tribal Brick Colonies', path: '/otf', description: 'Permanent brick housing colonies for indigenous tribal communities' },
   { id: 'pr-melania', category: 'PROGRAMS', title: 'Melania Water & Sanitation', path: '/melania', description: 'Clean borewells, RO plants, and community hygiene in drought zones' },
   { id: 'pr-pollination', category: 'PROGRAMS', title: 'Pollination & Beekeeping', path: '/pollination', description: 'Apiculture, bio-farming, and sustainable rural livelihood training' },
 
@@ -164,7 +164,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                   </div>
                   <p className="text-slate-800 font-bold text-base">No matches found for "{query}"</p>
                   <p className="text-xs text-slate-500 mt-1 max-w-sm mx-auto">
-                    Try searching for "Donate", "80G", "LACIM", "Yanadi", "Water", or "Contact"
+                    Try searching for "Donate", "80G", "LACIM", "Tribal Housing", "Water", or "Contact"
                   </p>
                 </div>
               ) : (

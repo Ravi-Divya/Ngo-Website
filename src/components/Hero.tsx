@@ -119,8 +119,8 @@ export default function Hero() {
               className="absolute top-0 left-[10%] w-[80%] h-[58%] rounded-2xl shadow-xl overflow-hidden border-[6px] border-white z-10"
             >
               <img 
-                src="/images/hero_new_2.jpg" 
-                alt="CARD Community Infrastructure" 
+                src="/images/hero_borewell_lacim.jpg" 
+                alt="CARD Community Infrastructure - Borewell supported by LACIM" 
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-brand-primary/10 mix-blend-multiply pointer-events-none" />

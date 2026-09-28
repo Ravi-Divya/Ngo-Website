@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     question: "Where are your programs primarily located?",
-    answer: "Our grassroots initiatives are primarily focused on the Chittoor District of Andhra Pradesh, where we partner with marginalized families, Yanadi tribal communities, and smallholder farmers."
+    answer: "Our grassroots initiatives are primarily focused on the Chittoor District of Andhra Pradesh, where we partner with marginalized families, tribal communities, and smallholder farmers."
   },
   {
     question: "Can I sponsor a specific project?",

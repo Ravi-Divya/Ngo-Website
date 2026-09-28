@@ -43,7 +43,7 @@ const galleryImages: string[] = [
   "/images/hero_community_support.jpg",
   "/images/hero_meal_service.jpg",
   "/images/hero_new_1.jpg",
-  "/images/hero_new_2.jpg",
+  "/images/hero_borewell_lacim.jpg",
   "/images/hero_school_kids.jpg",
   "/images/hero_supply_distribution.jpg",
   "/images/hero_village_outreach.jpg",

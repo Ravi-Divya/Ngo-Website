@@ -27,7 +27,7 @@ export default function Home() {
                 Established in 1995 by founder <strong>S. Ravi</strong>, <strong>Community Alternative Research and Development (CARD)</strong> is a registered non-profit organization with 30 years of empowering rural communities across Andhra Pradesh.
               </p>
               <p className="text-brand-muted text-sm md:text-base leading-relaxed">
-                Over three decades, CARD has pioneered permanent housing colonies for Yanadi tribal families, quality education for underprivileged rural children, drinking water infrastructure, and sustainable agricultural livelihoods across 150+ villages in Chittoor District.
+                Over three decades, CARD has pioneered permanent housing colonies for tribal families, quality education for underprivileged rural children, drinking water infrastructure, and sustainable agricultural livelihoods across 150+ villages in Chittoor District.
               </p>
               <div className="grid grid-cols-3 gap-3 md:gap-4 pt-2">
                 <div className="bg-brand-soft p-3 md:p-3.5 rounded-2xl border border-brand-light text-center">

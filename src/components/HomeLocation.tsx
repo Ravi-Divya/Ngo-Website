@@ -20,7 +20,7 @@ const operationalClusters: Cluster[] = [
   {
     name: 'Anupu & Dasarapalli ST Colonies',
     focus: 'Permanent Disaster-Resilient Housing & OTF Girl Child Coaching',
-    villages: 'Dedicated Yanadi ST Housing Settlements',
+    villages: 'Dedicated ST Tribal Housing Settlements',
     icon: HomeIcon,
     badge: 'Housing & Education',
   },
