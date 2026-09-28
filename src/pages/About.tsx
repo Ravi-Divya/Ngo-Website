@@ -39,7 +39,7 @@ export default function About() {
                 </p>
                 
                 <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                  For over three decades, <strong className="text-gray-900 font-bold">CARD</strong> has served as a catalyst for transformative, grassroots change across the Chittoor District. We work closely with marginalized families, tribal communities, smallholder farmers, and rural women, understanding that true empowerment begins at the community level. Our comprehensive initiatives focus on advancing access to quality education, securing permanent and safe housing, cultivating sustainable agricultural livelihoods, and fiercely upholding the civil rights and dignity of every individual we serve.
+                  For over three decades, <strong className="text-gray-900 font-bold">CARD</strong> has served as a catalyst for transformative, grassroots change across the Chittoor District. We work closely with marginalized families, tribal communities, smallholder farmers, and rural women, understanding that true empowerment begins at the community level. Our comprehensive initiatives focus on advancing access to quality education, installing safe drinking water infrastructure, cultivating sustainable agricultural livelihoods, and fiercely upholding the civil rights and dignity of every individual we serve.
                 </p>
 
                 <p className="text-gray-600 text-sm md:text-base leading-relaxed">

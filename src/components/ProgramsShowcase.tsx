@@ -38,10 +38,10 @@ const programs: Program[] = [
   },
   {
     id: 'lacim',
-    title: 'LACIM Tribal Rehabilitation & Housing',
-    tagline: 'Constructing disaster-resilient brick colonies, sanitation, and child bridge education in tribal ST settlements.',
+    title: 'LACIM Tribal Community Development & Education',
+    tagline: 'Supporting child bridge education, nutrition centers, sanitation, and community development across tribal settlements.',
     highlights: [
-      'Permanent brick housing with legal government land titles (Pattas)',
+      'Supplementary child education centers and daily nutrition',
       'Individual household sanitation units to prevent open defecation',
       'Solar street lighting and paved village community pathways',
     ],

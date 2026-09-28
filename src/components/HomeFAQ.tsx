@@ -23,7 +23,7 @@ const FAQS: FAQ[] = [
   {
     id: 'faq-3',
     question: 'What are CARD’s primary grassroots development programs?',
-    answer: 'Our core focus areas include: permanent brick housing colonies for indigenous tribal communities, supplementary education and nutrition via LACIM child centers, safe drinking water RO plants, and sustainable livelihoods through beekeeping and agriculture.',
+    answer: 'Our core focus areas include: supplementary primary education and nutrition via LACIM child centers, deep borewells & community RO drinking water plants, women empowerment through artisan collectives, and sustainable agriculture through MGNREGS.',
   },
   {
     id: 'faq-4',

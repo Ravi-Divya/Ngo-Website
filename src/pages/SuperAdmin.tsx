@@ -58,7 +58,7 @@ const INITIAL_INQUIRIES: InquiryItem[] = [
     email: 'kvenkat92@gmail.com',
     phone: '+91 98854 33221',
     subject: 'Field Visit & Volunteering',
-    message: 'I am visiting Chittoor next weekend and would love to visit the tribal housing colony and understand how we can contribute construction materials.',
+    message: 'I am visiting Chittoor next weekend and would love to visit the community education centers and understand how we can contribute learning materials.',
     date: '2026-09-20',
     status: 'Contacted',
   },
@@ -91,7 +91,7 @@ const INITIAL_DONATIONS: DonationRecord[] = [
     donorName: 'Dr. Mohan Babu',
     pan: 'BKMPB8721K',
     amount: 25000,
-    program: 'Tribal Housing Brick Supplies',
+    program: 'Clean Water Borewell Project',
     receiptNumber: 'CARD/80G/2026/0411',
     date: '2026-09-20',
     paymentMode: 'Net Banking',
@@ -766,12 +766,12 @@ export default function SuperAdmin() {
                 progress: 94,
               },
               {
-                title: 'OTF / FEP Tribal Housing',
-                reach: '340 Brick houses built & occupied',
+                title: 'OTF / FEP Girl Child Education',
+                reach: '340+ Girl students receiving learning kits & tutoring',
                 mandal: 'Anupu & Dasarapalli Habitations',
                 lead: 'S. Ravi (Director)',
-                status: 'Phase 4 Infrastructure',
-                progress: 80,
+                status: 'Ongoing Educational Support',
+                progress: 88,
               },
               {
                 title: 'Melania Clean Drinking Water & RO Plants',
@@ -909,7 +909,7 @@ export default function SuperAdmin() {
                   {[
                     { term: 'NGO in Chittoor Andhra Pradesh', rank: '#1', volume: '1,800/mo', ctr: '14.2%' },
                     { term: '80G Tax Exemption Donation NGO', rank: '#2', volume: '4,200/mo', ctr: '8.6%' },
-                    { term: 'Tribal Housing NGO Andhra Pradesh', rank: '#1', volume: '950/mo', ctr: '19.4%' },
+                    { term: 'Drinking Water Borewell NGO Andhra Pradesh', rank: '#1', volume: '950/mo', ctr: '19.4%' },
                     { term: 'MGNREGS Social Audit Andhra Pradesh', rank: '#1', volume: '1,400/mo', ctr: '12.0%' },
                     { term: 'Child Education Charity Chittoor', rank: '#1', volume: '1,100/mo', ctr: '11.5%' },
                   ].map((kw, idx) => (

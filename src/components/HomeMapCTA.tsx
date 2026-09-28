@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail, ArrowRight, ShieldCheck, CheckCircle2, MessageSqua
 
 const clusters = [
   { name: 'Gudipala Mandal', focus: 'Education & Community RO Plants' },
-  { name: 'Anupu / Dasarapalli', focus: 'Tribal Housing Colonies' },
+  { name: 'Anupu / Dasarapalli', focus: 'Tribal Education & Water Projects' },
   { name: 'Puthalapattu', focus: 'Women SHGs & Livelihoods' },
   { name: 'G.D. Nellore', focus: 'Social Audits & MGNREGS Support' },
   { name: 'Singagarapeta', focus: 'Bio-Farming & Beekeeping' },
@@ -92,7 +92,7 @@ export default function HomeMapCTA() {
                 </div>
                 <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-200">
                   <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
-                  <span><strong>Open Field Access:</strong> Visit our community schools &amp; housing</span>
+                  <span><strong>Open Field Access:</strong> Visit our community schools &amp; water projects</span>
                 </div>
               </div>
 

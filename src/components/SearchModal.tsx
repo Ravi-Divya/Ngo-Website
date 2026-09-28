@@ -16,7 +16,7 @@ const SEARCH_ITEMS: SearchItem[] = [
   { id: 'p-home', category: 'PAGES', title: 'Home', path: '/', description: 'CARD grassroots overview, mission, and live impact in Chittoor' },
   { id: 'p-about', category: 'PAGES', title: 'About Us', path: '/about', description: 'Founded in 1995 by S. Ravi, 30 years of community development' },
   { id: 'p-work', category: 'PAGES', title: 'Our Work', path: '/our-work', description: 'Grassroots projects across 150+ villages in Andhra Pradesh' },
-  { id: 'p-impact', category: 'PAGES', title: 'Our Impact', path: '/impact', description: '50,000+ lives touched, housing, water, and schooling' },
+  { id: 'p-impact', category: 'PAGES', title: 'Our Impact', path: '/impact', description: '50,000+ lives touched through schooling, clean water, and livelihoods' },
   { id: 'p-case', category: 'PAGES', title: 'Case Studies', path: '/case-study', description: 'In-depth transformation stories of rural families and self-help groups' },
   { id: 'p-gallery', category: 'PAGES', title: 'Gallery', path: '/gallery', description: 'Photographic documentation of our field interventions' },
   { id: 'p-donate', category: 'PAGES', title: 'Donate Now (80G Tax Deductible)', path: '/donate', description: '100% transparent donations eligible for 50% Indian tax rebate' },
@@ -27,7 +27,7 @@ const SEARCH_ITEMS: SearchItem[] = [
   // Programs
   { id: 'pr-lacim', category: 'PROGRAMS', title: 'LACIM Children Education & Nutrition', path: '/lacim', description: 'Supplementary schooling, nutrition & learning centers for rural kids' },
   { id: 'pr-mgnregs', category: 'PROGRAMS', title: 'MGNREGS Social Audits & Nurseries', path: '/mgnregs', description: 'Transparency & accountability in rural employment guarantee scheme' },
-  { id: 'pr-otf', category: 'PROGRAMS', title: 'OTF / FEP Tribal Brick Colonies', path: '/otf', description: 'Permanent brick housing colonies for indigenous tribal communities' },
+  { id: 'pr-otf', category: 'PROGRAMS', title: 'OTF / FEP Girl Child Education Support', path: '/otf', description: 'Comprehensive school bags, learning kits, and tutoring for tribal girls' },
   { id: 'pr-melania', category: 'PROGRAMS', title: 'Melania Water & Sanitation', path: '/melania', description: 'Clean borewells, RO plants, and community hygiene in drought zones' },
   { id: 'pr-pollination', category: 'PROGRAMS', title: 'Pollination & Beekeeping', path: '/pollination', description: 'Apiculture, bio-farming, and sustainable rural livelihood training' },
 
@@ -164,7 +164,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                   </div>
                   <p className="text-slate-800 font-bold text-base">No matches found for "{query}"</p>
                   <p className="text-xs text-slate-500 mt-1 max-w-sm mx-auto">
-                    Try searching for "Donate", "80G", "LACIM", "Tribal Housing", "Water", or "Contact"
+                    Try searching for "Donate", "80G", "LACIM", "Education", "Water", or "Contact"
                   </p>
                 </div>
               ) : (

@@ -32,10 +32,10 @@ const sectors = [
     sector: 'Infrastructure and Water Support',
     poster: '/images/poster_water.png',
     keyFeatures: [
-      'Permanent disaster-resilient brick houses with land titles',
+      'Community drinking water RO plants and solar borewells',
       'Deep borewells & overhead piped drinking water supply',
       'Hygienic household toilets & community sanitation',
-      'Solar-powered street lighting for tribal colonies',
+      'Solar-powered street lighting for rural habitations',
       'Concrete village roads & stormwater drainage systems',
     ],
   },
