@@ -14,6 +14,7 @@ const sectors = [
       'Parental counseling to prevent school dropouts',
       'Infrastructure & digital aids for village schools',
     ],
+    detailsLink: '/lacim',
   },
   {
     id: 'nutrition-support',
@@ -26,6 +27,7 @@ const sectors = [
       'Daily warm meal service for destitute & elderly',
       'Community hygiene & nutrition awareness drives',
     ],
+    detailsLink: '/pollination',
   },
   {
     id: 'infrastructure-water-support',
@@ -38,6 +40,7 @@ const sectors = [
       'Solar-powered street lighting for rural habitations',
       'Concrete village roads & stormwater drainage systems',
     ],
+    detailsLink: '/melania',
   },
   {
     id: 'agriculture-support',
@@ -50,6 +53,7 @@ const sectors = [
       'Livelihood coverage across Gangadhara Nellore, Yadamari & Gudipala Mandalam',
       'Organic farming, vermicomposting training & high-yield seed kits',
     ],
+    detailsLink: '/mgnregs',
   },
   {
     id: 'mgnregs',

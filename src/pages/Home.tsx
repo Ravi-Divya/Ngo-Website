@@ -19,10 +19,16 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-8 space-y-4">
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-dark leading-tight">
-                About Us
-              </h2>
-              <div className="w-16 h-1 bg-brand-primary rounded-full mb-1"></div>
+              <div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-dark leading-tight">
+                  About Us
+                </h2>
+                <div
+                  className="w-16 h-1.5 bg-[#0284C7] rounded-full mt-2.5 mb-4 block shadow-xs"
+                  style={{ backgroundColor: '#0284C7', height: '6px', width: '64px' }}
+                  aria-hidden="true"
+                />
+              </div>
               <p className="text-brand-deep text-base md:text-lg leading-relaxed">
                 Established in 1995 by founder <strong>S. Ravi</strong>, <strong>Community Alternative Research and Development (CARD)</strong> is a registered non-profit organization with 30 years of empowering rural communities across Andhra Pradesh.
               </p>
