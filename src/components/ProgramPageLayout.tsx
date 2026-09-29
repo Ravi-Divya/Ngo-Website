@@ -39,32 +39,28 @@ export default function ProgramPageLayout({
               {title}
             </h1>
             {/* Small Blue Line Under Heading */}
-            <div
-              className="w-16 h-1.5 bg-[#0284C7] mx-auto mt-3 rounded-full shadow-xs"
-              style={{ backgroundColor: '#0284C7', height: '6px', width: '64px' }}
-              aria-hidden="true"
-            />
+            <div className="w-14 h-1 bg-brand-primary mx-auto mt-3 rounded-full" />
           </div>
 
           {/* Meta Details Box: Only Aided By, Sector, Place */}
-          <div className="border-2 border-slate-900 rounded-2xl overflow-hidden mb-7 text-xs md:text-sm divide-y-2 divide-slate-900 shadow-xs">
-            <div className="flex flex-col sm:flex-row bg-[#EBF5FB] p-3.5 sm:px-5 items-start sm:items-center">
-              <span className="font-bold text-slate-900 w-full sm:w-36 shrink-0 flex items-center gap-2">
-                <Landmark size={16} className="text-[#0284C7] shrink-0" /> Aided By :
+          <div className="border border-brand-light rounded-xl overflow-hidden mb-7 text-xs md:text-sm divide-y divide-brand-light/60">
+            <div className="flex flex-col sm:flex-row bg-brand-soft/40 p-3 sm:px-5 items-start sm:items-center">
+              <span className="font-bold text-brand-dark w-full sm:w-36 shrink-0 flex items-center gap-2">
+                <Landmark size={15} className="text-brand-primary" /> Aided By :
               </span>
-              <span className="font-bold text-sky-950 uppercase tracking-tight">{fundedBy}</span>
+              <span className="font-bold text-brand-deep uppercase">{fundedBy}</span>
             </div>
-            <div className="flex flex-col sm:flex-row bg-white p-3.5 sm:px-5 items-start sm:items-center">
-              <span className="font-bold text-slate-900 w-full sm:w-36 shrink-0 flex items-center gap-2">
-                <Tag size={16} className="text-[#0284C7] shrink-0" /> Sector :
+            <div className="flex flex-col sm:flex-row bg-white p-3 sm:px-5 items-start sm:items-center">
+              <span className="font-bold text-brand-dark w-full sm:w-36 shrink-0 flex items-center gap-2">
+                <Tag size={15} className="text-brand-primary" /> Sector :
               </span>
-              <span className="font-semibold text-slate-800">{sector}</span>
+              <span className="font-medium text-slate-700">{sector}</span>
             </div>
-            <div className="flex flex-col sm:flex-row bg-[#EBF5FB] p-3.5 sm:px-5 items-start sm:items-center">
-              <span className="font-bold text-slate-900 w-full sm:w-36 shrink-0 flex items-center gap-2">
-                <MapPin size={16} className="text-[#0284C7] shrink-0" /> Place :
+            <div className="flex flex-col sm:flex-row bg-brand-soft/40 p-3 sm:px-5 items-start sm:items-center">
+              <span className="font-bold text-brand-dark w-full sm:w-36 shrink-0 flex items-center gap-2">
+                <MapPin size={15} className="text-brand-primary" /> Place :
               </span>
-              <span className="font-semibold text-slate-800">{place}</span>
+              <span className="font-medium text-slate-700">{place}</span>
             </div>
           </div>
 
@@ -72,7 +68,7 @@ export default function ProgramPageLayout({
           {displayImages.length > 0 && (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-7">
               {displayImages.map((img, i) => (
-                <div key={img.src + i} className="rounded-2xl overflow-hidden border-2 border-slate-900 shadow-sm bg-slate-100">
+                <div key={img.src + i} className="rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-slate-100">
                   <img
                     src={img.src}
                     alt={img.alt}
@@ -80,7 +76,7 @@ export default function ProgramPageLayout({
                     className="w-full h-52 sm:h-56 md:h-64 object-cover hover:scale-105 transition-transform duration-500"
                   />
                   {img.caption && (
-                    <div className="p-2.5 text-center text-xs font-bold text-slate-900 bg-slate-100 border-t-2 border-slate-900">
+                    <div className="p-2.5 text-center text-xs font-semibold text-slate-700 bg-slate-50 border-t border-slate-200">
                       {img.caption}
                     </div>
                   )}

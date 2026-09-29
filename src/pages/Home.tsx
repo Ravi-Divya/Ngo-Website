@@ -24,8 +24,8 @@ export default function Home() {
                   About Us
                 </h2>
                 <div
-                  className="w-16 h-1.5 bg-[#0284C7] rounded-full mt-2.5 mb-4 block shadow-xs"
-                  style={{ backgroundColor: '#0284C7', height: '6px', width: '64px' }}
+                  className="w-16 h-1 bg-brand-primary rounded-full mt-3.5 mb-4"
+                  style={{ backgroundColor: '#0284C7', height: '4px', width: '64px' }}
                   aria-hidden="true"
                 />
               </div>
