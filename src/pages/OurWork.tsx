@@ -69,7 +69,7 @@ const sectors = [
 export default function OurWork() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      <PageHeader title="Our Work" />
+      <PageHeader title="Support a Cause" />
 
       <main className="flex-grow py-14 md:py-20">
         <div className="container mx-auto px-4 md:px-10 max-w-6xl">

@@ -28,7 +28,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 const quickLinks = [
   { name: 'About Us', path: '/about' },
-  { name: 'Our Work', path: '/our-work' },
+  { name: 'Support a Cause', path: '/support-a-cause' },
   { name: 'Impact Stories', path: '/impact' },
   { name: 'Photo Gallery', path: '/gallery' },
   { name: 'Case Study', path: '/case-study' },

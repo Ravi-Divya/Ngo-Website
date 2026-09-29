@@ -15,7 +15,7 @@ const SEARCH_ITEMS: SearchItem[] = [
   // Pages
   { id: 'p-home', category: 'PAGES', title: 'Home', path: '/', description: 'CARD grassroots overview, mission, and live impact in Chittoor' },
   { id: 'p-about', category: 'PAGES', title: 'About Us', path: '/about', description: 'Founded in 1995 by S. Ravi, 30 years of community development' },
-  { id: 'p-work', category: 'PAGES', title: 'Our Work', path: '/our-work', description: 'Grassroots projects across 150+ villages in Andhra Pradesh' },
+  { id: 'p-work', category: 'PAGES', title: 'Support a Cause', path: '/support-a-cause', description: 'Educational, nutrition, water & agriculture programs across 150+ villages' },
   { id: 'p-impact', category: 'PAGES', title: 'Our Impact', path: '/impact', description: '50,000+ lives touched through schooling, clean water, and livelihoods' },
   { id: 'p-case', category: 'PAGES', title: 'Case Studies', path: '/case-study', description: 'In-depth transformation stories of rural families and self-help groups' },
   { id: 'p-gallery', category: 'PAGES', title: 'Gallery', path: '/gallery', description: 'Photographic documentation of our field interventions' },

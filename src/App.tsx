@@ -122,6 +122,7 @@ const AppContent = () => {
               <Route path="/programs" element={<Navigate to="/our-work" replace />} />
               <Route path="/admin" element={<Navigate to="/super-admin" replace />} />
               <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
+              <Route path="/support-a-cause" element={<PageWrapper><OurWork /></PageWrapper>} />
               <Route path="/our-work" element={<PageWrapper><OurWork /></PageWrapper>} />
               <Route path="/impact" element={<PageWrapper><Impact /></PageWrapper>} />
               <Route path="/mgnregs" element={<PageWrapper><MGNREGS /></PageWrapper>} />
