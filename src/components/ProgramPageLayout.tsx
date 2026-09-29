@@ -43,24 +43,24 @@ export default function ProgramPageLayout({
           </div>
 
           {/* Meta Details Box: Only Aided By, Sector, Place */}
-          <div className="border-2 border-slate-900 rounded-2xl overflow-hidden mb-7 text-xs md:text-sm divide-y-2 divide-slate-900 shadow-xs">
-            <div className="flex flex-col sm:flex-row bg-[#EBF5FB] p-3.5 sm:px-5 items-start sm:items-center">
-              <span className="font-bold text-slate-900 w-full sm:w-36 shrink-0 flex items-center gap-2">
-                <Landmark size={16} className="text-[#0284C7] shrink-0" /> Aided By :
+          <div className="border border-brand-light rounded-xl overflow-hidden mb-7 text-xs md:text-sm divide-y divide-brand-light/60">
+            <div className="flex flex-col sm:flex-row bg-brand-soft/40 p-3 sm:px-5 items-start sm:items-center">
+              <span className="font-bold text-brand-dark w-full sm:w-36 shrink-0 flex items-center gap-2">
+                <Landmark size={15} className="text-brand-primary" /> Aided By :
               </span>
-              <span className="font-bold text-sky-950 uppercase tracking-tight">{fundedBy}</span>
+              <span className="font-bold text-brand-deep uppercase">{fundedBy}</span>
             </div>
-            <div className="flex flex-col sm:flex-row bg-white p-3.5 sm:px-5 items-start sm:items-center">
-              <span className="font-bold text-slate-900 w-full sm:w-36 shrink-0 flex items-center gap-2">
-                <Tag size={16} className="text-[#0284C7] shrink-0" /> Sector :
+            <div className="flex flex-col sm:flex-row bg-white p-3 sm:px-5 items-start sm:items-center">
+              <span className="font-bold text-brand-dark w-full sm:w-36 shrink-0 flex items-center gap-2">
+                <Tag size={15} className="text-brand-primary" /> Sector :
               </span>
-              <span className="font-semibold text-slate-800">{sector}</span>
+              <span className="font-medium text-slate-700">{sector}</span>
             </div>
-            <div className="flex flex-col sm:flex-row bg-[#EBF5FB] p-3.5 sm:px-5 items-start sm:items-center">
-              <span className="font-bold text-slate-900 w-full sm:w-36 shrink-0 flex items-center gap-2">
-                <MapPin size={16} className="text-[#0284C7] shrink-0" /> Place :
+            <div className="flex flex-col sm:flex-row bg-brand-soft/40 p-3 sm:px-5 items-start sm:items-center">
+              <span className="font-bold text-brand-dark w-full sm:w-36 shrink-0 flex items-center gap-2">
+                <MapPin size={15} className="text-brand-primary" /> Place :
               </span>
-              <span className="font-semibold text-slate-800">{place}</span>
+              <span className="font-medium text-slate-700">{place}</span>
             </div>
           </div>
 
