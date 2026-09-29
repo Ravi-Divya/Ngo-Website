@@ -34,11 +34,11 @@ export default function About() {
                 <div className="w-16 h-1 bg-brand-primary rounded-full mb-6"></div>
                 
                 <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-                  Established in 1995 by founder <strong className="text-gray-900 font-bold">S. Ravi</strong>, <strong className="text-gray-900 font-bold">Community Alternative Research and Development (CARD)</strong> is a registered non-profit organization with 30 years of empowering rural communities across <strong className="text-gray-900 font-semibold">Chittoor District, Andhra Pradesh State, India</strong>.
+                  Established in 1995 by founder <strong className="text-gray-900 font-bold">S. Ravi</strong>, <strong className="text-gray-900 font-bold">Community Alternative Research and Development (CARD)</strong> is a registered non-profit organization with 30 years of empowering rural communities across Andhra Pradesh.
                 </p>
                 
                 <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                  For over three decades, <strong className="text-gray-900 font-bold">CARD</strong> has served as a catalyst for transformative, grassroots change across <strong className="text-gray-900 font-semibold">Chittoor District, Andhra Pradesh State, India</strong>. We work closely with marginalized families, tribal communities, smallholder farmers, and rural women, understanding that true empowerment begins at the community level. Our comprehensive initiatives focus on advancing access to quality education, installing safe drinking water infrastructure, cultivating sustainable agricultural livelihoods, and fiercely upholding the civil rights and dignity of every individual we serve.
+                  For over three decades, <strong className="text-gray-900 font-bold">CARD</strong> has served as a catalyst for transformative, grassroots change across <strong className="text-gray-900 font-semibold">Andhra Pradesh State, India</strong>. We work closely with marginalized families, tribal communities, smallholder farmers, and rural women, understanding that true empowerment begins at the community level. Our comprehensive initiatives focus on advancing access to quality education, installing safe drinking water infrastructure, cultivating sustainable agricultural livelihoods, and fiercely upholding the civil rights and dignity of every individual we serve.
                 </p>
 
                 <p className="text-gray-600 text-sm md:text-base leading-relaxed">
