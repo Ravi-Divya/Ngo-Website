@@ -15,10 +15,10 @@ export default function About() {
           {/* Genesis & History Card */}
           <div className="bg-white border border-gray-200 shadow-xl shadow-brand-soft/20 rounded-3xl p-6 md:p-10 lg:p-12 overflow-hidden">
             
-            <div className="flow-root">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
               
-              {/* Left Side Image (Floated) */}
-              <div className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-white p-2 w-full sm:w-1/2 lg:w-5/12 float-left mr-6 md:mr-8 lg:mr-10 mb-4 md:mb-6 mt-1 hover:shadow-xl transition-shadow duration-300">
+              {/* Left Side Image */}
+              <div className="lg:col-span-5 relative rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-white p-2 hover:shadow-xl transition-shadow duration-300">
                 <img
                   src="/images/card_felicitation_award.jpg"
                   alt="Founder S. Ravi felicitated by Chittoor MP Daggumalla Prasada Rao garu, District Collector Sumit Kumar garu, IAS, and CHUDA Chairperson Katari Hemalatha garu"
@@ -26,14 +26,14 @@ export default function About() {
                 />
               </div>
               
-              {/* Right Side & Wrapping Content */}
-              <div className="space-y-5">
+              {/* Right Side Content */}
+              <div className="lg:col-span-7 space-y-5">
                 <div>
                   <h2 className="text-3xl md:text-4xl font-display font-bold text-brand-dark leading-tight">
                     About Us
                   </h2>
                   <div
-                    className="w-16 h-1 bg-brand-primary rounded-full mt-3.5 mb-5"
+                    className="w-16 h-1 bg-brand-primary rounded-full mt-3.5 mb-5 block"
                     style={{ backgroundColor: '#0284C7', height: '4px', width: '64px' }}
                     aria-hidden="true"
                   />
