@@ -11,11 +11,11 @@ interface Cluster {
 
 const operationalClusters: Cluster[] = [
   {
-    name: 'Gudipala Mandal',
-    focus: 'MGNREGS Community Tree Nurseries & Rural Wage Employment',
-    villages: 'Gram Panchayats across Gudipala',
+    name: 'Gangadhara Nellore, Yadamari & Gudipala Mandalam',
+    focus: 'MGNREGS 100 Days Wage Employment, Nursery Raising, Plantations & Pond Desilting',
+    villages: 'Gram Panchayats across GD Nellore, Yadamari & Gudipala',
     icon: Trees,
-    badge: 'Social Forestry',
+    badge: '100 Days Employment',
   },
   {
     name: 'Anupu & Dasarapalli ST Colonies',
@@ -92,7 +92,7 @@ export default function HomeLocation() {
                   <MapPin size={18} className="text-brand-primary shrink-0 mt-0.5" />
                   <div className="text-xs sm:text-sm text-brand-deep leading-relaxed">
                     <strong className="text-brand-dark block font-bold mb-0.5">COMMUNITY ALTERNATIVE RESEARCH AND DEVELOPMENT (CARD)</strong>
-                    Mittapalyam, Ellamarajupalli (Post), G.D. Nellore (Mandal) &bull; Chittoor District, Andhra Pradesh — PIN 517125, India.
+                    Mittapalyam, Ellamarajupalli (Post), G.D. Nellore (Mandal) &bull; Chittoor District, Andhra Pradesh State, India — PIN 517125.
                   </div>
                 </div>
               </div>

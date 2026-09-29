@@ -44,12 +44,25 @@ const sectors = [
     sector: 'Agriculture Support',
     poster: '/images/poster_agriculture.png',
     keyFeatures: [
-      'Community nurseries for fruit & timber saplings',
-      'MGNREGS Shrama Shakthi Sangha (SSS) group land work',
-      'Check dams & farm ponds for groundwater recharge',
-      'Organic farming & vermicomposting training',
-      'Distribution of agricultural toolkits & high-yield seeds',
+      'Community nursery raising for fruit & timber saplings',
+      'Mahatma Gandhi National Rural Employment Guarantee Scheme (MGNREGS) 100 days wage work',
+      'Desilting of ponds, check dams & farm percolation ponds for groundwater recharge',
+      'Livelihood coverage across Gangadhara Nellore, Yadamari & Gudipala Mandalam',
+      'Organic farming, vermicomposting training & high-yield seed kits',
     ],
+  },
+  {
+    id: 'mgnregs',
+    sector: 'Mahatma Gandhi National Rural Employment Guarantee Scheme (MGNREGS)',
+    poster: '/images/poster_forestry.png',
+    keyFeatures: [
+      '100 days of guaranteed wage employment per financial year for rural households',
+      'Active in Gangadhara Nellore Mandalam, Yadamari Mandalam, and Gudipala Mandalam',
+      'Community nursery raising for timber and fruit tree saplings',
+      'Extensive block, avenue, and social forestry plantations across Gram Panchayats',
+      'Desilting of ponds, check dams, and farm percolation ponds for groundwater recharge',
+    ],
+    detailsLink: '/mgnregs',
   },
 ];
 
@@ -104,8 +117,16 @@ export default function OurWork() {
                         ))}
                       </div>
 
-                      {/* Donate Now CTA Button */}
-                      <div className="pt-3">
+                      {/* Action Buttons */}
+                      <div className="pt-3 flex flex-wrap gap-3">
+                        {sec.detailsLink && (
+                          <Link
+                            to={sec.detailsLink}
+                            className="w-full sm:w-auto inline-flex items-center justify-center bg-brand-deep hover:bg-brand-dark text-white font-display font-bold px-6 py-3 rounded-xl text-xs md:text-sm tracking-wider uppercase shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-center"
+                          >
+                            View Program Details
+                          </Link>
+                        )}
                         <Link
                           to="/donate"
                           className="w-full sm:w-auto inline-flex items-center justify-center bg-brand-primary hover:bg-brand-deep text-white font-display font-bold px-7 py-3 rounded-xl text-xs md:text-sm tracking-wider uppercase shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-center"

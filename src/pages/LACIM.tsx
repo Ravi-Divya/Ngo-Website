@@ -6,7 +6,7 @@ export default function LACIM() {
       title="LACIM TRIBAL DEVELOPMENT PROGRAMME"
       fundedBy="LES AMIS DU C.I.M. (LACIM), FRANCE"
       sector="Tribal Upliftment & Primary Child Education"
-      place="Anupu ST Colony, G.D. Nellore & Surrounding Tribal Hamlets, Chittoor District, AP"
+      place="Anupu ST Colony, G.D. Nellore & Surrounding Tribal Hamlets, Chittoor District, Andhra Pradesh State, India"
       images={[
         { src: '/images/lacim_1.jpg', alt: 'Tribal community development and schooling', caption: 'Child Education & Nutritional Support Center' },
         { src: '/images/lacim_2.jpg', alt: 'Community support under LACIM partnership', caption: 'Community Development & Support for Tribal Families' },

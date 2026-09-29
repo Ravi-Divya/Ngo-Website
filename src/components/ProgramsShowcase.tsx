@@ -25,12 +25,13 @@ interface Program {
 const programs: Program[] = [
   {
     id: 'mgnregs',
-    title: 'MGNREGS SSS Group Formation',
-    tagline: 'Awareness programs, community nursery raising & rural wage employment in Gudipala Gram Panchayats.',
+    title: 'Mahatma Gandhi National Rural Employment Guarantee Scheme (MGNREGS)',
+    tagline: '100 days guaranteed wage employment, community nursery raising, plantations, and desilting of ponds across Gangadhara Nellore Mandalam, Yadamari Mandalam, and Gudipala Mandalam.',
     highlights: [
-      '5,000+ timber & fruit saplings raised in community nurseries',
-      'Direct wage employment under Mahatma Gandhi NREGS scheme',
-      'Soil conservation & groundwater recharge check-dams',
+      '100 days of guaranteed wage employment for rural households',
+      'Community nursery raising for timber and fruit tree saplings',
+      'Extensive block, avenue, and social forestry plantations',
+      'Desilting of ponds, check dams & farm percolation ponds for water recharge',
     ],
     icon: TreePine,
     link: '/mgnregs',

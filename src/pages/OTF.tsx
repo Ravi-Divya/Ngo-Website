@@ -6,7 +6,7 @@ export default function OTF() {
       title="EDUCATIONAL DEVELOPMENT FOR POOR GIRL CHILDREN"
       fundedBy="ONTARIO TEACHERS FEDERATION (OTF/FEP)"
       sector="Girl Child Education & Academic Support"
-      place="GD.Nellore Dasarapalli S.T. Colony, Chittoor District, AP"
+      place="GD.Nellore Dasarapalli S.T. Colony, Chittoor District, Andhra Pradesh State, India"
       images={[
         { src: '/images/otf_1.jpg', alt: 'Distribution of school kits and learning materials', caption: 'Supply of Learning Material & School Bags Distribution' },
         { src: '/images/otf_2.jpg', alt: 'Girl children and students receiving educational aids', caption: 'Empowering Underprivileged Girl Children in S.T. Colony' },

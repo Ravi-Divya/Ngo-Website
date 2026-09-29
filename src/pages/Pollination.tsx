@@ -6,7 +6,7 @@ export default function Pollination() {
       title="COVID-19 FOOD GROCERIES & GRAINS DISTRIBUTION"
       fundedBy="THE POLLINATION – USA"
       sector="Humanitarian Relief & Food Security"
-      place="GD Nellore (1. Buchanna Kandiga SC Colony, 2. Singagara Peta SC Colony), Chittoor District, AP"
+      place="GD Nellore (1. Buchanna Kandiga SC Colony, 2. Singagara Peta SC Colony), Chittoor District, Andhra Pradesh State, India"
       images={[
         { src: '/images/pollination_1.jpg', alt: 'Food grains and grocery kit distribution', caption: 'Covid-19 Relief Grocery Kits Distribution' },
         { src: '/images/pollination_2.jpg', alt: 'Beneficiary families receiving nutritional support', caption: 'Direct Household Relief in SC Colonies' },

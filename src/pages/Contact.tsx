@@ -90,7 +90,7 @@ export default function Contact() {
                       <p className="text-brand-soft/80 text-sm leading-relaxed">
                         Mittapalyam, Ellamarajupalli (Post),<br />
                         G.D.Nellore (Mandal) — 517125,<br />
-                        Chittoor District, AP, India
+                        Chittoor District, Andhra Pradesh State, India
                       </p>
                     </div>
                   </div>

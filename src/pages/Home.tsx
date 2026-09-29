@@ -24,10 +24,10 @@ export default function Home() {
               </h2>
               <div className="w-16 h-1 bg-brand-primary rounded-full mb-1"></div>
               <p className="text-brand-deep text-base md:text-lg leading-relaxed">
-                Established in 1995 by founder <strong>S. Ravi</strong>, <strong>Community Alternative Research and Development (CARD)</strong> is a registered non-profit organization with 30 years of empowering rural communities across Andhra Pradesh.
+                Established in 1995 by founder <strong>S. Ravi</strong>, <strong>Community Alternative Research and Development (CARD)</strong> is a registered non-profit organization with 30 years of empowering rural communities across <strong>Chittoor District, Andhra Pradesh State, India</strong>.
               </p>
               <p className="text-brand-muted text-sm md:text-base leading-relaxed">
-                Over three decades, CARD has pioneered quality education for underprivileged rural children, deep borewell & drinking water infrastructure, women's livelihood collectives, and sustainable agricultural livelihoods across 150+ villages in Chittoor District.
+                Over three decades, CARD has pioneered quality education for underprivileged rural children, deep borewell &amp; drinking water infrastructure, women's livelihood collectives, and sustainable agricultural livelihoods across 150+ villages in <strong>Chittoor District, Andhra Pradesh State, India</strong>.
               </p>
               <div className="grid grid-cols-3 gap-3 md:gap-4 pt-2">
                 <div className="bg-brand-soft p-3 md:p-3.5 rounded-2xl border border-brand-light text-center">

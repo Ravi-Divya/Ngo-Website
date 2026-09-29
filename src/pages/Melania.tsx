@@ -6,7 +6,7 @@ export default function Melania() {
       title="BROOM MAKERS OF PUTHALAPATTU LIVELIHOOD PROJECT"
       fundedBy="MELANIA - THE NETHERLANDS"
       sector="Livelihood Development & Women Empowerment"
-      place="Puthalapattu ST Colony, Chittoor District, AP"
+      place="Puthalapattu ST Colony, Chittoor District, Andhra Pradesh State, India"
       images={[
         { src: '/images/melania_1.jpg', alt: 'Livelihood support and craft materials', caption: 'Livelihood Toolkits & Raw Material Support' },
         { src: '/images/melania_2.jpg', alt: 'Tribal women artisan enterprise', caption: 'Tribal Women Broom Makers Cooperative Group' },

@@ -26,7 +26,7 @@ const SEARCH_ITEMS: SearchItem[] = [
 
   // Programs
   { id: 'pr-lacim', category: 'PROGRAMS', title: 'LACIM Children Education & Nutrition', path: '/lacim', description: 'Supplementary schooling, nutrition & learning centers for rural kids' },
-  { id: 'pr-mgnregs', category: 'PROGRAMS', title: 'MGNREGS Social Audits & Nurseries', path: '/mgnregs', description: 'Transparency & accountability in rural employment guarantee scheme' },
+  { id: 'pr-mgnregs', category: 'PROGRAMS', title: 'Mahatma Gandhi National Rural Employment Guarantee Scheme (MGNREGS)', path: '/mgnregs', description: '100 days wage employment, nursery raising, plantations & pond desilting across Gangadhara Nellore, Yadamari & Gudipala Mandalam' },
   { id: 'pr-otf', category: 'PROGRAMS', title: 'OTF / FEP Girl Child Education Support', path: '/otf', description: 'Comprehensive school bags, learning kits, and tutoring for tribal girls' },
   { id: 'pr-melania', category: 'PROGRAMS', title: 'Melania Water & Sanitation', path: '/melania', description: 'Clean borewells, RO plants, and community hygiene in drought zones' },
   { id: 'pr-pollination', category: 'PROGRAMS', title: 'Pollination & Beekeeping', path: '/pollination', description: 'Apiculture, bio-farming, and sustainable rural livelihood training' },

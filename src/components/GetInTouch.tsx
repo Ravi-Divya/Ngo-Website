@@ -53,7 +53,7 @@ export default function GetInTouch() {
             {
               icon: MapPin,
               title: 'Visit Us',
-              lines: ['Mittapalyam, Ellamarajupalli (Post),', 'G.D. Nellore (Mandal) — 517125,', 'Chittoor District, Andhra Pradesh'],
+              lines: ['Mittapalyam, Ellamarajupalli (Post),', 'G.D. Nellore (Mandal) — 517125,', 'Chittoor District, Andhra Pradesh State, India'],
             },
             {
               icon: Phone,

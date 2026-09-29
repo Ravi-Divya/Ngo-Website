@@ -150,7 +150,7 @@ export default function Footer() {
                 <div className="flex items-start gap-2.5">
                   <MapPin size={14} className="text-sky-400 shrink-0 mt-0.5" />
                   <span className="leading-relaxed">
-                    Chittoor, Andhra Pradesh, India
+                    Chittoor District, Andhra Pradesh State, India
                   </span>
                 </div>
                 <div className="flex items-center gap-2.5">

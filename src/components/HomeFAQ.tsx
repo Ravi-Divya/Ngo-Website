@@ -17,13 +17,13 @@ const FAQS: FAQ[] = [
   },
   {
     id: 'faq-2',
-    question: 'Where does CARD operate in Chittoor District, Andhra Pradesh?',
-    answer: 'Our registered headquarters is in Mittapalyam, Chittoor District (PIN 517125). We actively operate across 5+ Mandals including Gudipala, Anupu / Dasarapalli, Puthalapattu, G.D. Nellore, and Singagarapeta, covering more than 150 rural habitations.',
+    question: 'Where does CARD operate in Chittoor District, Andhra Pradesh State, India?',
+    answer: 'Our registered headquarters is in Mittapalyam, Chittoor District, Andhra Pradesh State, India (PIN 517125). We actively operate across Mandals including Gangadhara Nellore Mandalam, Yadamari Mandalam, Gudipala Mandalam, Puthalapattu, and surrounding rural habitations.',
   },
   {
     id: 'faq-3',
     question: 'What are CARD’s primary grassroots development programs?',
-    answer: 'Our core focus areas include: supplementary primary education and nutrition via LACIM child centers, deep borewells & community RO drinking water plants, women empowerment through artisan collectives, and sustainable agriculture through MGNREGS.',
+    answer: 'Our core focus areas include: supplementary primary education and nutrition via LACIM child centers, deep borewells & community RO drinking water plants, women empowerment through artisan collectives, and sustainable agriculture through Mahatma Gandhi National Rural Employment Guarantee Scheme (MGNREGS) featuring 100 days wage employment, community nursery raising, plantations, and desilting of ponds.',
   },
   {
     id: 'faq-4',

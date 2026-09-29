@@ -1,6 +1,6 @@
 import PageHeader from '../components/PageHeader';
 import FocusAreas from '../components/FocusAreas';
-import { Target, Eye, ArrowRight, ShieldCheck, FileText, CheckCircle2 } from 'lucide-react';
+import { Target, Eye, ArrowRight, ShieldCheck, FileText, CheckCircle2, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function About() {
@@ -12,7 +12,6 @@ export default function About() {
       <main className="flex-grow py-14 md:py-20">
         <div className="container mx-auto px-4 md:px-10 max-w-6xl space-y-20">
           
-          {/* Genesis & History Card */}
           {/* Genesis & History Card */}
           <div className="bg-white border border-gray-200 shadow-xl shadow-brand-soft/20 rounded-3xl p-6 md:p-10 lg:p-12 overflow-hidden">
             
@@ -35,11 +34,11 @@ export default function About() {
                 <div className="w-16 h-1 bg-brand-primary rounded-full mb-6"></div>
                 
                 <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-                  Established in 1995 by founder <strong className="text-gray-900 font-bold">S. Ravi</strong>, <strong className="text-gray-900 font-bold">Community Alternative Research and Development (CARD)</strong> is a registered non-profit organization with 30 years of empowering rural communities across Andhra Pradesh.
+                  Established in 1995 by founder <strong className="text-gray-900 font-bold">S. Ravi</strong>, <strong className="text-gray-900 font-bold">Community Alternative Research and Development (CARD)</strong> is a registered non-profit organization with 30 years of empowering rural communities across <strong className="text-gray-900 font-semibold">Chittoor District, Andhra Pradesh State, India</strong>.
                 </p>
                 
                 <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                  For over three decades, <strong className="text-gray-900 font-bold">CARD</strong> has served as a catalyst for transformative, grassroots change across the Chittoor District. We work closely with marginalized families, tribal communities, smallholder farmers, and rural women, understanding that true empowerment begins at the community level. Our comprehensive initiatives focus on advancing access to quality education, installing safe drinking water infrastructure, cultivating sustainable agricultural livelihoods, and fiercely upholding the civil rights and dignity of every individual we serve.
+                  For over three decades, <strong className="text-gray-900 font-bold">CARD</strong> has served as a catalyst for transformative, grassroots change across <strong className="text-gray-900 font-semibold">Chittoor District, Andhra Pradesh State, India</strong>. We work closely with marginalized families, tribal communities, smallholder farmers, and rural women, understanding that true empowerment begins at the community level. Our comprehensive initiatives focus on advancing access to quality education, installing safe drinking water infrastructure, cultivating sustainable agricultural livelihoods, and fiercely upholding the civil rights and dignity of every individual we serve.
                 </p>
 
                 <p className="text-gray-600 text-sm md:text-base leading-relaxed">
@@ -57,6 +56,20 @@ export default function About() {
               <h3 className="text-xl md:text-2xl font-serif italic text-brand-primary/90 font-medium">
                 "Building resilience and dignity, one village at a time."
               </h3>
+            </div>
+
+            {/* Official Registered Office Address Highlight */}
+            <div className="mt-6 pt-5 border-t border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs md:text-sm text-gray-700 bg-brand-soft/60 p-4 rounded-2xl border border-brand-light">
+              <div className="flex items-start sm:items-center gap-2.5">
+                <MapPin size={18} className="text-brand-primary shrink-0 mt-0.5 sm:mt-0" />
+                <div>
+                  <span className="font-bold text-brand-dark">Registered Office Address: </span>
+                  <span className="font-medium text-slate-800">Mittapalyam, Ellamarajupalli (Post), G.D. Nellore (Mandal), Chittoor District, Andhra Pradesh State, India — PIN 517125</span>
+                </div>
+              </div>
+              <Link to="/contact" className="text-brand-primary font-bold hover:underline shrink-0 text-xs flex items-center gap-1">
+                Contact &amp; Map &rarr;
+              </Link>
             </div>
           </div>
 
