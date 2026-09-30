@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { ArrowRight, HeartPulse, ShieldCheck } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -54,13 +54,13 @@ export default function Hero() {
   return (
     <section 
       id="hero"
-      className="relative pt-8 md:pt-12 pb-16 md:pb-24 overflow-hidden bg-slate-950 text-white min-h-[580px] flex items-center"
+      className="relative pt-10 md:pt-16 pb-16 md:pb-24 overflow-hidden bg-gradient-to-br from-[#F0F9FF] via-white to-[#F0F9FF] border-b border-brand-light"
     >
-      {/* Background Photo Collage Mosaic from Gallery */}
+      {/* Background Photo Collage Mosaic from Gallery (Clean Light Theme) */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 h-full w-full gap-1.5 opacity-45 sm:opacity-50 scale-105 filter saturate-125 contrast-105">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 h-full w-full gap-1.5 opacity-20 sm:opacity-25 scale-105 filter saturate-110">
           {galleryCollageImages.map((src, idx) => (
-            <div key={idx} className="relative overflow-hidden w-full h-full min-h-[130px] md:min-h-[160px]">
+            <div key={idx} className="relative overflow-hidden w-full h-full min-h-[120px] md:min-h-[150px]">
               <img
                 src={src}
                 alt={`CARD Gallery Community Action ${idx + 1}`}
@@ -70,153 +70,72 @@ export default function Hero() {
             </div>
           ))}
         </div>
-        {/* Balanced Dark & Navy Gradient Overlay for Clear Readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/92 via-slate-950/80 to-sky-950/75" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-slate-950/70" />
+        {/* Soft Clean Light Gradient Overlay for Pure Readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F0F9FF]/85 via-white/80 to-white/95" />
       </div>
 
       <div className="container mx-auto px-4 md:px-10 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-          
-          {/* Left Column: Mission & Impact */}
-          <motion.div 
-            className="lg:col-span-7 flex flex-col items-start"
-            initial="hidden"
-            animate="visible"
-            variants={containerVariants}
+        <motion.div 
+          className="max-w-4xl mx-auto flex flex-col items-center text-center"
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+        >
+          {/* Main Heading */}
+          <h1 className="font-display font-bold leading-tight mb-4">
+            <motion.span variants={itemVariants} className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-brand-dark mb-1">
+              Transforming and Building
+            </motion.span>
+            <motion.span variants={itemVariants} className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-brand-primary mb-1">
+              Stronger Communities
+            </motion.span>
+            <motion.span variants={itemVariants} className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-brand-dark">
+              Together
+            </motion.span>
+          </h1>
+
+          {/* Description */}
+          <motion.p 
+            variants={itemVariants}
+            className="text-base sm:text-lg md:text-xl text-brand-deep font-sans max-w-2xl mt-2 leading-relaxed"
           >
-            {/* Top Badge */}
-            <motion.div 
-              variants={itemVariants}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-sky-300 text-xs font-bold tracking-wider uppercase border border-white/15 mb-4"
-            >
-              <ShieldCheck size={14} className="text-sky-400" />
-              <span>30 Years of Grassroots Impact • Est. 1995</span>
-            </motion.div>
+            CARD works to improve the socio, economic, political and cultural condition of the unorganized and underprivileged people in rural areas, empowering vulnerable communities through education, healthcare, sanitation, and sustainable livelihoods.
+          </motion.p>
 
-            {/* Heading */}
-            <h1 className="font-display font-bold leading-tight mb-3">
-              <motion.span variants={itemVariants} className="block text-3xl sm:text-4xl md:text-5xl text-white mb-1">
-                Transforming and Building
-              </motion.span>
-              <motion.span variants={itemVariants} className="block text-3xl sm:text-4xl md:text-5xl text-sky-400 mb-1">
-                Stronger Communities
-              </motion.span>
-              <motion.span variants={itemVariants} className="block text-3xl sm:text-4xl md:text-5xl text-white">
-                Together
-              </motion.span>
-            </h1>
-
-            <motion.p 
-              variants={itemVariants}
-              className="text-base sm:text-lg text-slate-300 font-sans max-w-xl mt-2 leading-relaxed"
-            >
-              CARD works to improve the socio, economic, political and cultural condition of the unorganized and underprivileged people in rural areas, empowering vulnerable communities through education, healthcare, sanitation, and sustainable livelihoods.
-            </motion.p>
-
-            {/* Primary Action Buttons */}
-            <motion.div 
-              variants={itemVariants}
-              className="mt-6 flex flex-wrap gap-4"
-            >
-              <motion.div whileHover={{ scale: 1.04 }}>
-                <Link 
-                  to="/donate" 
-                  className="bg-brand-primary text-white rounded-full px-8 py-3.5 font-bold text-sm sm:text-base hover:bg-sky-500 shadow-lg shadow-sky-600/30 transition-all inline-flex items-center gap-2"
-                >
-                  <span>Donate Now</span>
-                  <ArrowRight size={16} />
-                </Link>
-              </motion.div>
+          {/* Action CTAs */}
+          <motion.div 
+            variants={itemVariants}
+            className="mt-8 flex flex-wrap justify-center gap-4"
+          >
+            <motion.div whileHover={{ scale: 1.04 }}>
               <Link 
-                to="/about" 
-                className="border-2 border-white/30 text-white rounded-full px-7 py-3.5 font-semibold text-sm sm:text-base hover:bg-white/10 hover:border-white transition-all inline-block backdrop-blur-sm"
+                to="/donate" 
+                className="bg-brand-primary text-white rounded-full px-8 py-3.5 font-bold text-sm sm:text-base hover:bg-brand-deep shadow-md hover:shadow-lg transition-all inline-flex items-center gap-2"
               >
-                Learn More
+                <span>Donate Now</span>
+                <ArrowRight size={16} />
               </Link>
             </motion.div>
-
-            {/* Inspiring Mission Strip with Handshake Emoji */}
-            <motion.div 
-              variants={itemVariants}
-              className="mt-6 inline-flex items-center gap-2.5 sm:gap-3 bg-white/10 backdrop-blur-md rounded-2xl border border-white/15 px-4 sm:px-5 py-2.5 sm:py-3 shadow-sm"
+            <Link 
+              to="/about" 
+              className="border-2 border-brand-accent text-brand-dark rounded-full px-8 py-3.5 font-semibold text-sm sm:text-base hover:bg-brand-soft hover:shadow-sm transition-all inline-block bg-white/80 backdrop-blur-sm"
             >
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-              <p className="font-display font-medium text-xs sm:text-sm text-slate-200 tracking-tight flex items-center gap-1.5">
-                <span>Join hands with us to bring hope, dignity, and brighter smiles</span>
-                <span className="text-base sm:text-lg" aria-hidden="true">🤝</span>
-              </p>
-            </motion.div>
+              Learn More
+            </Link>
           </motion.div>
 
-          {/* Right Column: Explore Cards (Styled exactly like Image 5 with circular & split banners) */}
+          {/* Inspiring Mission Strip with Handshake Emoji */}
           <motion.div 
-            className="lg:col-span-5 flex flex-col gap-4 sm:gap-5"
-            initial={{ opacity: 0, x: 25 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.25 }}
+            variants={itemVariants}
+            className="mt-8 inline-flex items-center gap-2.5 sm:gap-3 bg-white/95 backdrop-blur-md rounded-2xl border border-sky-200/90 px-5 py-3 shadow-xs hover:shadow-sm transition-all"
           >
-            {/* Card 1: EDUCATION 2025 Banner */}
-            <div className="group relative overflow-hidden rounded-3xl bg-slate-900/80 backdrop-blur-md border border-white/15 p-6 shadow-2xl transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/90">
-              <div className="flex items-center justify-between gap-4">
-                <div className="flex items-center gap-4">
-                  {/* Circular Badge styled after Image 5 */}
-                  <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white text-slate-950 flex flex-col items-center justify-center shadow-xl shrink-0 p-2 border-4 border-sky-400">
-                    <span className="text-[10px] sm:text-xs font-black tracking-widest uppercase text-sky-600">EDUCATION</span>
-                    <span className="text-lg sm:text-xl font-display font-black leading-none text-slate-950">2025</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-display font-bold text-white tracking-tight">
-                      Tribal Child Welfare
-                    </h3>
-                    <p className="text-xs text-slate-300 line-clamp-2 mt-1">
-                      Free education kits, after-school learning centers &amp; nutritious meals for rural children.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-4 pt-3 border-t border-white/10 flex justify-end">
-                <Link
-                  to="/otf"
-                  className="inline-flex items-center gap-2 bg-sky-500 hover:bg-sky-400 text-white font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full transition-all shadow-md hover:shadow-sky-500/25 hover:translate-x-1"
-                >
-                  <span>Explore Now</span>
-                  <ArrowRight size={14} />
-                </Link>
-              </div>
-            </div>
-
-            {/* Card 2: HEALTHCARE & NUTRITION Banner */}
-            <div className="group relative overflow-hidden rounded-3xl bg-slate-900/80 backdrop-blur-md border border-white/15 p-6 shadow-2xl transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/90">
-              <div className="flex items-center justify-between gap-4">
-                <div className="flex items-center gap-4">
-                  {/* Healthcare Icon Badge */}
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-sky-500/20 border border-sky-400/40 text-sky-400 flex items-center justify-center shrink-0">
-                    <HeartPulse size={36} className="text-sky-300" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-display font-black text-white tracking-wide uppercase">
-                      Healthcare &amp; Nutrition
-                    </h3>
-                    <p className="text-xs text-slate-300 line-clamp-2 mt-1">
-                      Clean drinking water borewells, health camps, and emergency food grains relief.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-4 pt-3 border-t border-white/10 flex justify-end">
-                <Link
-                  to="/pollination"
-                  className="inline-flex items-center gap-2 bg-[#0284C7] hover:bg-[#0369A1] text-white font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full transition-all shadow-md hover:shadow-sky-500/25 hover:translate-x-1"
-                >
-                  <span>Explore Now</span>
-                  <ArrowRight size={14} />
-                </Link>
-              </div>
-            </div>
-
+            <span className="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse shrink-0" />
+            <p className="font-display font-bold text-xs sm:text-sm md:text-base text-brand-dark whitespace-nowrap tracking-tight flex items-center gap-1.5">
+              <span>Join hands with us to bring hope, dignity, and brighter smiles</span>
+              <span className="text-base sm:text-lg" aria-hidden="true">🤝</span>
+            </p>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
