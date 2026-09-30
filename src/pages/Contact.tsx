@@ -101,12 +101,13 @@ export default function Contact() {
                     </div>
                     <div>
                       <div className="font-bold text-lg mb-1">Phone</div>
-                      <div className="space-y-0.5">
-                        <a href="tel:+919573307088" className="text-brand-soft/90 text-sm hover:text-white transition-colors block font-medium">
-                          +91 9573307088
-                        </a>
-                        <a href="tel:+919885429900" className="text-brand-soft/75 text-xs hover:text-white transition-colors block">
+                      <div className="flex flex-wrap items-center gap-x-2 pt-0.5">
+                        <a href="tel:+919885429900" className="text-brand-soft/90 text-sm hover:text-white transition-colors font-medium">
                           +91 9885429900
+                        </a>
+                        <span className="text-white/40 text-xs">/</span>
+                        <a href="tel:+919573307088" className="text-brand-soft/90 text-sm hover:text-white transition-colors font-medium">
+                          +91 9573307088
                         </a>
                       </div>
                     </div>

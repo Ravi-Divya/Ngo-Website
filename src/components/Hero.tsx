@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { ArrowRight, BookOpen, HeartPulse, Droplets, ShieldCheck } from 'lucide-react';
+import { ArrowRight, HeartPulse, ShieldCheck } from 'lucide-react';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -22,19 +22,32 @@ const itemVariants = {
   },
 };
 
-const collageImages = [
-  { src: '/images/hero_new_1.jpg', alt: 'Rural Education' },
-  { src: '/images/glimpses_health_campaign.jpg', alt: 'Healthcare Camps' },
-  { src: '/images/hero_borewell_lacim.jpg', alt: 'Water Infrastructure' },
-  { src: '/images/glimpses_children.jpg', alt: 'Child Welfare' },
-  { src: '/images/melania_1.jpg', alt: 'Women Livelihoods' },
-  { src: '/images/glimpses_meal_service.jpg', alt: 'Nutrition Service' },
-  { src: '/images/educational_support_new.jpg', alt: 'Classroom Support' },
-  { src: '/images/hero_new_3.jpg', alt: 'Relief Distribution' },
-  { src: '/images/water_infrastructure_1.jpg', alt: 'Safe Drinking Water' },
-  { src: '/images/nutrition_covid_relief.jpg', alt: 'Crisis Aid' },
-  { src: '/images/mgnregs_1.jpg', alt: 'Sustainable Agriculture' },
-  { src: '/images/glimpses_relief_kits_row.jpg', alt: 'Essential Aid' },
+// Curated authentic field action photos directly from Gallery
+const galleryCollageImages = [
+  "/images/clothing_distribution_kids.jpg",
+  "/images/glimpses_children.jpg",
+  "/images/clothing_formal_donation.jpg",
+  "/images/glimpses_classroom_donation.jpg",
+  "/images/glimpses_health_campaign.jpg",
+  "/images/glimpses_community_feast.jpg",
+  "/images/water_infrastructure_1.jpg",
+  "/images/glimpses_student_support.jpg",
+  "/images/glimpses_meal_service.jpg",
+  "/images/clothing_support_2.jpg",
+  "/images/glimpses_elderly_interaction.jpg",
+  "/images/glimpses_relief_kits_row.jpg",
+  "/images/melania_1.jpg",
+  "/images/glimpses_children_celebration.jpg",
+  "/images/glimpses_grocery_distribution.jpg",
+  "/images/card_leadership.jpg",
+  "/images/nutrition_covid_relief.jpg",
+  "/images/glimpses_large_relief_drive.jpg",
+  "/images/gallery_new_1.jpg",
+  "/images/gallery_new_2.jpg",
+  "/images/glimpses_tribal_livelihood.jpg",
+  "/images/mgnregs_1.jpg",
+  "/images/hero_community_support.jpg",
+  "/images/water_infrastructure_2.jpg",
 ];
 
 export default function Hero() {
@@ -43,23 +56,23 @@ export default function Hero() {
       id="hero"
       className="relative pt-8 md:pt-12 pb-16 md:pb-24 overflow-hidden bg-slate-950 text-white min-h-[580px] flex items-center"
     >
-      {/* Background Photo Collage Mosaic (Reference Image 5) */}
+      {/* Background Photo Collage Mosaic from Gallery */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 h-full w-full gap-1 opacity-30 sm:opacity-35 scale-105 filter saturate-110">
-          {collageImages.map((img, idx) => (
-            <div key={idx} className="relative overflow-hidden w-full h-full min-h-[140px] md:min-h-[180px]">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 h-full w-full gap-1.5 opacity-45 sm:opacity-50 scale-105 filter saturate-125 contrast-105">
+          {galleryCollageImages.map((src, idx) => (
+            <div key={idx} className="relative overflow-hidden w-full h-full min-h-[130px] md:min-h-[160px]">
               <img
-                src={img.src}
-                alt={img.alt}
+                src={src}
+                alt={`CARD Gallery Community Action ${idx + 1}`}
                 className="w-full h-full object-cover"
                 loading="eager"
               />
             </div>
           ))}
         </div>
-        {/* Sophisticated Dark Gradient Overlays for Crystal Clear Contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-sky-950/85" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/70" />
+        {/* Balanced Dark & Navy Gradient Overlay for Clear Readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/92 via-slate-950/80 to-sky-950/75" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-slate-950/70" />
       </div>
 
       <div className="container mx-auto px-4 md:px-10 relative z-10">
@@ -143,7 +156,7 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.25 }}
           >
-            {/* Card 1: EDUCATION 2025 Banner (matching Reference Image 5) */}
+            {/* Card 1: EDUCATION 2025 Banner */}
             <div className="group relative overflow-hidden rounded-3xl bg-slate-900/80 backdrop-blur-md border border-white/15 p-6 shadow-2xl transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/90">
               <div className="flex items-center justify-between gap-4">
                 <div className="flex items-center gap-4">
@@ -173,7 +186,7 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Card 2: HEALTHCARE & NUTRITION Banner (matching Reference Image 5) */}
+            {/* Card 2: HEALTHCARE & NUTRITION Banner */}
             <div className="group relative overflow-hidden rounded-3xl bg-slate-900/80 backdrop-blur-md border border-white/15 p-6 shadow-2xl transition-all duration-300 hover:border-sky-400/50 hover:bg-slate-900/90">
               <div className="flex items-center justify-between gap-4">
                 <div className="flex items-center gap-4">

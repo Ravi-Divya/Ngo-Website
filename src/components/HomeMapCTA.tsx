@@ -124,7 +124,7 @@ export default function HomeMapCTA() {
                 </div>
                 <div>
                   <div className="text-[10px] text-slate-400">Direct Field Call</div>
-                  <div className="font-semibold text-white">+91 9573307088 / 9885429900</div>
+                  <div className="font-semibold text-white">+91 9885429900 / +91 9573307088</div>
                 </div>
               </a>
 

@@ -58,7 +58,7 @@ export default function GetInTouch() {
             {
               icon: Phone,
               title: 'Call Us',
-              lines: ['+91 9573307088', '+91 9885429900', 'Mon – Sat, 9:00 AM – 5:00 PM'],
+              lines: ['+91 9885429900 / +91 9573307088', 'Mon – Sat, 9:00 AM – 5:00 PM'],
             },
             {
               icon: Mail,
