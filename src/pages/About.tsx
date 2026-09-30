@@ -18,12 +18,17 @@ export default function About() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
               
               {/* Left Side Image */}
-              <div className="lg:col-span-5 relative rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-white p-2 hover:shadow-xl transition-shadow duration-300">
-                <img
-                  src="/images/card_felicitation_award.jpg"
-                  alt="Founder S. Ravi felicitated by Chittoor MP Daggumalla Prasada Rao garu, District Collector Sumit Kumar garu, IAS, and CHUDA Chairperson Katari Hemalatha garu"
-                  className="w-full h-auto aspect-[4/3] object-cover object-center rounded-xl"
-                />
+              <div className="lg:col-span-5 space-y-3">
+                <div className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-white p-2 hover:shadow-xl transition-shadow duration-300">
+                  <img
+                    src="/images/card_felicitation_award.jpg"
+                    alt="Founder S. Ravi felicitated by Chittoor MP Daggumalla Prasada Rao garu, District Collector Sumit Kumar garu, IAS, and CHUDA Chairperson Katari Hemalatha garu"
+                    className="w-full h-auto aspect-[4/3] object-cover object-center rounded-xl"
+                  />
+                </div>
+                <p className="text-[11px] md:text-xs text-slate-500 text-center font-medium leading-normal px-1">
+                  Founder <strong>S. Ravi</strong> felicitated by Chittoor MP <strong>Sri Daggumalla Prasada Rao garu</strong>, District Collector <strong>Sri Sumit Kumar garu, IAS</strong>, and CHUDA Chairperson <strong>Smt. Katari Hemalatha garu</strong>.
+                </p>
               </div>
               
               {/* Right Side Content */}

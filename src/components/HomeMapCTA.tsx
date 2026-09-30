@@ -29,8 +29,8 @@ export default function HomeMapCTA() {
             {/* Google Map Embedded Frame */}
             <div className="relative w-full h-72 sm:h-80 md:h-96 bg-slate-100">
               <iframe
-                title="CARD Headquarters Location - Chittoor, Andhra Pradesh"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124374.88729571343!2d79.03055964999999!3d13.2171922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad38bf6ee8d207%3A0xe5a3c26b7617c5b!2sChittoor%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                title="CARD Headquarters Exact Pin Location - Mittapalyam, Chittoor"
+                src="https://maps.google.com/maps?q=13.2325,79.1834&hl=en&z=15&output=embed"
                 className="w-full h-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

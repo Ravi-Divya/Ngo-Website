@@ -36,7 +36,13 @@ const navLinks: NavLinkItem[] = [
           { name: 'Melania', path: '/melania' },
           { name: 'Pollination', path: '/pollination' },
         ]
-      },
+      }
+    ]
+  },
+  { 
+    name: 'Resources', 
+    path: '/gallery',
+    dropdown: [
       {
         heading: 'GALLERY',
         items: [
@@ -48,10 +54,15 @@ const navLinks: NavLinkItem[] = [
         items: [
           { name: 'Our Impact', path: '/impact' },
         ]
+      },
+      {
+        heading: 'CASE STUDIES',
+        items: [
+          { name: 'Case Studies', path: '/case-study' },
+        ]
       }
     ]
   },
-  { name: 'Case Study', path: '/case-study' },
   { name: 'Contact', path: '/contact' },
 ];
 
@@ -59,6 +70,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openMobileDropdowns, setOpenMobileDropdowns] = useState<Record<string, boolean>>({
     Programs: false,
+    Resources: false,
   });
   const [searchOpen, setSearchOpen] = useState(false);
   const [showAnnouncement, setShowAnnouncement] = useState(true);

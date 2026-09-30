@@ -293,17 +293,27 @@ export default function Contact() {
 
           {/* Full-width Map Section */}
           <div className="mb-20">
-            <h3 className="font-display font-bold text-2xl text-brand-dark mb-6 text-center lg:text-left">Find Us on the Map</h3>
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
+              <h3 className="font-display font-bold text-2xl text-brand-dark text-center sm:text-left">Find Us on the Map</h3>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=13.2325,79.1834"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 text-xs font-semibold text-brand-primary hover:text-brand-deep bg-brand-soft px-4 py-2 rounded-xl border border-brand-light transition-colors self-center sm:self-auto"
+              >
+                <MapPin size={15} /> Open Exact Location in Google Maps
+              </a>
+            </div>
             <div className="rounded-3xl overflow-hidden border border-brand-light shadow-xl h-[400px] w-full relative">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124119.53702116128!2d79.03460835497217!3d13.221703632906325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4d348a4c8a2b5d%3A0x89e0cf6f2ea35930!2sChittoor%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                src="https://maps.google.com/maps?q=13.2325,79.1834&hl=en&z=15&output=embed" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
                 allowFullScreen={false} 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
-                title="CARD Office Map"
+                title="CARD Registered Office Map - Exact Pin Location"
                 className="absolute inset-0 w-full h-full object-cover"
               ></iframe>
             </div>
