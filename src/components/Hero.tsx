@@ -71,13 +71,13 @@ export default function Hero() {
           ))}
         </div>
         {/* Transparent Glass Frosted Layer */}
-        <div className="absolute inset-0 backdrop-blur-[2px] bg-white/35" />
+        <div className="absolute inset-0 backdrop-blur-[1.5px] bg-white/60" />
       </div>
 
       <div className="container mx-auto px-4 md:px-10 relative z-10">
-        {/* Frosted Glass Floating Card for Maximum Readability and Glass Aesthetic */}
+        {/* Main Content - Letters rendered directly over transparent glass collage */}
         <motion.div 
-          className="max-w-3xl mx-auto flex flex-col items-center text-center bg-white/85 backdrop-blur-md rounded-3xl p-6 sm:p-8 md:p-10 border border-white/90 shadow-2xl shadow-slate-900/10"
+          className="max-w-3xl mx-auto flex flex-col items-center text-center"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
@@ -98,7 +98,7 @@ export default function Hero() {
           {/* Description */}
           <motion.p 
             variants={itemVariants}
-            className="text-sm sm:text-base md:text-lg text-brand-deep font-sans max-w-xl mt-1 leading-relaxed"
+            className="text-sm sm:text-base md:text-lg text-slate-800 font-medium font-sans max-w-xl mt-1 leading-relaxed"
           >
             CARD works to improve the socio, economic, political and cultural condition of the unorganized and underprivileged people in rural areas, empowering vulnerable communities through education, healthcare, sanitation, and sustainable livelihoods.
           </motion.p>
@@ -128,7 +128,7 @@ export default function Hero() {
           {/* Inspiring Mission Strip with Handshake Emoji */}
           <motion.div 
             variants={itemVariants}
-            className="mt-5 inline-flex items-center gap-2.5 sm:gap-3 bg-white/90 backdrop-blur-md rounded-2xl border border-sky-200/90 px-4 sm:px-5 py-2 sm:py-2.5 shadow-xs hover:shadow-sm transition-all"
+            className="mt-6 inline-flex items-center gap-2.5 sm:gap-3 bg-white/80 backdrop-blur-md rounded-full border border-sky-200/90 px-5 py-2 shadow-xs hover:shadow-sm transition-all"
           >
             <span className="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse shrink-0" />
             <p className="font-display font-bold text-xs sm:text-sm text-brand-dark whitespace-nowrap tracking-tight flex items-center gap-1.5">
