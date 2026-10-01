@@ -54,11 +54,11 @@ export default function Hero() {
   return (
     <section 
       id="hero"
-      className="relative pt-10 md:pt-16 pb-16 md:pb-24 overflow-hidden bg-gradient-to-br from-[#F0F9FF] via-white to-[#F0F9FF] border-b border-brand-light"
+      className="relative py-8 sm:py-12 md:py-16 overflow-hidden bg-slate-100 border-b border-brand-light flex items-center"
     >
-      {/* Background Photo Collage Mosaic from Gallery (Clean Light Theme) */}
+      {/* Background Photo Collage from Gallery - High Visibility */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 h-full w-full gap-1.5 opacity-20 sm:opacity-25 scale-105 filter saturate-110">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 h-full w-full gap-1.5 opacity-80 sm:opacity-85 scale-105 filter saturate-120 contrast-105">
           {galleryCollageImages.map((src, idx) => (
             <div key={idx} className="relative overflow-hidden w-full h-full min-h-[120px] md:min-h-[150px]">
               <img
@@ -70,26 +70,27 @@ export default function Hero() {
             </div>
           ))}
         </div>
-        {/* Soft Clean Light Gradient Overlay for Pure Readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F0F9FF]/85 via-white/80 to-white/95" />
+        {/* Transparent Glass Frosted Layer */}
+        <div className="absolute inset-0 backdrop-blur-[2px] bg-white/35" />
       </div>
 
       <div className="container mx-auto px-4 md:px-10 relative z-10">
+        {/* Frosted Glass Floating Card for Maximum Readability and Glass Aesthetic */}
         <motion.div 
-          className="max-w-4xl mx-auto flex flex-col items-center text-center"
+          className="max-w-3xl mx-auto flex flex-col items-center text-center bg-white/85 backdrop-blur-md rounded-3xl p-6 sm:p-8 md:p-10 border border-white/90 shadow-2xl shadow-slate-900/10"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
         >
           {/* Main Heading */}
-          <h1 className="font-display font-bold leading-tight mb-4">
-            <motion.span variants={itemVariants} className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-brand-dark mb-1">
+          <h1 className="font-display font-bold leading-tight mb-3">
+            <motion.span variants={itemVariants} className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-dark mb-1">
               Transforming and Building
             </motion.span>
-            <motion.span variants={itemVariants} className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-brand-primary mb-1">
+            <motion.span variants={itemVariants} className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-primary mb-1">
               Stronger Communities
             </motion.span>
-            <motion.span variants={itemVariants} className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-brand-dark">
+            <motion.span variants={itemVariants} className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-dark">
               Together
             </motion.span>
           </h1>
@@ -97,7 +98,7 @@ export default function Hero() {
           {/* Description */}
           <motion.p 
             variants={itemVariants}
-            className="text-base sm:text-lg md:text-xl text-brand-deep font-sans max-w-2xl mt-2 leading-relaxed"
+            className="text-sm sm:text-base md:text-lg text-brand-deep font-sans max-w-xl mt-1 leading-relaxed"
           >
             CARD works to improve the socio, economic, political and cultural condition of the unorganized and underprivileged people in rural areas, empowering vulnerable communities through education, healthcare, sanitation, and sustainable livelihoods.
           </motion.p>
@@ -105,12 +106,12 @@ export default function Hero() {
           {/* Action CTAs */}
           <motion.div 
             variants={itemVariants}
-            className="mt-8 flex flex-wrap justify-center gap-4"
+            className="mt-6 flex flex-wrap justify-center gap-3.5"
           >
             <motion.div whileHover={{ scale: 1.04 }}>
               <Link 
                 to="/donate" 
-                className="bg-brand-primary text-white rounded-full px-8 py-3.5 font-bold text-sm sm:text-base hover:bg-brand-deep shadow-md hover:shadow-lg transition-all inline-flex items-center gap-2"
+                className="bg-brand-primary text-white rounded-full px-7 py-3 font-bold text-sm sm:text-base hover:bg-brand-deep shadow-md hover:shadow-lg transition-all inline-flex items-center gap-2"
               >
                 <span>Donate Now</span>
                 <ArrowRight size={16} />
@@ -118,7 +119,7 @@ export default function Hero() {
             </motion.div>
             <Link 
               to="/about" 
-              className="border-2 border-brand-accent text-brand-dark rounded-full px-8 py-3.5 font-semibold text-sm sm:text-base hover:bg-brand-soft hover:shadow-sm transition-all inline-block bg-white/80 backdrop-blur-sm"
+              className="border-2 border-brand-accent text-brand-dark rounded-full px-7 py-3 font-semibold text-sm sm:text-base hover:bg-brand-soft hover:shadow-sm transition-all inline-block bg-white/90 backdrop-blur-sm"
             >
               Learn More
             </Link>
@@ -127,12 +128,12 @@ export default function Hero() {
           {/* Inspiring Mission Strip with Handshake Emoji */}
           <motion.div 
             variants={itemVariants}
-            className="mt-8 inline-flex items-center gap-2.5 sm:gap-3 bg-white/95 backdrop-blur-md rounded-2xl border border-sky-200/90 px-5 py-3 shadow-xs hover:shadow-sm transition-all"
+            className="mt-5 inline-flex items-center gap-2.5 sm:gap-3 bg-white/90 backdrop-blur-md rounded-2xl border border-sky-200/90 px-4 sm:px-5 py-2 sm:py-2.5 shadow-xs hover:shadow-sm transition-all"
           >
             <span className="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse shrink-0" />
-            <p className="font-display font-bold text-xs sm:text-sm md:text-base text-brand-dark whitespace-nowrap tracking-tight flex items-center gap-1.5">
+            <p className="font-display font-bold text-xs sm:text-sm text-brand-dark whitespace-nowrap tracking-tight flex items-center gap-1.5">
               <span>Join hands with us to bring hope, dignity, and brighter smiles</span>
-              <span className="text-base sm:text-lg" aria-hidden="true">🤝</span>
+              <span className="text-sm sm:text-base" aria-hidden="true">🤝</span>
             </p>
           </motion.div>
         </motion.div>
